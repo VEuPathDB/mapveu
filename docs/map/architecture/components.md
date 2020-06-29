@@ -68,3 +68,42 @@ Not sure if that requires a function prop?
 * onDeselected : `({id, extent}) => void`
 
 
+
+## View select menu
+
+![markers screenshot](images/view-select.png)
+
+Allows the user to switch between "views".  Each view shows one type
+of record (or a back-end hardcoded subset of a type of record) and
+there may be different fields available in different views.  The idea
+is that some fields are the same between views (e.g. species).
+
+### Props
+
+* availableViews : id[]  (list of view IDs)
+* labels : string[]      (labels to show)
+* defaultView : id       (default view ID)
+* onViewChange: (viewId : id) => void
+
+
+## Filter field select menu
+
+![markers screenshot](images/filter-field-select.png)
+
+Allows user to choose a which field to filter on in the legend panel.
+
+Note that when the view changes, the availableFields must change too.
+If the currently selected field exists in both fromView and toView on
+view change, then it should remain selected, otherwise fall back to
+defaultField.
+
+### Props
+
+* availableFields : id[]  (list of field IDs)
+* labels : string[]       (labels to show)
+* defaultField : id       (default field ID)
+* onFieldChange : (fieldId : id) => void
+
+
+
+
