@@ -117,21 +117,22 @@ Or will it be scalable to 100s of fields using hierarchical nesting and OWL-file
 ![screenshot](images/filter-legend.png)
 
 The legend in MapVEu 1.0 went through several iterations.  It started
-being simply a legend panel to show the colour scheme.  Colours are
-always going to be tricky because you users can distinguish max 20
-(and that's pushing it). Grey shades are used for the remainder.  The
-"default colors" in MapVEu 1.0 are not simply assigned to the 20 most
-populous categories. There is an algorithm to distribute the colours
-across the globe (and there was a separate AJAX request to get the
-data for this, e.g. smplPalette, abndPalette etc), which prevented
-Africa having all the colours (because most data was there).  Nowadays
-the USA would hog all the colours because the largest numbers of
-samples are there (e.g. Aedes vexans sensu lato).  Then we added the
-"Optimize Colors" functionality and this assigned the 20 colours to
-the 20 most populous categories in the markers currently on screen (in
-the current viewport and satisfying all active filters).  The numbers
-on the right hand side of the legend were a similarly recent addition,
-as were the sorting options.
+being simply a legend panel to show the colour scheme for the
+currently active filter field.  Colours are always going to be tricky
+because you users can distinguish max 20 (and that's pushing it). Grey
+shades are used for the remainder.  The "default colors" in MapVEu 1.0
+are not simply assigned to the 20 most populous categories. There is
+an algorithm to distribute the colours across the globe (and there was
+a separate AJAX request to get the data for this, e.g. smplPalette,
+abndPalette etc), which prevented Africa having all the colours
+(because most data was there).  Nowadays the USA would hog all the
+colours because the largest numbers of samples are there (e.g. Aedes
+vexans sensu lato).  Then we added the "Optimize Colors" functionality
+and this assigned the 20 colours to the 20 most populous categories in
+the markers currently on screen (in the current viewport and
+satisfying all active filters).  The numbers on the right hand side of
+the legend were a similarly recent addition, as were the sorting
+options.
 
 The legend has always been a filter, by which we mean that when you
 click on a category name, it adds a filter for that category.
@@ -146,8 +147,29 @@ Here are some things we can consider in 2.0:
    colour the 20 most populous categories in the currently visible data.
    Allow the user to freeze the current colour palette when they need to.
 
-2. TBC
+2. Build multi-select in from the start.  This may require an extra click
+   (e.g. "Apply" and "Cancel" buttons that appear, like in site search),
+   but that should be fairly intuitive for users.
 
+3. The footprint must be small by default, but often the filter will
+   need to display many categories (or wide numeric and date ranges,
+   see next point) - so it should have a "compact mode" where it acts
+   like a legend - providing critical colour palette info for the most
+   populous categories (or date distributions), and an "extended mode"
+   where it's possible to see all categories (by paging/scrolling or
+   whatever) and to see numeric variable and date distributions in
+   full. Maybe the filter functionality should only be available in
+   extended mode?
+   
+4. It will handle numeric and date variables, not just categorical
+   text variables (as present, e.g. species, collection protocol, ...).
+   In MapVEu 1.0 the date variable had special filter UI elements below
+   the search box.  But this would break if a dataset had more than one
+   date (e.g enrollment date, clinic visit date), so date should be
+   treated just like any other variable.  This means the legend/filter
+   needs to handle non-categorical fields.
+   
 
 ### Props
 
+* 
