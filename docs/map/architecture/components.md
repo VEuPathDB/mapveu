@@ -58,15 +58,41 @@ Not sure if that requires a function prop?
 * id : string (if aggregating on geohash strings, this should be the geohash string)
 * position : LatLong
 * extent : Geometry (bbox or other geometry (e.g. convex hull) to show geographic extent of data aggregated "under" the marker)
+* selected : Boolean
 * values : number[] (these are the amounts represented in the mini-donut chart, e.g. the counts per species)
 * labels : string[] (these are the labels, e.g. species names, that won't normally be displayed due to space limits, but might be if you mouse-over a marker to expand it)
-* colours : ?  (array of colours, or mapping from label to colour?)
+* colors : colorSpec[]  (array of colours, or mapping from label to colour?)
 * value : string | number (value to be shown in the center of the donut)
-* selected : Boolean
 
 * onSelected : `({id, extent}) => void`
 * onDeselected : `({id, extent}) => void`
 
+
+## Mini Histogram Marker
+
+(no screenshot or mock-up yet)
+
+Non-categorical fields (numeric or date) will probably have to have
+tiny histogram markers.  That's because it doesn't make much sense to
+visualise distributions of numeric or date variables in a circle (why
+should 1970 be next to 2020?).
+
+Should be NO MORE THAN ABOUT 5 BINS in my opinion.  For interpretability
+the bins should be the same for all markers.
+
+Colours? Not sure individual colours per bin are needed.  Or a gradient?
+
+### Props
+
+* id : string (if aggregating on geohash strings, this should be the geohash string)
+* position : LatLong
+* extent : Geometry (bbox or other geometry (e.g. convex hull) to show geographic extent of data aggregated "under" the marker)
+* selected : Boolean
+* values : number[] (these are the amounts represented by bar height, e.g. the counts per year bin)
+* labels : string[] (string labels, e.g. 1982-1994, 1995-2003, possibly for click/mouseover enlarged version)
+
+* onSelected : `({id, extent}) => void`
+* onDeselected : `({id, extent}) => void`
 
 
 ## View select menu
@@ -168,8 +194,25 @@ Here are some things we can consider in 2.0:
    date (e.g enrollment date, clinic visit date), so date should be
    treated just like any other variable.  This means the legend/filter
    needs to handle non-categorical fields.
-   
 
 ### Props
 
-* 
+* data:
+  - xType: 'categorical' | 'numeric' | 'date'   (very close to Datum type: string|number|Date)
+  - x: Datum[]
+  - y: number[]
+  - colors: colorSpec[]   (definitely needed for categorical data)
+  - xLabel: string        (this is basically the field name, e.g. species)
+  - yLabel: string        (e.g. 'count' or 'total specimens'**)
+  - mode: 'compact' | 'extended'
+  - onZoomed  (callback after zooming - might need new data (semantic zoom))
+  - onSelected (callback that communicates selection either discrete x values and/or a range x1-x2)
+
+
+
+But how about multiple data series (e.g. grey and red histograms of WDK filters)?
+
+
+** MapVEu 1.0 Sample View shows counts of records in the legend/filter, but Abundance View
+   shows the sum of the sample_size_i field for all filter fields (e.g. species, collection method etc)
+
