@@ -204,9 +204,9 @@ Here are some things we can consider in 2.0:
   - colors: colorSpec[]   (definitely needed for categorical data)
   - xLabel: string        (this is basically the field name, e.g. species)
   - yLabel: string        (e.g. 'count' or 'total specimens'**)
-  - mode: 'compact' | 'extended'
-  - onZoomed  (callback after zooming - might need new data (semantic zoom))
-  - onSelected (callback that communicates selection either discrete x values and/or a range x1-x2)
+* mode: 'compact' | 'extended'
+* onZoomed  (callback after zooming - might need new data (semantic zoom))
+* onSelected (callback that communicates selection either discrete x values and/or a range x1-x2)
 
 
 
