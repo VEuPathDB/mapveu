@@ -5,4 +5,3 @@ import { FancyMarkerProps } from "./Types";
 export default function FancyMarker(props: FancyMarkerProps) {
   return <Marker {...props} title='fancy' />;
 }
-

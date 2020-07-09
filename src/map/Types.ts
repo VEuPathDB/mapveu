@@ -24,10 +24,9 @@ export interface MarkerDatum {
   component: React.Component | Function  // because FancyMarker is just a function...
 }
 
-
 export interface MarkerProps {
   position: LatLong,
-  key: string
+  key: string,
 }
 
 export interface FancyMarkerProps extends MarkerProps {
@@ -35,11 +34,15 @@ export interface FancyMarkerProps extends MarkerProps {
 }
 
 export interface DonutMarkerProps extends MarkerProps {
-  values: Array<number>, // the counts or totals to be shown in the donut
-  labels: Array<string>, // the labels (not likely to be shown at normal marker size)
-  atomic?: boolean,      // add a special thumbtack icon if this is true (it's a marker that won't disaggregate if zoomed in further)
-  text?: string,         // text to render in center, sprintf(numberFormat,sum(values)) if not given
-  numberFormat?: string  // see 'text' above, defaults to %.1f
+  //DKDK add below two for donut marker
+  icon: any,          // DKDK icon name?
+  title: string,
+  //DKDK blocked below for a while as they may not be necessary
+  // values: Array<number>, // the counts or totals to be shown in the donut
+  // labels: Array<string>, // the labels (not likely to be shown at normal marker size)
+  // atomic?: boolean,      // add a special thumbtack icon if this is true (it's a marker that won't disaggregate if zoomed in further)
+  // text?: string,         // text to render in center, sprintf(numberFormat,sum(values)) if not given
+  // numberFormat?: string  // see 'text' above, defaults to %.1f
 }
 
 

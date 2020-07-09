@@ -1,15 +1,21 @@
 import React, { useState } from 'react';
 // import { action } from '@storybook/addon-actions';
 import MapVEuMap from './MapVEuMap';
-import { BoundsViewport, MarkerData, MarkerProps, FancyMarkerProps } from './Types';
+import { BoundsViewport, MarkerData, MarkerProps, FancyMarkerProps, DonutMarkerProps } from './Types';
 import { Marker } from 'react-leaflet';
 import FancyMarker from './FancyMarker';
-
+import DonutMarker from './DonutMarker';
 
 // temporary hack to work-around webpack/leaflet incompatibility
 // https://github.com/Leaflet/Leaflet/issues/4968#issuecomment-483402699
 // we will have custom markers soon so no need to worry
 import L from "leaflet";
+import { setUncaughtExceptionCaptureCallback } from 'process';
+
+//DKDK this works
+import './popbio/Icon.Canvas.popbio.dk1.js'
+
+
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
@@ -24,6 +30,11 @@ export default {
 };
 
 
+//DKDK for donut marker size and color
+// iterate over types, filter by that type, and format the layer for that feature type
+let projColor = ["#FFB300", "#803E75", "#FF6800", "#A6BDD7", "#C10020", "#CEA262", "#007D34"];
+let projCount = 0;
+const size = 40;
 
 
 /*
@@ -31,50 +42,130 @@ export default {
    The real thing should something with zoomLevel.
 */
 const getMarkerData = ({ bounds, zoomLevel }: BoundsViewport) => {
-  // marker data has to be empty because we don't
-  // know the map bounds until the map is rendered
-  // (particularly in full screen deployments)
-  const markerData : MarkerData = {
-    markers : []
-  }
-  console.log("I've been triggered with bounds=["+bounds.southWest+" TO "+bounds.northEast+"] and zoom="+zoomLevel);
-  const numMarkers = 10;
-  for (var i=0; i<numMarkers; i++) {
-    const lat = bounds.southWest[0] + Math.random()*(bounds.northEast[0] - bounds.southWest[0]);
-    const long = bounds.southWest[1] + Math.random()*(bounds.northEast[1] - bounds.southWest[1]);
-    if (Math.random() < 0.5) { // basic Marker
-      markerData.markers.push(
-	{
-	  props: { key: 'marker'+i,
-		   position: [ lat, long ]
-          } as MarkerProps,
-	  component: Marker
-      });
-    } else {  // make a FancyMarker
-      markerData.markers.push(
-	{
-	  props: { key: 'fancymarker'+i,
-		   position: [ lat, long ],
-		   opacity: 0.25
-          } as FancyMarkerProps,
-	  component: FancyMarker
-      });
+    // marker data has to be empty because we don't
+    // know the map bounds until the map is rendered
+    // (particularly in full screen deployments)
+    const markerData : MarkerData = {
+      markers : []
     }
+    console.log("I've been triggered with bounds=["+bounds.southWest+" TO "+bounds.northEast+"] and zoom="+zoomLevel);
+    const numMarkers = 10;
+    for (var i=0; i<numMarkers; i++) {
+      const lat = bounds.southWest[0] + Math.random()*(bounds.northEast[0] - bounds.southWest[0]);
+      const long = bounds.southWest[1] + Math.random()*(bounds.northEast[1] - bounds.southWest[1]);
+      if (Math.random() < 0.5) { // basic Marker
+        markerData.markers.push(
+      {
+        props: { key: 'marker'+i,
+             position: [ lat, long ]
+            } as MarkerProps,
+        component: Marker
+        });
+      } else {  // make a FancyMarker
+        markerData.markers.push(
+      {
+        props: { key: 'fancymarker'+i,
+             position: [ lat, long ],
+             opacity: 0.25
+            } as FancyMarkerProps,
+        component: FancyMarker
+        });
+      }
+    }
+    // replace old markers with these new ones
+    return markerData;
   }
-  // replace old markers with these new ones
-  return markerData;
-}
 
+
+/*
+   DKDK: This is for Donut marker based on getMarkerData() above
+*/
+const getDonutMarkerData = ({ bounds, zoomLevel }: BoundsViewport) => {
+    // marker data has to be empty because we don't
+    // know the map bounds until the map is rendered
+    // (particularly in full screen deployments)
+    const markerData : MarkerData = {
+      markers : []
+    }
+    console.log("I've been triggered with bounds=["+bounds.southWest+" TO "+bounds.northEast+"] and zoom="+zoomLevel);
+    const numMarkers = 10;
+    for (var i=0; i<numMarkers; i++) {
+      const lat = bounds.southWest[0] + Math.random()*(bounds.northEast[0] - bounds.southWest[0]);
+      const long = bounds.southWest[1] + Math.random()*(bounds.northEast[1] - bounds.southWest[1]);
+  
+      if (Math.random() < 0.5) { // basic Marker
+        markerData.markers.push(
+      {
+        props: { key: 'marker'+i,
+             position: [ lat, long ]
+            } as MarkerProps,
+        component: Marker
+        });
+      } else {  // make a FancyMarker
+        markerData.markers.push(
+      {
+        props: { key: 'donutmarker'+i,
+              position: [ lat, long ],
+         //    icon: circle,
+              icon: new L.Icon.Canvas({
+                  iconSize: new L.Point(size, size),
+                  // markerText: feature.properties.val.replace(',',''),
+                  markerText: 'DK'+i,
+                  count: '123',
+                  trafficlight: -1,   // DKDK set negative value to be default
+                  id: '',
+                  stats: [],  // DKDK array
+                  // // avgSampleSize: (viewMode === 'abnd') ? record.avgSampleSize : -1,
+                  // // avgDuration: (viewMode === 'abnd') ? record.avgDuration : -1,
+                  atomic: '',
+                  projColor: projColor[projCount],
+              }),
+              title: 'title'+i,
+            } as DonutMarkerProps,
+        component: DonutMarker,
+        });
+      }
+    }
+    // replace old markers with these new ones
+    return markerData;
+  }
 
 export const Basic = () => {
   const [ markerData, setMarkerData ] = useState<MarkerData>({ markers: [] });
   return (
     <MapVEuMap
-    viewport={{center: [ 54.561781, -3.143297 ], zoom: 12}}
-    height="600px" width="800px"
+    viewport={{center: [ 54.561781, -3.143297 ], zoom: 13}}
+    height="98vh" width="98vw"
     onViewportChanged={(bvp : BoundsViewport) => setMarkerData(getMarkerData(bvp))}
     markerData={markerData}
     />
   );
 }
 
+export const Donut = () => {
+    const [ markerData, setMarkerData ] = useState<MarkerData>({ markers: [] });
+    return (
+      <MapVEuMap
+      viewport={{center: [ 54.561781, -3.143297 ], zoom: 13}}
+      height="98vh" width="98vw"
+      onViewportChanged={(bvp : BoundsViewport) => setMarkerData(getDonutMarkerData(bvp))}
+      markerData={markerData}
+      />
+    );
+  }
+  
+
+//DKDK this also works by setting 'icon: circle' at props above but inline call is better to change values dynamically
+// const circle = new L.Icon.Canvas({
+//     iconSize: new L.Point(size, size),
+//     // markerText: feature.properties.val.replace(',',''),
+//     markerText: 'DK',
+//     count: '123',
+//     trafficlight: -1,   // DKDK set negative value to be default
+//     id: '',
+//     stats: [],  // DKDK array
+//     // // avgSampleSize: (viewMode === 'abnd') ? record.avgSampleSize : -1,
+//     // // avgDuration: (viewMode === 'abnd') ? record.avgDuration : -1,
+//     atomic: '',
+//     projColor: projColor[projCount],
+//     });
