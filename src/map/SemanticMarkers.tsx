@@ -5,9 +5,9 @@ import 'leaflet/dist/leaflet.css';
 
 /**
  * Renders the semantic markers layer
- * 
- * 
- * @param props 
+ *
+ *
+ * @param props
  */
 
 export default function SemanticMarkers({ onViewportChanged, data }: SemanticMarkersProps) {
@@ -32,7 +32,7 @@ console.log("I'm here");
   }, [map]);
 
 
-  
+
 
   /* also think about animating from the previous markers
      hopefully react can do that for free?  (I saw something about prevProps in lifecycle methods.)
@@ -78,7 +78,7 @@ function boundsToGeoBBox(bounds : any) : GeoBBox {
   }
   if (east < -180) {
     east = -180;
-  }  
+  }
 
   return { southWest: [south, west],
 	   northEast: [north, east] }

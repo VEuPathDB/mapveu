@@ -9,7 +9,7 @@ L.Icon.Canvas = L.Icon.extend({
         className: 'leaflet-canvas-icon',
         population: 0,
         stats: [],
-        // DKDK add this for change proj coclor
+        // DKDK add below fields for ClinEpiDB
         projColor: '',
     },
 
@@ -38,7 +38,7 @@ L.Icon.Canvas = L.Icon.extend({
 
         if (value < 0) {
             return ["white", '#555'];
-            // DKDK
+            // DKDK fillColor = inner circle color = white
             // return ["blue", '#0000FF'];
         }
 
@@ -101,7 +101,7 @@ L.Icon.Canvas = L.Icon.extend({
         // DKDK add colors...
         // canvas.fillStyle = 'white';
         // canvas.fillStyle = '#0f5970';
-        canvas.fillStyle = this.options.projColor;
+        canvas.fillStyle = this.options.projColor;   //DKDK this was only for ClinEpiDB
         // DKDK arc(arc(x,y,r,sAngle,eAngle,counterclockwise) - Angle is 0-2pi and clockwise, iconSize3 determins radius
         canvas.arc(iconSize2, iconSize2, iconSize3, 0, Math.PI * 2);
         canvas.fill();
@@ -174,7 +174,8 @@ L.Icon.Canvas = L.Icon.extend({
             canvas.restore();
         }
 
-    }
+    },  //DKDK don't forget comman here
+
 });
 
 //DKDK this does not work as is

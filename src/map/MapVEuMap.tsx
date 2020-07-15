@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { MapVEuMapProps } from "./Types";
-import { Viewport, Map, TileLayer, LayersControl, ZoomControl } from "react-leaflet";
+import { Viewport, Map, TileLayer, LayersControl, ZoomControl, ScaleControl } from "react-leaflet";
 import SemanticMarkers from "./SemanticMarkers";
 import 'leaflet/dist/leaflet.css';
 
@@ -8,9 +8,9 @@ const { BaseLayer, Overlay } = LayersControl
 
 /**
  * Renders a Leaflet map with semantic zooming markers
- * 
- * 
- * @param props 
+ *
+ *
+ * @param props
  */
 export default function MapVEuMap({ viewport, height, width, onViewportChanged, markerData }: MapVEuMapProps) {
 
@@ -21,27 +21,29 @@ export default function MapVEuMap({ viewport, height, width, onViewportChanged, 
   // which is useful for fetching data to show on the map.
   // The Viewport info (center and zoom) handled here would be useful for saving a
   // 'bookmarkable' state of the map.
-  const [ state, updateState ] = useState<Viewport>(viewport as Viewport);
+  //DKDK change state, updateState to mapState, setMapState for consistency: maybe still confusing
+  const [ mapState, setMapState ] = useState<Viewport>(viewport as Viewport);
   const handleViewportChanged = (viewport : Viewport) => {
-    updateState(viewport);
+    setMapState(viewport);
   };
 
   return (
     <Map
-      viewport={state}
+      viewport={mapState}
       style={{ height, width }}
       onViewportChanged={handleViewportChanged}
-      zoomControl={false}
+      zoomControl={false} //DKDK this is for disabling default zoomControl at top left
       minzoom='1'
     >
-      <ZoomControl position="topright"></ZoomControl>
+      <ZoomControl position="topright" />
+      <ScaleControl position="bottomright" />
       <LayersControl position="topright">
         <BaseLayer checked name="street">
           <TileLayer
             url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}"
             attribution='Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
           />
-        </BaseLayer>  
+        </BaseLayer>
         <BaseLayer name="terrain">
           <TileLayer
             url="https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}{r}.{ext}"
@@ -49,22 +51,22 @@ export default function MapVEuMap({ viewport, height, width, onViewportChanged, 
             subdomains='abcd'
             minZoom='0'
             maxZoom='18'
-            ext='png'            
+            ext='png'
           />
-        </BaseLayer>  
+        </BaseLayer>
         <BaseLayer name="satellite">
           <TileLayer
             url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
             attribution='Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
           />
-        </BaseLayer>  
+        </BaseLayer>
         <BaseLayer name="light">
           <TileLayer
             url="http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png"
             attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
             maxZoom='18'
           />
-        </BaseLayer>  
+        </BaseLayer>
         <BaseLayer name="dark">
           <TileLayer
             url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}{r}.png"
@@ -72,7 +74,7 @@ export default function MapVEuMap({ viewport, height, width, onViewportChanged, 
             subdomains='abcd'
             maxZoom='19'
           />
-        </BaseLayer>  
+        </BaseLayer>
         <BaseLayer name="mp3">
           <TileLayer
             url="http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -81,13 +83,14 @@ export default function MapVEuMap({ viewport, height, width, onViewportChanged, 
             maxZoom='18'
             noWrap='0'
           />
-        </BaseLayer>                                          
+        </BaseLayer>
       </LayersControl>
 
       <SemanticMarkers
         onViewportChanged={onViewportChanged}
       	data={markerData}
       />
+
     </Map>
   );
 }
