@@ -39,7 +39,9 @@ export interface DonutMarkerProps extends MarkerProps {
   labels: Array<string>, // the labels (not likely to be shown at normal marker size)
   atomic?: boolean,      // add a special thumbtack icon if this is true (it's a marker that won't disaggregate if zoomed in further)
   text?: string,         // text to render in center, sprintf(numberFormat,sum(values)) if not given
-  numberFormat?: string  // see 'text' above, defaults to %.1f
+  numberFormat?: string, // see 'text' above, defaults to %.1f
+  colors?: Array<string> // expecting '#1234ab' hex colors - is there a TypeScript type for this?
+                         // (BM is happy for colors to be mandatory)
 }
 
 
