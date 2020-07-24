@@ -7,10 +7,11 @@ L.Icon.Canvas = L.Icon.extend({
     options: {
         iconSize: new L.Point(20, 20), // Have to be supplied
         className: 'leaflet-canvas-icon',
+        // className: 'leaflet-canvas-icon leaflet-marker-icon-anim',   //DKDK do we need to have leaflet-marker-icon-anim here?
         population: 0,
         stats: [],
-        // DKDK add below fields for ClinEpiDB
-        projColor: '',
+        // DKDK add below fields for ClinEpiDB only - no longer needed
+        // projColor: '',
     },
 
     createIcon: function () {
@@ -21,7 +22,7 @@ L.Icon.Canvas = L.Icon.extend({
         e.width = s.x;
         e.height = s.y;
         e.id = this.options.id;
-        //DKDK 070720 block this as markers is not assigned to this library
+        //DKDK 070720 block this as markers is not assigned to this library yet
         // this.options.selected = markers.isSelected(this.options.id);
         this.draw(e.getContext('2d'), s.x, s.y);
         return e;
@@ -99,9 +100,9 @@ L.Icon.Canvas = L.Icon.extend({
 
         canvas.beginPath();
         // DKDK add colors...
-        // canvas.fillStyle = 'white';
+        canvas.fillStyle = 'white';
         // canvas.fillStyle = '#0f5970';
-        canvas.fillStyle = this.options.projColor;   //DKDK this was only for ClinEpiDB
+        // canvas.fillStyle = this.options.projColor;   //DKDK this was only for ClinEpiDB
         // DKDK arc(arc(x,y,r,sAngle,eAngle,counterclockwise) - Angle is 0-2pi and clockwise, iconSize3 determins radius
         canvas.arc(iconSize2, iconSize2, iconSize3, 0, Math.PI * 2);
         canvas.fill();
@@ -169,8 +170,8 @@ L.Icon.Canvas = L.Icon.extend({
             canvas.textAlign = "center";
             canvas.font = '900 12px "Font Awesome 5 Free"';
             canvas.fillStyle = '#595959';
+            //DKDK
             canvas.fillText('\uf08d', 2, 0);
-
             canvas.restore();
         }
 

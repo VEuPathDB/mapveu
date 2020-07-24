@@ -1,0 +1,529 @@
+{
+  "responseHeader":{
+    "status":0,
+    "QTime":13},
+  "response":{"numFound":10343,"start":0,"docs":[]
+  },
+  "facets":{
+    "count":10343,
+    "geo":{
+      "buckets":[{
+          "val":"u10",
+          "count":3708,
+          "lnAvg":0.7232177346277778,
+          "lnMin":0.02,
+          "lnMax":1.33,
+          "atomicCount":25,
+          "ltMax":52.03,
+          "ltAvg":51.448646062567754,
+          "ltMin":50.79,
+          "term":{
+            "buckets":[{
+                "val":"Anopheles maculipennis sensu lato",
+                "count":1509},
+              {
+                "val":"subgenus Avaritia",
+                "count":675},
+              {
+                "val":"Culiseta annulata",
+                "count":347},
+              {
+                "val":"Culicoides pulicaris",
+                "count":262},
+              {
+                "val":"Culicoides punctatus",
+                "count":166},
+              {
+                "val":"Culicoides",
+                "count":124},
+              {
+                "val":"Culex pipiens",
+                "count":110},
+              {
+                "val":"Culicoides obsoletus",
+                "count":107},
+              {
+                "val":"Anopheles atroparvus",
+                "count":102},
+              {
+                "val":"Culicoides pulicaris group",
+                "count":96},
+              {
+                "val":"Anopheles messeae/daciae morphological group",
+                "count":63},
+              {
+                "val":"Culicoides scoticus",
+                "count":55},
+              {
+                "val":"Culicoides dewulfi",
+                "count":24},
+              {
+                "val":"Culicoides chiopterus",
+                "count":18},
+              {
+                "val":"Anopheles messeae",
+                "count":17},
+              {
+                "val":"Culex",
+                "count":8},
+              {
+                "val":"Coquillettidia richiardii",
+                "count":6},
+              {
+                "val":"Aedes detritus",
+                "count":5},
+              {
+                "val":"Culex modestus",
+                "count":5},
+              {
+                "val":"Culiseta morsitans",
+                "count":5},
+              {
+                "val":"Culicoides impunctatus",
+                "count":3},
+              {
+                "val":"Anopheles claviger",
+                "count":1}]}},
+        {
+          "val":"gcw",
+          "count":2153,
+          "lnAvg":-2.4439247561541793,
+          "lnMin":-2.74,
+          "lnMax":-2.13,
+          "atomicCount":2,
+          "ltMax":54.63,
+          "ltAvg":54.47561077566331,
+          "ltMin":54.33,
+          "term":{
+            "buckets":[{
+                "val":"subgenus Avaritia",
+                "count":492},
+              {
+                "val":"Culicoides pulicaris",
+                "count":391},
+              {
+                "val":"Culicoides impunctatus",
+                "count":331},
+              {
+                "val":"Culicoides pulicaris group",
+                "count":257},
+              {
+                "val":"Culicoides punctatus",
+                "count":213},
+              {
+                "val":"Culicoides",
+                "count":186},
+              {
+                "val":"Culicoides obsoletus",
+                "count":85},
+              {
+                "val":"Culicoides chiopterus",
+                "count":71},
+              {
+                "val":"Culicoides dewulfi",
+                "count":70},
+              {
+                "val":"Culicoides scoticus",
+                "count":57}]}},
+        {
+          "val":"gcj",
+          "count":1562,
+          "lnAvg":-3.9384245198462486,
+          "lnMin":-3.94,
+          "lnMax":-2.8561,
+          "atomicCount":4,
+          "ltMax":51.3674,
+          "ltAvg":51.16918098591413,
+          "ltMin":50.6775,
+          "term":{
+            "buckets":[{
+                "val":"subgenus Avaritia",
+                "count":419},
+              {
+                "val":"Culicoides pulicaris",
+                "count":392},
+              {
+                "val":"Culicoides pulicaris group",
+                "count":168},
+              {
+                "val":"Culicoides",
+                "count":113},
+              {
+                "val":"Culicoides punctatus",
+                "count":108},
+              {
+                "val":"Culicoides obsoletus",
+                "count":96},
+              {
+                "val":"Culicoides dewulfi",
+                "count":80},
+              {
+                "val":"Culicoides chiopterus",
+                "count":69},
+              {
+                "val":"Culicoides scoticus",
+                "count":62},
+              {
+                "val":"Culicoides impunctatus",
+                "count":51},
+              {
+                "val":"Anopheles messeae",
+                "count":3},
+              {
+                "val":"Anopheles atroparvus",
+                "count":1}]}},
+        {
+          "val":"gcy",
+          "count":1442,
+          "lnAvg":-2.1795839112343534,
+          "lnMin":-2.18,
+          "lnMax":-1.58,
+          "atomicCount":2,
+          "ltMax":55.24,
+          "ltAvg":55.23981969486863,
+          "ltMin":54.98,
+          "term":{
+            "buckets":[{
+                "val":"subgenus Avaritia",
+                "count":372},
+              {
+                "val":"Culicoides impunctatus",
+                "count":259},
+              {
+                "val":"Culicoides pulicaris",
+                "count":245},
+              {
+                "val":"Culicoides",
+                "count":133},
+              {
+                "val":"Culicoides pulicaris group",
+                "count":129},
+              {
+                "val":"Culicoides punctatus",
+                "count":129},
+              {
+                "val":"Culicoides obsoletus",
+                "count":68},
+              {
+                "val":"Culicoides chiopterus",
+                "count":39},
+              {
+                "val":"Culicoides dewulfi",
+                "count":35},
+              {
+                "val":"Culicoides scoticus",
+                "count":32},
+              {
+                "val":"Anopheles messeae",
+                "count":1}]}},
+        {
+          "val":"gch",
+          "count":505,
+          "lnAvg":-4.640000000000023,
+          "lnMin":-4.64,
+          "lnMax":-4.64,
+          "atomicCount":1,
+          "ltMax":50.64,
+          "ltAvg":50.639999999999645,
+          "ltMin":50.64,
+          "term":{
+            "buckets":[{
+                "val":"subgenus Avaritia",
+                "count":166},
+              {
+                "val":"Culicoides pulicaris",
+                "count":113},
+              {
+                "val":"Culicoides punctatus",
+                "count":49},
+              {
+                "val":"Culicoides pulicaris group",
+                "count":46},
+              {
+                "val":"Culicoides",
+                "count":40},
+              {
+                "val":"Culicoides obsoletus",
+                "count":36},
+              {
+                "val":"Culicoides impunctatus",
+                "count":18},
+              {
+                "val":"Culicoides dewulfi",
+                "count":15},
+              {
+                "val":"Culicoides chiopterus",
+                "count":13},
+              {
+                "val":"Culicoides scoticus",
+                "count":9}]}},
+        {
+          "val":"gcm",
+          "count":425,
+          "lnAvg":-3.23189788235295,
+          "lnMin":-3.44,
+          "lnMax":-2.84,
+          "atomicCount":3,
+          "ltMax":53.0559,
+          "ltAvg":52.575110117647,
+          "ltMin":52.49,
+          "term":{
+            "buckets":[{
+                "val":"subgenus Avaritia",
+                "count":113},
+              {
+                "val":"Culicoides pulicaris",
+                "count":106},
+              {
+                "val":"Culicoides pulicaris group",
+                "count":50},
+              {
+                "val":"Culicoides punctatus",
+                "count":36},
+              {
+                "val":"Culicoides",
+                "count":30},
+              {
+                "val":"Culicoides obsoletus",
+                "count":25},
+              {
+                "val":"Culicoides scoticus",
+                "count":23},
+              {
+                "val":"Culicoides dewulfi",
+                "count":20},
+              {
+                "val":"Culicoides impunctatus",
+                "count":11},
+              {
+                "val":"Culicoides chiopterus",
+                "count":9},
+              {
+                "val":"Anopheles atroparvus",
+                "count":2}]}},
+        {
+          "val":"gcq",
+          "count":300,
+          "lnAvg":-1.7699999999999927,
+          "lnMin":-1.77,
+          "lnMax":-1.77,
+          "atomicCount":1,
+          "ltMax":53.05,
+          "ltAvg":53.04999999999971,
+          "ltMin":53.05,
+          "term":{
+            "buckets":[{
+                "val":"subgenus Avaritia",
+                "count":120},
+              {
+                "val":"Culicoides pulicaris",
+                "count":70},
+              {
+                "val":"Culicoides",
+                "count":22},
+              {
+                "val":"Culicoides scoticus",
+                "count":16},
+              {
+                "val":"Culicoides obsoletus",
+                "count":15},
+              {
+                "val":"Culicoides punctatus",
+                "count":15},
+              {
+                "val":"Culicoides dewulfi",
+                "count":14},
+              {
+                "val":"Culicoides chiopterus",
+                "count":13},
+              {
+                "val":"Culicoides pulicaris group",
+                "count":12},
+              {
+                "val":"Culicoides impunctatus",
+                "count":3}]}},
+        {
+          "val":"gcn",
+          "count":85,
+          "lnAvg":-1.7233729411764684,
+          "lnMin":-2.7858,
+          "lnMax":-1.66,
+          "atomicCount":6,
+          "ltMax":51.4578,
+          "ltAvg":51.0846364705882,
+          "ltMin":50.65,
+          "term":{
+            "buckets":[{
+                "val":"subgenus Avaritia",
+                "count":53},
+              {
+                "val":"Culicoides obsoletus",
+                "count":6},
+              {
+                "val":"Culicoides pulicaris",
+                "count":6},
+              {
+                "val":"Anopheles messeae",
+                "count":4},
+              {
+                "val":"Culicoides scoticus",
+                "count":4},
+              {
+                "val":"Anopheles atroparvus",
+                "count":3},
+              {
+                "val":"Culicoides dewulfi",
+                "count":3},
+              {
+                "val":"Culicoides pulicaris group",
+                "count":3},
+              {
+                "val":"Culicoides",
+                "count":2},
+              {
+                "val":"Culicoides impunctatus",
+                "count":1}]}},
+        {
+          "val":"gcr",
+          "count":80,
+          "lnAvg":-0.8054950000000002,
+          "lnMin":-1.08,
+          "lnMax":-0.25,
+          "atomicCount":4,
+          "ltMax":52.92,
+          "ltAvg":52.411171249999974,
+          "ltMin":52.39,
+          "term":{
+            "buckets":[{
+                "val":"subgenus Avaritia",
+                "count":42},
+              {
+                "val":"Culicoides pulicaris",
+                "count":14},
+              {
+                "val":"Culicoides",
+                "count":5},
+              {
+                "val":"Culicoides obsoletus",
+                "count":4},
+              {
+                "val":"Culicoides punctatus",
+                "count":4},
+              {
+                "val":"Anopheles messeae",
+                "count":3},
+              {
+                "val":"Anopheles atroparvus",
+                "count":2},
+              {
+                "val":"Culicoides dewulfi",
+                "count":2},
+              {
+                "val":"Culicoides scoticus",
+                "count":2},
+              {
+                "val":"Culicoides chiopterus",
+                "count":1},
+              {
+                "val":"Culicoides pulicaris group",
+                "count":1}]}},
+        {
+          "val":"u12",
+          "count":56,
+          "lnAvg":0.5840249999999999,
+          "lnMin":0.2796,
+          "lnMax":1.12,
+          "atomicCount":9,
+          "ltMax":52.85,
+          "ltAvg":52.31461964285719,
+          "ltMin":52.26,
+          "term":{
+            "buckets":[{
+                "val":"subgenus Avaritia",
+                "count":26},
+              {
+                "val":"Culicoides",
+                "count":9},
+              {
+                "val":"Anopheles messeae",
+                "count":8},
+              {
+                "val":"Culicoides obsoletus",
+                "count":5},
+              {
+                "val":"Culicoides pulicaris",
+                "count":4},
+              {
+                "val":"Culicoides punctatus",
+                "count":2},
+              {
+                "val":"Anopheles atroparvus",
+                "count":1},
+              {
+                "val":"Culicoides dewulfi",
+                "count":1}]}},
+        {
+          "val":"gcp",
+          "count":19,
+          "lnAvg":-0.6744789473684212,
+          "lnMin":-1.05,
+          "lnMax":-0.13,
+          "atomicCount":15,
+          "ltMax":51.4792,
+          "ltAvg":51.063821052631575,
+          "ltMin":50.8,
+          "term":{
+            "buckets":[{
+                "val":"Anopheles atroparvus",
+                "count":12},
+              {
+                "val":"Anopheles messeae",
+                "count":7}]}},
+        {
+          "val":"u13",
+          "count":4,
+          "lnAvg":1.7272,
+          "lnMin":1.6909,
+          "lnMax":1.7393,
+          "atomicCount":2,
+          "ltMax":52.6309,
+          "ltAvg":52.590374999999995,
+          "ltMin":52.4688,
+          "term":{
+            "buckets":[{
+                "val":"Anopheles atroparvus",
+                "count":2},
+              {
+                "val":"Anopheles messeae",
+                "count":2}]}},
+        {
+          "val":"gbv",
+          "count":3,
+          "lnAvg":-3.5983,
+          "lnMin":-3.7949,
+          "lnMax":-3.5,
+          "atomicCount":2,
+          "ltMax":50.47,
+          "ltAvg":50.3841,
+          "ltMin":50.2123,
+          "term":{
+            "buckets":[{
+                "val":"Anopheles messeae",
+                "count":2},
+              {
+                "val":"Anopheles atroparvus",
+                "count":1}]}},
+        {
+          "val":"gck",
+          "count":1,
+          "lnAvg":-4.37,
+          "lnMin":-4.37,
+          "lnMax":-4.37,
+          "atomicCount":1,
+          "ltMax":53.15,
+          "ltAvg":53.15,
+          "ltMin":53.15,
+          "term":{
+            "buckets":[{
+                "val":"Anopheles atroparvus",
+                "count":1}]}}]}}}

@@ -11,6 +11,7 @@ import 'leaflet/dist/leaflet.css';
  */
 
 export default function SemanticMarkers({ onViewportChanged, data }: SemanticMarkersProps) {
+  // export default function SemanticMarkers({ onViewportChanged }: SemanticMarkersProps) {
 console.log("I'm here");
   const { map } = useLeaflet();
   // call the prop callback to communicate bounds and zoomLevel to outside world

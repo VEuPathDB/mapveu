@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 // import { action } from '@storybook/addon-actions';
 import MapVEuMap from './MapVEuMap';
 import { BoundsViewport, MarkerData, MarkerProps, FancyMarkerProps, DonutMarkerProps, Viewport } from './Types';
@@ -12,11 +12,11 @@ import DonutMarker from './DonutMarker';    //DKDK donut marker component made b
 import L from "leaflet";
 import { setUncaughtExceptionCaptureCallback } from 'process';
 
-//DKDK load
+//DKDK load necessary functions and data
 import './popbio/Icon.Canvas.popbio.dk1.js'   //DKDK call custom canvas icon
 import * as mapveuUtils from './popbio/mapveuUtils.js'  //DKDK call util functions
 import useRequest from './hooks/asyncLoadJson'  //DKDK load custom hook for asynchronous request (async/await, axios)
-
+import smplPalette from './json/sample_uk_facet_palette1.json'  //DKDK load smplPalette query's response (json file)
 
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
@@ -31,13 +31,7 @@ export default {
   component: MapVEuMap,
 };
 
-
-//DKDK for donut marker size and color
-// iterate over types, filter by that type, and format the layer for that feature type
-let projColor = ["#FFB300", "#803E75", "#FF6800", "#A6BDD7", "#C10020", "#CEA262", "#007D34"];
-let projCount = 0;
-const size = 40;
-
+const size = 40;  //DKDK donut marker size
 
 /*
    This is a trivial marker data generator.  It returns 10 random points within the given bounds.
@@ -79,17 +73,15 @@ const getMarkerData = ({ bounds, zoomLevel }: BoundsViewport) => {
   }
 
 
-/**
- *  DKDK: This is for Donut marker based on getMarkerData() above
- */
-
- //DKDK roundDecimals function from vb-popbio-maps.js
+//DKDK roundDecimals function from vb-popbio-maps.js
 Number.prototype.roundDecimals = function (decimals) {
   return Number(Math.round(this.valueOf() + 'e' + decimals) + 'e-' + decimals);
 };
 
-const getDonutMarkerData = ({ bounds, zoomLevel }: BoundsViewport, response) => {
-// function getDonutMarkerData ({ bounds, zoomLevel }: BoundsViewport) {
+/**
+ * DKDK: This is for Donut marker based on getMarkerData() above
+ */
+const getDonutMarkerData = ({ bounds, zoomLevel }: BoundsViewport, response: any) => {
     // marker data has to be empty because we don't
     // know the map bounds until the map is rendered
     // (particularly in full screen deployments)
@@ -100,37 +92,81 @@ const getDonutMarkerData = ({ bounds, zoomLevel }: BoundsViewport, response) => 
     console.log("I've been triggered with bounds=["+bounds.southWest+" TO "+bounds.northEast+"] and zoom="+zoomLevel);
 
 
-    const responseData = response.data.facets.geo.buckets //DKDK for solr smplGeoclust
-    // console.log('responseData = ', responseData)
+    /**
+     * DKDK need to set color palette (made at legend using, e.g.,  smplPalette query response, in popbio map)
+     * using customized functions for generating color palette (referencing map.Legend.js)
+     * Note that the palette is only made once per each legend category (e.g., Species, Collections, etc.)
+     * That is, as an example of Species, all species will have their own colors at once
+     * Then, marker coloring at each maker is a kind of a color table lookup where the table is colorPalette here
+     */
+    const colorPalette = mapveuUtils._populateLegend(smplPalette)
+    // console.log('colorPalette = ', colorPalette)
 
-    for (let i = 0; i < responseData.length; i++) {
-      //DKDK for solr smplGeoclust
-      const lat = responseData[i].ltAvg;
-      const long = responseData[i].lnAvg;
+    //DKDK handling solr smplGeoclust query response (species-based)
+    const facetResults = response.data.facets.geo.buckets
+    // console.log('facetResults = ', facetResults)
+
+    //DKDK looping facetResults for each data
+    for (let i = 0; i < facetResults.length; i++) {
+      //DKDK for solr smplGeoclust: using average value of lt and ln
+      const lat = facetResults[i].ltAvg;
+      const long = facetResults[i].lnAvg;
+
+      //DKDK here, fullStats array need to be made for marker coloring (referencing loadSolr() at vb-popbio-map.js)
+      let geoCount = facetResults[i].count
+      let key = facetResults[i].val,
+          elStats = [],
+          fullElStats = [],
+          tagsTotalCount = 0;
+      let geoTerms = facetResults[i].term.buckets;
+
+      //DKDK in this example (Species category), geoTerms contains species data/array per each geo location (marker)
+      geoTerms.forEach(function (inEl) {
+          let inKey = inEl.val;       //DKDK for this example data, inKey is indeed a species name
+          let inCount = inEl.count;
+
+          if (inCount > 0) {
+              fullElStats.push({
+                  "label": inKey,
+                  "value": inCount.roundDecimals(0),
+                  //DKDK taking color info per each species based on colorPalette above
+                  "color": (colorPalette[inKey] ? colorPalette[inKey] : "#000000")
+              });
+          }
+
+          // store the total counts
+          tagsTotalCount += inCount;
+      });
+
+      //DKDK handling unknown color
+      if (geoCount - tagsTotalCount > 0) {
+        fullElStats.push({
+            "label": 'Unknown',
+            "value": geoCount - tagsTotalCount,
+            "color": (colorPalette['Unknown'])
+        });
+      }
+
+      //DKDK set atomicValue here based on solr query response: displayed as thumbtack
+      let atomicValue = facetResults[i].atomicCount === 1;
 
       markerData.markers.push(
       {
         props: { key: 'donutmarker'+i,
               position: [ lat, long ],
-         //    icon: circle,
+              //DKDK icon property is used for custom marker
+              //DKDK below method also works but the circle function needs changes based on new property values in the following
+              //    icon: circle,
               icon: new L.Icon.Canvas({
                   iconSize: new L.Point(size, size),
-                  // markerText: feature.properties.val.replace(',',''),
-                  // markerText: 'DK'+i, //DKDK dynamically assign id for solr select
-                  // markerText: responseData[i].count, //DKDK dynamically assign id for solr smplGeoClust
-                  markerText: mapveuUtils.kFormatter(responseData[i].count), //DKDK dynamically assign id for solr smplGeoClust
-                  count: responseData[i].count,
+                  markerText: mapveuUtils.kFormatter(facetResults[i].count), //DKDK dynamically assign id for solr smplGeoClust
+                  count: facetResults[i].count,
                   trafficlight: -1,   // DKDK set negative value to be default
-                  // id: responseData[i][geoLevel], //DKDK dynamically assign id for solr select
-                  id: responseData[i].val, //DKDK dynamically assign id for solr smplGeoClust
-                  // id: responseData[i].term, //DKDK dynamically assign id for solr smplGeoClust
-                  stats: [],  // DKDK array
-                  // // avgSampleSize: (viewMode === 'abnd') ? record.avgSampleSize : -1,
-                  // // avgDuration: (viewMode === 'abnd') ? record.avgDuration : -1,
-                  atomic: '', //DKDK if set (like 1), it shows apostrophe like display
-                  projColor: projColor[projCount],
+                  id: facetResults[i].val, //DKDK dynamically assign id for solr smplGeoClust
+                  stats: fullElStats,  // DKDK array - this will be used for marker coloring
+                  atomic: atomicValue, //DKDK idk what this actually means but...
               }),
-              title: '[' + lat + ',' + long + ']',  //DKDK mouseover text, i.e., tooltip
+              title: '[' + lat + ',' + long + ']',  //DKDK mouseover text, i.e., a sort of tooltip
             } as DonutMarkerProps,
         component: DonutMarker,
         });
@@ -156,11 +192,19 @@ export const Basic = () => {
 export const Donut = () => {
     const [ markerData, setMarkerData ] = useState<MarkerData>({ markers: [] });
 
-    //DKDK made/used custom hook, useRequest
-    const [response, loading, error] = useRequest(
-        'http://localhost:9009/json/sample_uk_facet_geoclust1.json'  //DKDK for solr smplGeoclust
-        );
+    /**
+     * DKDK testing async Promise-based query using axios
+     * In reality, markerData cannot be obtained here but just used for test purpose
+     * this json data is a Solr facet query response (smplGeoclust handler) for UK
+     */
+    let dataUrl = 'http://localhost:9009/json/sample_uk_facet_geoclust1.json'
 
+    //DKDK axios call via custom hook
+    const [response, loading, error] = useRequest(
+      dataUrl
+    );
+
+    //DKDK handling loading/error in a quick way
     if (loading) {
       return <div>Loading...</div>;
     }
@@ -177,16 +221,21 @@ export const Donut = () => {
     return (
       <MapVEuMap
         //   viewport={{center: [ 54.561781, -3.143297 ], zoom: 13}}
-        viewport={{center: [ 54.011722, -4.694708 ], zoom: 6}}
+        viewport={{center: [ 54.011722, -4.694708 ], zoom: 6}}  //DKDk centering to UK area
         height="98vh" width="98vw"
+        //DKDK send response: doesn't make sense in real situation but just for test purpose
         onViewportChanged={(bvp : BoundsViewport) => setMarkerData(getDonutMarkerData(bvp, response))}
+        // onViewportChanged={(bvp : BoundsViewport) => setMarkerData(getDonutMarkerData(bvp))}
         markerData={markerData}
       />
     );
   }
 
 
-//DKDK this also works by setting 'icon: circle' at props above but inline call is better to change values dynamically
+/**
+ * DKDK this also works by setting 'icon: circle' at props above but inline call is better to change values dynamically
+ * however, key values need to be changed following above L.Icon.Canvas's new options - didn't change them yet
+ */
 // const circle = new L.Icon.Canvas({
 //     iconSize: new L.Point(size, size),
 //     // markerText: feature.properties.val.replace(',',''),

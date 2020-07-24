@@ -1,0 +1,6569 @@
+{
+  "responseHeader":{
+    "status":0,
+    "QTime":187},
+  "response":{"numFound":1188357,"start":0,"docs":[]
+  },
+  "facets":{
+    "count":1188357,
+    "geo":{
+      "buckets":[{
+          "val":"dp",
+          "count":330630,
+          "terms":{
+            "buckets":[{
+                "val":"Culex pipiens morphological group",
+                "count":118032},
+              {
+                "val":"Aedes vexans sensu lato",
+                "count":96516},
+              {
+                "val":"Anopheles punctipennis",
+                "count":21980},
+              {
+                "val":"Aedes trivittatus",
+                "count":14288},
+              {
+                "val":"Uranotaenia sapphirina",
+                "count":13459},
+              {
+                "val":"Culex territans",
+                "count":11040},
+              {
+                "val":"Anopheles quadrimaculatus",
+                "count":8633},
+              {
+                "val":"Culex pipiens",
+                "count":6595},
+              {
+                "val":"genus Culex",
+                "count":5395},
+              {
+                "val":"Aedes japonicus complex",
+                "count":4555},
+              {
+                "val":"Culex erraticus",
+                "count":4360},
+              {
+                "val":"Culiseta inornata",
+                "count":4247},
+              {
+                "val":"Aedes triseriatus",
+                "count":4000},
+              {
+                "val":"Culex restuans",
+                "count":3961},
+              {
+                "val":"Aedes sticticus",
+                "count":3402},
+              {
+                "val":"Coquillettidia perturbans",
+                "count":2782},
+              {
+                "val":"Culex salinarius",
+                "count":1081},
+              {
+                "val":"Orthopodomyia signifera",
+                "count":771},
+              {
+                "val":"Aedes stimulans",
+                "count":714},
+              {
+                "val":"Psorophora columbiae",
+                "count":637},
+              {
+                "val":"Culex tarsalis",
+                "count":614},
+              {
+                "val":"Aedes albopictus",
+                "count":602},
+              {
+                "val":"Psorophora ferox",
+                "count":472},
+              {
+                "val":"Aedes grossbecki",
+                "count":467},
+              {
+                "val":"Aedes canadensis",
+                "count":399},
+              {
+                "val":"Psorophora ciliata",
+                "count":328},
+              {
+                "val":"Anopheles walkeri",
+                "count":324},
+              {
+                "val":"Anopheles perplexens",
+                "count":239},
+              {
+                "val":"Aedes cinereus",
+                "count":151},
+              {
+                "val":"Culiseta minnesotae",
+                "count":151},
+              {
+                "val":"Culiseta morsitans",
+                "count":68},
+              {
+                "val":"Anopheles barberi",
+                "count":53},
+              {
+                "val":"Aedes canadensis complex",
+                "count":41},
+              {
+                "val":"Psorophora howardii",
+                "count":37},
+              {
+                "val":"Aedes excrucians",
+                "count":35},
+              {
+                "val":"Aedes sollicitans",
+                "count":30},
+              {
+                "val":"Anopheles earlei",
+                "count":23},
+              {
+                "val":"Aedes dorsalis",
+                "count":22},
+              {
+                "val":"Ixodes scapularis",
+                "count":22},
+              {
+                "val":"Aedes abserratus",
+                "count":19},
+              {
+                "val":"Aedes communis",
+                "count":15},
+              {
+                "val":"Aedes mitchellae",
+                "count":13},
+              {
+                "val":"Aedes fitchii",
+                "count":11},
+              {
+                "val":"Aedes spencerii",
+                "count":7},
+              {
+                "val":"Aedes nigromaculis",
+                "count":5},
+              {
+                "val":"Culicidae",
+                "count":5},
+              {
+                "val":"Anopheles crucians complex",
+                "count":4},
+              {
+                "val":"Psorophora cyanescens",
+                "count":4},
+              {
+                "val":"genus Culiseta",
+                "count":4},
+              {
+                "val":"Aedes aurifer",
+                "count":3},
+              {
+                "val":"Aedes implicatus",
+                "count":3},
+              {
+                "val":"Culiseta melanura",
+                "count":3},
+              {
+                "val":"Psorophora horrida",
+                "count":3},
+              {
+                "val":"genus Anopheles",
+                "count":3},
+              {
+                "val":"Anopheles crucians",
+                "count":1},
+              {
+                "val":"Culex peccator",
+                "count":1}]}},
+        {
+          "val":"9z",
+          "count":227391,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes vexans sensu lato",
+                "count":83247},
+              {
+                "val":"Culex pipiens morphological group",
+                "count":58162},
+              {
+                "val":"Anopheles punctipennis",
+                "count":18165},
+              {
+                "val":"Aedes trivittatus",
+                "count":16788},
+              {
+                "val":"Culex tarsalis",
+                "count":16086},
+              {
+                "val":"Culiseta inornata",
+                "count":6518},
+              {
+                "val":"Uranotaenia sapphirina",
+                "count":5184},
+              {
+                "val":"Aedes triseriatus",
+                "count":3825},
+              {
+                "val":"Anopheles quadrimaculatus",
+                "count":3576},
+              {
+                "val":"Coquillettidia perturbans",
+                "count":2420},
+              {
+                "val":"Culex territans",
+                "count":1870},
+              {
+                "val":"Aedes nigromaculis",
+                "count":1264},
+              {
+                "val":"Aedes japonicus japonicus",
+                "count":1238},
+              {
+                "val":"Aedes sticticus",
+                "count":1197},
+              {
+                "val":"Aedes sollicitans",
+                "count":927},
+              {
+                "val":"Psorophora ciliata",
+                "count":835},
+              {
+                "val":"Culex restuans",
+                "count":820},
+              {
+                "val":"genus Aedes",
+                "count":715},
+              {
+                "val":"Aedes dorsalis",
+                "count":645},
+              {
+                "val":"Anopheles walkeri",
+                "count":559},
+              {
+                "val":"Culex erraticus",
+                "count":517},
+              {
+                "val":"Psorophora horrida",
+                "count":459},
+              {
+                "val":"Psorophora columbiae",
+                "count":431},
+              {
+                "val":"Aedes japonicus complex",
+                "count":414},
+              {
+                "val":"genus Culex",
+                "count":319},
+              {
+                "val":"Orthopodomyia signifera",
+                "count":266},
+              {
+                "val":"Culex salinarius",
+                "count":200},
+              {
+                "val":"Aedes stimulans",
+                "count":172},
+              {
+                "val":"Psorophora ferox",
+                "count":107},
+              {
+                "val":"Aedes canadensis",
+                "count":103},
+              {
+                "val":"Anopheles barberi",
+                "count":64},
+              {
+                "val":"Culex pipiens",
+                "count":61},
+              {
+                "val":"Aedes atropalpus",
+                "count":44},
+              {
+                "val":"Psorophora signipennis",
+                "count":29},
+              {
+                "val":"Orthopodomyia alba",
+                "count":22},
+              {
+                "val":"genus Psorophora",
+                "count":21},
+              {
+                "val":"Aedes spencerii",
+                "count":17},
+              {
+                "val":"Psorophora cyanescens",
+                "count":15},
+              {
+                "val":"genus Anopheles",
+                "count":14},
+              {
+                "val":"Aedes albopictus",
+                "count":12},
+              {
+                "val":"Culiseta impatiens",
+                "count":8},
+              {
+                "val":"Culiseta minnesotae",
+                "count":8},
+              {
+                "val":"Aedes campestris",
+                "count":6},
+              {
+                "val":"Aedes hendersoni",
+                "count":5},
+              {
+                "val":"Aedes vexans arabiensis",
+                "count":5},
+              {
+                "val":"Culiseta melanura",
+                "count":4},
+              {
+                "val":"Psorophora discolor",
+                "count":4},
+              {
+                "val":"Psorophora howardii",
+                "count":4},
+              {
+                "val":"Aedes aurifer",
+                "count":3},
+              {
+                "val":"Aedes dupreei",
+                "count":3},
+              {
+                "val":"Culiseta",
+                "count":3},
+              {
+                "val":"Aedes cinereus",
+                "count":2},
+              {
+                "val":"Aedes flavescens",
+                "count":2},
+              {
+                "val":"Anopheles earlei",
+                "count":2},
+              {
+                "val":"genus Orthopodomyia",
+                "count":2},
+              {
+                "val":"Anopheles crucians",
+                "count":1},
+              {
+                "val":"Culiseta morsitans",
+                "count":1}]}},
+        {
+          "val":"dh",
+          "count":128065,
+          "terms":{
+            "buckets":[{
+                "val":"Culex nigripalpus",
+                "count":21676},
+              {
+                "val":"Aedes taeniorhynchus",
+                "count":10192},
+              {
+                "val":"Psorophora columbiae",
+                "count":10167},
+              {
+                "val":"Anopheles crucians complex",
+                "count":8503},
+              {
+                "val":"Anopheles crucians",
+                "count":7536},
+              {
+                "val":"Culex erraticus",
+                "count":7346},
+              {
+                "val":"Anopheles quadrimaculatus",
+                "count":6982},
+              {
+                "val":"Culicidae",
+                "count":5947},
+              {
+                "val":"Aedes infirmatus",
+                "count":5761},
+              {
+                "val":"Culiseta melanura",
+                "count":4864},
+              {
+                "val":"Mansonia titillans",
+                "count":3553},
+              {
+                "val":"genus Mansonia",
+                "count":3241},
+              {
+                "val":"Aedes aegypti",
+                "count":3144},
+              {
+                "val":"Psorophora ferox",
+                "count":2857},
+              {
+                "val":"Aedes albopictus",
+                "count":2547},
+              {
+                "val":"Culex coronator",
+                "count":2525},
+              {
+                "val":"Culex quinquefasciatus",
+                "count":2201},
+              {
+                "val":"Anopheles atropos",
+                "count":2102},
+              {
+                "val":"Mansonia dyari",
+                "count":1970},
+              {
+                "val":"Psorophora ciliata",
+                "count":1897},
+              {
+                "val":"Coquillettidia perturbans",
+                "count":1605},
+              {
+                "val":"Culex salinarius",
+                "count":1557},
+              {
+                "val":"genus Uranotaenia",
+                "count":1413},
+              {
+                "val":"Aedes vexans sensu lato",
+                "count":1355},
+              {
+                "val":"genus Culex",
+                "count":840},
+              {
+                "val":"Aedes atlanticus",
+                "count":709},
+              {
+                "val":"Uranotaenia lowii",
+                "count":649},
+              {
+                "val":"Aedes atlanticus-tormentor morphological group",
+                "count":646},
+              {
+                "val":"genus Coquillettidia",
+                "count":601},
+              {
+                "val":"Uranotaenia sapphirina",
+                "count":584},
+              {
+                "val":"Aedes sollicitans",
+                "count":564},
+              {
+                "val":"Aedes triseriatus",
+                "count":482},
+              {
+                "val":"Culex cedecei",
+                "count":451},
+              {
+                "val":"Psorophora howardii",
+                "count":387},
+              {
+                "val":"Culex pilosus",
+                "count":292},
+              {
+                "val":"genus Wyeomyia",
+                "count":207},
+              {
+                "val":"genus Culiseta",
+                "count":119},
+              {
+                "val":"Aedes fulvus",
+                "count":103},
+              {
+                "val":"Culiseta inornata",
+                "count":74},
+              {
+                "val":"genus Anopheles",
+                "count":59},
+              {
+                "val":"Culex iolambdis",
+                "count":58},
+              {
+                "val":"Culex restuans",
+                "count":57},
+              {
+                "val":"genus Aedes",
+                "count":57},
+              {
+                "val":"Wyeomyia mitchellii",
+                "count":52},
+              {
+                "val":"Wyeomyia vanduzeei",
+                "count":49},
+              {
+                "val":"Psorophora cyanescens",
+                "count":22},
+              {
+                "val":"Aedes tormentor",
+                "count":11},
+              {
+                "val":"Culex spissipes",
+                "count":7},
+              {
+                "val":"Anopheles albimanus",
+                "count":6},
+              {
+                "val":"Culicinae",
+                "count":6},
+              {
+                "val":"genus Psorophora",
+                "count":5},
+              {
+                "val":"Culex atratus",
+                "count":4},
+              {
+                "val":"Psorophora horrida",
+                "count":4},
+              {
+                "val":"Anopheles punctipennis",
+                "count":3},
+              {
+                "val":"Culex opisthopus",
+                "count":3},
+              {
+                "val":"Aedes dupreei",
+                "count":2},
+              {
+                "val":"Anopheles perplexens",
+                "count":2},
+              {
+                "val":"Aedes bahamensis",
+                "count":1},
+              {
+                "val":"Aedes canadensis",
+                "count":1},
+              {
+                "val":"Aedes mathesoni",
+                "count":1},
+              {
+                "val":"Aedes sticticus",
+                "count":1},
+              {
+                "val":"Culex tarsalis",
+                "count":1},
+              {
+                "val":"Culex territans",
+                "count":1},
+              {
+                "val":"Orthopodomyia signifera",
+                "count":1},
+              {
+                "val":"Wyeomyia haynei",
+                "count":1},
+              {
+                "val":"genus Orthopodomyia",
+                "count":1}]}},
+        {
+          "val":"dq",
+          "count":96676,
+          "terms":{
+            "buckets":[{
+                "val":"Culiseta melanura",
+                "count":11726},
+              {
+                "val":"Culex salinarius",
+                "count":9080},
+              {
+                "val":"Aedes albopictus",
+                "count":7173},
+              {
+                "val":"Aedes vexans sensu lato",
+                "count":7073},
+              {
+                "val":"Culex erraticus",
+                "count":6413},
+              {
+                "val":"Anopheles crucians complex",
+                "count":6083},
+              {
+                "val":"Psorophora ferox",
+                "count":4697},
+              {
+                "val":"Aedes canadensis complex",
+                "count":4553},
+              {
+                "val":"Culex restuans",
+                "count":4500},
+              {
+                "val":"Anopheles quadrimaculatus",
+                "count":4029},
+              {
+                "val":"Culex pipiens",
+                "count":3942},
+              {
+                "val":"Aedes triseriatus",
+                "count":3884},
+              {
+                "val":"Aedes atlanticus",
+                "count":3647},
+              {
+                "val":"Coquillettidia perturbans",
+                "count":3361},
+              {
+                "val":"Anopheles punctipennis",
+                "count":3214},
+              {
+                "val":"Psorophora columbiae",
+                "count":2417},
+              {
+                "val":"genus Aedes",
+                "count":1670},
+              {
+                "val":"Aedes infirmatus",
+                "count":1648},
+              {
+                "val":"Uranotaenia sapphirina",
+                "count":1633},
+              {
+                "val":"Culex territans",
+                "count":950},
+              {
+                "val":"Aedes japonicus japonicus",
+                "count":783},
+              {
+                "val":"Aedes hendersoni",
+                "count":752},
+              {
+                "val":"Psorophora ciliata",
+                "count":496},
+              {
+                "val":"Psorophora howardii",
+                "count":483},
+              {
+                "val":"Aedes japonicus complex",
+                "count":441},
+              {
+                "val":"Aedes taeniorhynchus",
+                "count":337},
+              {
+                "val":"Orthopodomyia signifera",
+                "count":337},
+              {
+                "val":"genus Culex",
+                "count":256},
+              {
+                "val":"Aedes sollicitans",
+                "count":241},
+              {
+                "val":"Culex pipiens morphological group",
+                "count":210},
+              {
+                "val":"Aedes tormentor",
+                "count":164},
+              {
+                "val":"Aedes cantator",
+                "count":158},
+              {
+                "val":"Aedes aurifer",
+                "count":75},
+              {
+                "val":"Toxorhynchites rutilus complex",
+                "count":70},
+              {
+                "val":"Aedes aegypti",
+                "count":42},
+              {
+                "val":"Aedes sticticus",
+                "count":41},
+              {
+                "val":"Psorophora mathesoni",
+                "count":20},
+              {
+                "val":"Aedes fulvus pallens",
+                "count":15},
+              {
+                "val":"Ixodes scapularis",
+                "count":12},
+              {
+                "val":"Psorophora horrida",
+                "count":11},
+              {
+                "val":"Culiseta inornata",
+                "count":10},
+              {
+                "val":"Aedes thibaulti",
+                "count":9},
+              {
+                "val":"Aedes mitchellae",
+                "count":6},
+              {
+                "val":"Aedes dupreei",
+                "count":5},
+              {
+                "val":"Culex nigripalpus",
+                "count":3},
+              {
+                "val":"Aedes trivittatus",
+                "count":2},
+              {
+                "val":"Anopheles barberi",
+                "count":2},
+              {
+                "val":"Aedes cinereus",
+                "count":1},
+              {
+                "val":"Culex cuyanus",
+                "count":1}]}},
+        {
+          "val":"cb",
+          "count":74215,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes vexans sensu lato",
+                "count":17744},
+              {
+                "val":"Culex tarsalis",
+                "count":11977},
+              {
+                "val":"Culiseta inornata",
+                "count":9165},
+              {
+                "val":"genus Aedes",
+                "count":5847},
+              {
+                "val":"Culicidae",
+                "count":5466},
+              {
+                "val":"Culex restuans",
+                "count":3994},
+              {
+                "val":"genus Culex",
+                "count":3936},
+              {
+                "val":"Culex pipiens",
+                "count":3241},
+              {
+                "val":"Aedes dorsalis",
+                "count":3060},
+              {
+                "val":"genus Culiseta",
+                "count":3008},
+              {
+                "val":"genus Anopheles",
+                "count":2518},
+              {
+                "val":"Coquillettidia perturbans",
+                "count":1604},
+              {
+                "val":"Culex salinarius",
+                "count":1418},
+              {
+                "val":"Aedes flavescens",
+                "count":459},
+              {
+                "val":"Aedes trivittatus",
+                "count":345},
+              {
+                "val":"Aedes nigromaculis",
+                "count":322},
+              {
+                "val":"Culex territans",
+                "count":76},
+              {
+                "val":"Culiseta morsitans",
+                "count":20},
+              {
+                "val":"Aedes spencerii",
+                "count":14},
+              {
+                "val":"Anopheles quadrimaculatus",
+                "count":1}]}},
+        {
+          "val":"dj",
+          "count":73260,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles crucians complex",
+                "count":13601},
+              {
+                "val":"Culex nigripalpus",
+                "count":10023},
+              {
+                "val":"Aedes atlanticus",
+                "count":5568},
+              {
+                "val":"Culex erraticus",
+                "count":5337},
+              {
+                "val":"Culiseta melanura",
+                "count":4873},
+              {
+                "val":"Aedes infirmatus",
+                "count":4192},
+              {
+                "val":"Psorophora columbiae",
+                "count":3738},
+              {
+                "val":"Culex quinquefasciatus",
+                "count":3156},
+              {
+                "val":"Aedes albopictus",
+                "count":2821},
+              {
+                "val":"Anopheles quadrimaculatus",
+                "count":2624},
+              {
+                "val":"Coquillettidia perturbans",
+                "count":2624},
+              {
+                "val":"Uranotaenia sapphirina",
+                "count":1665},
+              {
+                "val":"Aedes taeniorhynchus",
+                "count":1647},
+              {
+                "val":"Culex salinarius",
+                "count":1538},
+              {
+                "val":"Aedes vexans vexans",
+                "count":1523},
+              {
+                "val":"Psorophora ferox",
+                "count":1366},
+              {
+                "val":"Culex restuans",
+                "count":1009},
+              {
+                "val":"Psorophora ciliata",
+                "count":911},
+              {
+                "val":"Uranotaenia lowii",
+                "count":714},
+              {
+                "val":"Mansonia titillans",
+                "count":682},
+              {
+                "val":"Aedes vexans sensu lato",
+                "count":554},
+              {
+                "val":"Mansonia dyari",
+                "count":483},
+              {
+                "val":"Aedes sollicitans",
+                "count":339},
+              {
+                "val":"Aedes canadensis complex",
+                "count":300},
+              {
+                "val":"Psorophora howardii",
+                "count":293},
+              {
+                "val":"Culiseta inornata",
+                "count":259},
+              {
+                "val":"Culex coronator",
+                "count":255},
+              {
+                "val":"Aedes aegypti",
+                "count":228},
+              {
+                "val":"Aedes fulvus",
+                "count":217},
+              {
+                "val":"Anopheles perplexens",
+                "count":138},
+              {
+                "val":"Aedes triseriatus",
+                "count":123},
+              {
+                "val":"Anopheles atropos",
+                "count":84},
+              {
+                "val":"Aedes mitchellae",
+                "count":79},
+              {
+                "val":"Culex territans",
+                "count":61},
+              {
+                "val":"Anopheles punctipennis",
+                "count":39},
+              {
+                "val":"Anopheles bradleyi",
+                "count":33},
+              {
+                "val":"Culex pilosus",
+                "count":25},
+              {
+                "val":"genus Culex",
+                "count":25},
+              {
+                "val":"Psorophora cyanescens",
+                "count":22},
+              {
+                "val":"Wyeomyia mitchellii",
+                "count":18},
+              {
+                "val":"Anopheles walkeri",
+                "count":17},
+              {
+                "val":"Orthopodomyia signifera",
+                "count":15},
+              {
+                "val":"Toxorhynchites rutilus complex",
+                "count":11},
+              {
+                "val":"Ixodes scapularis",
+                "count":10},
+              {
+                "val":"Culex tarsalis",
+                "count":8},
+              {
+                "val":"Aedes dupreei",
+                "count":3},
+              {
+                "val":"Anopheles barberi",
+                "count":2},
+              {
+                "val":"Wyeomyia smithii",
+                "count":2},
+              {
+                "val":"Wyeomyia vanduzeei",
+                "count":2},
+              {
+                "val":"Aedes canadensis",
+                "count":1},
+              {
+                "val":"Aedes tormentor",
+                "count":1},
+              {
+                "val":"Anopheles crucians",
+                "count":1}]}},
+        {
+          "val":"9q",
+          "count":48459,
+          "terms":{
+            "buckets":[{
+                "val":"Culex quinquefasciatus",
+                "count":14047},
+              {
+                "val":"Culex tarsalis",
+                "count":10268},
+              {
+                "val":"Culex erythrothorax",
+                "count":5649},
+              {
+                "val":"Culex stigmatosoma",
+                "count":4341},
+              {
+                "val":"Culicoides",
+                "count":2509},
+              {
+                "val":"Culiseta incidens",
+                "count":2235},
+              {
+                "val":"Anopheles hermsi",
+                "count":2228},
+              {
+                "val":"Simuliidae",
+                "count":2066},
+              {
+                "val":"Culiseta inornata",
+                "count":1378},
+              {
+                "val":"Aedes aegypti",
+                "count":744},
+              {
+                "val":"Culiseta particeps",
+                "count":716},
+              {
+                "val":"Anopheles freeborni",
+                "count":599},
+              {
+                "val":"Aedes vexans sensu lato",
+                "count":554},
+              {
+                "val":"Anopheles franciscanus",
+                "count":462},
+              {
+                "val":"Culex thriambus",
+                "count":204},
+              {
+                "val":"Aedes washinoi",
+                "count":149},
+              {
+                "val":"Aedes dorsalis",
+                "count":88},
+              {
+                "val":"Psorophora signipennis",
+                "count":86},
+              {
+                "val":"Aedes sierrensis",
+                "count":32},
+              {
+                "val":"Psorophora columbiae",
+                "count":32},
+              {
+                "val":"Chironomidae",
+                "count":27},
+              {
+                "val":"Culex restuans",
+                "count":20},
+              {
+                "val":"Aedes melanimon",
+                "count":10},
+              {
+                "val":"Aedes increpitus",
+                "count":5},
+              {
+                "val":"Aedes campestris",
+                "count":4},
+              {
+                "val":"Ceratopogonidae",
+                "count":2},
+              {
+                "val":"Aedes albopictus",
+                "count":1},
+              {
+                "val":"Aedes nigromaculis",
+                "count":1},
+              {
+                "val":"Aedes sticticus",
+                "count":1},
+              {
+                "val":"Aedes thelcter",
+                "count":1}]}},
+        {
+          "val":"ef",
+          "count":21931,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles gambiae sensu lato",
+                "count":10412},
+              {
+                "val":"Anopheles gambiae",
+                "count":4770},
+              {
+                "val":"Anopheles arabiensis",
+                "count":4761},
+              {
+                "val":"Anopheles coluzzii",
+                "count":1700},
+              {
+                "val":"Anopheles funestus",
+                "count":220},
+              {
+                "val":"Anopheles nili",
+                "count":37},
+              {
+                "val":"Anopheles gambiae chromosomal form Bamako",
+                "count":20},
+              {
+                "val":"Aedes aegypti",
+                "count":6},
+              {
+                "val":"Anopheles pharoensis",
+                "count":2},
+              {
+                "val":"Anopheles rufipes",
+                "count":2},
+              {
+                "val":"Anopheles melas",
+                "count":1}]}},
+        {
+          "val":"9x",
+          "count":15750,
+          "terms":{
+            "buckets":[{
+                "val":"Culex pipiens",
+                "count":4399},
+              {
+                "val":"Culex tarsalis",
+                "count":3796},
+              {
+                "val":"Aedes dorsalis",
+                "count":3488},
+              {
+                "val":"Culiseta inornata",
+                "count":1403},
+              {
+                "val":"Anopheles freeborni",
+                "count":1082},
+              {
+                "val":"Culex erythrothorax",
+                "count":837},
+              {
+                "val":"Aedes vexans sensu lato",
+                "count":406},
+              {
+                "val":"Culiseta incidens",
+                "count":236},
+              {
+                "val":"Aedes increpitus",
+                "count":59},
+              {
+                "val":"Aedes nigromaculis",
+                "count":35},
+              {
+                "val":"Aedes sierrensis",
+                "count":9}]}},
+        {
+          "val":"c8",
+          "count":15317,
+          "terms":{
+            "buckets":[{
+                "val":"genus Aedes",
+                "count":2796},
+              {
+                "val":"Culicidae",
+                "count":2749},
+              {
+                "val":"Culex tarsalis",
+                "count":2077},
+              {
+                "val":"Aedes vexans sensu lato",
+                "count":2062},
+              {
+                "val":"genus Culex",
+                "count":1967},
+              {
+                "val":"genus Culiseta",
+                "count":1473},
+              {
+                "val":"genus Anopheles",
+                "count":1124},
+              {
+                "val":"Aedes dorsalis",
+                "count":276},
+              {
+                "val":"Aedes melanimon",
+                "count":196},
+              {
+                "val":"Aedes nigromaculis",
+                "count":186},
+              {
+                "val":"Aedes idahoensis",
+                "count":50},
+              {
+                "val":"Culiseta inornata",
+                "count":48},
+              {
+                "val":"Aedes trivittatus",
+                "count":46},
+              {
+                "val":"Aedes increpitus",
+                "count":32},
+              {
+                "val":"Aedes campestris",
+                "count":30},
+              {
+                "val":"Aedes spencerii",
+                "count":30},
+              {
+                "val":"Culex salinarius",
+                "count":30},
+              {
+                "val":"Aedes flavescens",
+                "count":24},
+              {
+                "val":"Aedes cinereus",
+                "count":18},
+              {
+                "val":"Aedes communis",
+                "count":16},
+              {
+                "val":"Aedes sticticus",
+                "count":16},
+              {
+                "val":"Anopheles earlei",
+                "count":13},
+              {
+                "val":"Aedes fitchii",
+                "count":12},
+              {
+                "val":"Coquillettidia perturbans",
+                "count":9},
+              {
+                "val":"Culex pipiens",
+                "count":8},
+              {
+                "val":"Anopheles freeborni",
+                "count":7},
+              {
+                "val":"Aedes excrucians",
+                "count":6},
+              {
+                "val":"Aedes implicatus",
+                "count":6},
+              {
+                "val":"Psorophora signipennis",
+                "count":6},
+              {
+                "val":"Aedes canadensis complex",
+                "count":1},
+              {
+                "val":"Anopheles quadrimaculatus",
+                "count":1},
+              {
+                "val":"Culex territans",
+                "count":1},
+              {
+                "val":"Culiseta minnesotae",
+                "count":1}]}},
+        {
+          "val":"sw",
+          "count":10645,
+          "terms":{
+            "buckets":[{
+                "val":"Phlebotomus neglectus",
+                "count":3720},
+              {
+                "val":"Phlebotomus similis",
+                "count":1875},
+              {
+                "val":"Phlebotomus papatasi",
+                "count":1451},
+              {
+                "val":"Sergentomyia dentata",
+                "count":1078},
+              {
+                "val":"Sergentomyia minuta",
+                "count":952},
+              {
+                "val":"Phlebotomus tobbi",
+                "count":656},
+              {
+                "val":"Phlebotomus galilaeus",
+                "count":198},
+              {
+                "val":"genus Sergentomyia",
+                "count":172},
+              {
+                "val":"Aedes zammitii",
+                "count":105},
+              {
+                "val":"Phlebotomus simici",
+                "count":102},
+              {
+                "val":"genus Phlebotomus",
+                "count":83},
+              {
+                "val":"Phlebotominae",
+                "count":51},
+              {
+                "val":"Sergentomyia theodori",
+                "count":46},
+              {
+                "val":"Anopheles sacharovi",
+                "count":38},
+              {
+                "val":"Sergentomyia fallax",
+                "count":37},
+              {
+                "val":"Aedes albopictus",
+                "count":23},
+              {
+                "val":"Anopheles superpictus",
+                "count":22},
+              {
+                "val":"Phlebotomus sergenti",
+                "count":15},
+              {
+                "val":"Phlebotomus perfiliewi sensu lato",
+                "count":10},
+              {
+                "val":"Phlebotomus perniciosus",
+                "count":6},
+              {
+                "val":"Larroussius",
+                "count":3},
+              {
+                "val":"Anopheles messeae",
+                "count":1},
+              {
+                "val":"Phlebotomus alexandri",
+                "count":1}]}},
+        {
+          "val":"s3",
+          "count":10431,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles arabiensis",
+                "count":5929},
+              {
+                "val":"Anopheles gambiae",
+                "count":4056},
+              {
+                "val":"Anopheles gambiae sensu lato",
+                "count":314},
+              {
+                "val":"Anopheles funestus",
+                "count":56},
+              {
+                "val":"Anopheles coluzzii",
+                "count":40},
+              {
+                "val":"Aedes aegypti",
+                "count":16},
+              {
+                "val":"Anopheles nili",
+                "count":9},
+              {
+                "val":"Anopheles melas",
+                "count":7},
+              {
+                "val":"Anopheles moucheti",
+                "count":3},
+              {
+                "val":"Anopheles gambiae chromosomal form Savanna",
+                "count":1}]}},
+        {
+          "val":"9r",
+          "count":7256,
+          "terms":{
+            "buckets":[{
+                "val":"Culex pipiens",
+                "count":2277},
+              {
+                "val":"Culex tarsalis",
+                "count":2016},
+              {
+                "val":"Aedes vexans sensu lato",
+                "count":1211},
+              {
+                "val":"Culiseta inornata",
+                "count":746},
+              {
+                "val":"Anopheles freeborni",
+                "count":601},
+              {
+                "val":"Aedes nigromaculis",
+                "count":229},
+              {
+                "val":"Aedes dorsalis",
+                "count":93},
+              {
+                "val":"Coquillettidia perturbans",
+                "count":36},
+              {
+                "val":"Culiseta incidens",
+                "count":25},
+              {
+                "val":"Anopheles punctipennis",
+                "count":9},
+              {
+                "val":"Aedes increpitus",
+                "count":4},
+              {
+                "val":"Aedes sierrensis",
+                "count":4},
+              {
+                "val":"Culex erythrothorax",
+                "count":2},
+              {
+                "val":"Culex restuans",
+                "count":2},
+              {
+                "val":"Aedes melanimon",
+                "count":1}]}},
+        {
+          "val":"sb",
+          "count":6977,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles gambiae sensu lato",
+                "count":3370},
+              {
+                "val":"Anopheles funestus sensu lato",
+                "count":2168},
+              {
+                "val":"genus Anopheles",
+                "count":467},
+              {
+                "val":"Anopheles gambiae",
+                "count":418},
+              {
+                "val":"Anopheles funestus",
+                "count":130},
+              {
+                "val":"Aedes aegypti",
+                "count":126},
+              {
+                "val":"Culex quinquefasciatus",
+                "count":124},
+              {
+                "val":"Anopheles arabiensis",
+                "count":82},
+              {
+                "val":"Aedes mcintoshi",
+                "count":7},
+              {
+                "val":"Aedes tricholabis",
+                "count":7},
+              {
+                "val":"Anopheles squamosus",
+                "count":7},
+              {
+                "val":"Culex pipiens",
+                "count":7},
+              {
+                "val":"Culex univittatus",
+                "count":7},
+              {
+                "val":"Aedes hirsutus",
+                "count":6},
+              {
+                "val":"Anopheles pharoensis",
+                "count":6},
+              {
+                "val":"Culex bitaeniorhynchus",
+                "count":6},
+              {
+                "val":"Culex vansomereni",
+                "count":6},
+              {
+                "val":"Mansonia uniformis",
+                "count":6},
+              {
+                "val":"Culex annulioris",
+                "count":5},
+              {
+                "val":"Aedes sudanensis",
+                "count":4},
+              {
+                "val":"Anopheles coustani",
+                "count":4},
+              {
+                "val":"Mansonia africana",
+                "count":4},
+              {
+                "val":"Culex poicilipes",
+                "count":3},
+              {
+                "val":"Lutzia tigripes",
+                "count":3},
+              {
+                "val":"Aedes cumminsii",
+                "count":2},
+              {
+                "val":"Anopheles nili",
+                "count":2}]}},
+        {
+          "val":"6w",
+          "count":6673,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles darlingi",
+                "count":5697},
+              {
+                "val":"Anopheles",
+                "count":265},
+              {
+                "val":"Anopheles braziliensis",
+                "count":199},
+              {
+                "val":"Anopheles nuneztovari",
+                "count":147},
+              {
+                "val":"Anopheles triannulatus",
+                "count":113},
+              {
+                "val":"Aedes aegypti",
+                "count":69},
+              {
+                "val":"Rhodnius robustus II",
+                "count":56},
+              {
+                "val":"Anopheles konderi",
+                "count":47},
+              {
+                "val":"Anopheles albitarsis",
+                "count":39},
+              {
+                "val":"Anopheles deaneorum",
+                "count":21},
+              {
+                "val":"Anopheles mattogrossensis",
+                "count":16},
+              {
+                "val":"Anopheles marajoara",
+                "count":4}]}},
+        {
+          "val":"gc",
+          "count":6572,
+          "terms":{
+            "buckets":[{
+                "val":"subgenus Avaritia",
+                "count":1777},
+              {
+                "val":"Culicoides pulicaris",
+                "count":1337},
+              {
+                "val":"Culicoides impunctatus",
+                "count":674},
+              {
+                "val":"Culicoides pulicaris group",
+                "count":666},
+              {
+                "val":"Culicoides punctatus",
+                "count":554},
+              {
+                "val":"Culicoides",
+                "count":531},
+              {
+                "val":"Culicoides obsoletus",
+                "count":335},
+              {
+                "val":"Culicoides dewulfi",
+                "count":239},
+              {
+                "val":"Culicoides chiopterus",
+                "count":215},
+              {
+                "val":"Culicoides scoticus",
+                "count":205},
+              {
+                "val":"Anopheles atroparvus",
+                "count":21},
+              {
+                "val":"Anopheles messeae",
+                "count":18}]}},
+        {
+          "val":"9m",
+          "count":5576,
+          "terms":{
+            "buckets":[{
+                "val":"Culex quinquefasciatus",
+                "count":1315},
+              {
+                "val":"Culex tarsalis",
+                "count":894},
+              {
+                "val":"Culex erythrothorax",
+                "count":736},
+              {
+                "val":"Culicoides",
+                "count":639},
+              {
+                "val":"Culex stigmatosoma",
+                "count":448},
+              {
+                "val":"Anopheles hermsi",
+                "count":348},
+              {
+                "val":"Simuliidae",
+                "count":242},
+              {
+                "val":"Culiseta incidens",
+                "count":193},
+              {
+                "val":"Culiseta inornata",
+                "count":189},
+              {
+                "val":"Chironomidae",
+                "count":110},
+              {
+                "val":"Aedes aegypti",
+                "count":90},
+              {
+                "val":"Aedes vexans sensu lato",
+                "count":88},
+              {
+                "val":"Culiseta particeps",
+                "count":83},
+              {
+                "val":"Aedes washinoi",
+                "count":81},
+              {
+                "val":"Anopheles franciscanus",
+                "count":69},
+              {
+                "val":"Aedes sierrensis",
+                "count":32},
+              {
+                "val":"Culex thriambus",
+                "count":16},
+              {
+                "val":"Ceratopogonidae",
+                "count":2},
+              {
+                "val":"Culex restuans",
+                "count":1}]}},
+        {
+          "val":"6r",
+          "count":5433,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles darlingi",
+                "count":5413},
+              {
+                "val":"Anopheles nuneztovari",
+                "count":18},
+              {
+                "val":"Anopheles pseudopunctipennis",
+                "count":2}]}},
+        {
+          "val":"ec",
+          "count":5388,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles gambiae",
+                "count":3961},
+              {
+                "val":"Anopheles gambiae sensu lato",
+                "count":663},
+              {
+                "val":"Anopheles coluzzii",
+                "count":310},
+              {
+                "val":"Anopheles funestus",
+                "count":192},
+              {
+                "val":"Anopheles arabiensis",
+                "count":118},
+              {
+                "val":"Anopheles nili",
+                "count":83},
+              {
+                "val":"Anopheles melas",
+                "count":12},
+              {
+                "val":"Culex decens",
+                "count":10},
+              {
+                "val":"Aedes aegypti",
+                "count":8},
+              {
+                "val":"Culex",
+                "count":6},
+              {
+                "val":"Aedes",
+                "count":4},
+              {
+                "val":"Aedes aegypti aegypti",
+                "count":4},
+              {
+                "val":"Aedes aegypti formosus",
+                "count":4},
+              {
+                "val":"Culex quinquefasciatus",
+                "count":4},
+              {
+                "val":"Anopheles gambiae chromosomal form Savanna",
+                "count":3},
+              {
+                "val":"Anopheles gambiae chromosomal form Mopti",
+                "count":2},
+              {
+                "val":"Anopheles gambiae x Anopheles coluzzii",
+                "count":2},
+              {
+                "val":"Anopheles pharoensis",
+                "count":2}]}},
+        {
+          "val":"dn",
+          "count":5358,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes albopictus",
+                "count":1902},
+              {
+                "val":"genus Aedes",
+                "count":1190},
+              {
+                "val":"Aedes japonicus japonicus",
+                "count":760},
+              {
+                "val":"Aedes triseriatus",
+                "count":757},
+              {
+                "val":"Aedes hendersoni",
+                "count":641},
+              {
+                "val":"Anopheles quadrimaculatus",
+                "count":108}]}},
+        {
+          "val":"ed",
+          "count":4405,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles gambiae sensu lato",
+                "count":1499},
+              {
+                "val":"Anopheles arabiensis",
+                "count":1038},
+              {
+                "val":"Anopheles gambiae",
+                "count":908},
+              {
+                "val":"Aedes aegypti",
+                "count":397},
+              {
+                "val":"Anopheles funestus",
+                "count":259},
+              {
+                "val":"Anopheles melas",
+                "count":207},
+              {
+                "val":"Anopheles coluzzii",
+                "count":82},
+              {
+                "val":"Anopheles nili",
+                "count":11},
+              {
+                "val":"Anopheles gambiae x Anopheles coluzzii",
+                "count":2},
+              {
+                "val":"Anopheles pharoensis",
+                "count":2}]}},
+        {
+          "val":"u1",
+          "count":4331,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles maculipennis sensu lato",
+                "count":1509},
+              {
+                "val":"subgenus Avaritia",
+                "count":701},
+              {
+                "val":"Culiseta annulata",
+                "count":363},
+              {
+                "val":"Anopheles atroparvus",
+                "count":328},
+              {
+                "val":"Culicoides pulicaris",
+                "count":266},
+              {
+                "val":"Anopheles messeae",
+                "count":177},
+              {
+                "val":"Culicoides punctatus",
+                "count":168},
+              {
+                "val":"Culex pipiens",
+                "count":136},
+              {
+                "val":"Culicoides",
+                "count":133},
+              {
+                "val":"Culicoides obsoletus",
+                "count":112},
+              {
+                "val":"Culicoides pulicaris group",
+                "count":96},
+              {
+                "val":"Anopheles messeae/daciae morphological group",
+                "count":63},
+              {
+                "val":"Culicoides scoticus",
+                "count":55},
+              {
+                "val":"Culicoides dewulfi",
+                "count":25},
+              {
+                "val":"Coquillettidia richiardii",
+                "count":19},
+              {
+                "val":"Culicoides chiopterus",
+                "count":18},
+              {
+                "val":"Aedes detritus",
+                "count":14},
+              {
+                "val":"Aedes vexans sensu lato",
+                "count":14},
+              {
+                "val":"Aedes caspius",
+                "count":12},
+              {
+                "val":"Aedes cinereus",
+                "count":11},
+              {
+                "val":"Aedes communis",
+                "count":11},
+              {
+                "val":"Aedes punctor",
+                "count":11},
+              {
+                "val":"Culiseta morsitans",
+                "count":11},
+              {
+                "val":"Aedes annulipes",
+                "count":10},
+              {
+                "val":"Aedes cantans",
+                "count":8},
+              {
+                "val":"Aedes geniculatus",
+                "count":8},
+              {
+                "val":"Aedes sticticus",
+                "count":8},
+              {
+                "val":"Culex",
+                "count":8},
+              {
+                "val":"Anopheles claviger",
+                "count":6},
+              {
+                "val":"Anopheles maculipennis",
+                "count":6},
+              {
+                "val":"Aedes rusticus",
+                "count":5},
+              {
+                "val":"Culex modestus",
+                "count":5},
+              {
+                "val":"Culex territans",
+                "count":4},
+              {
+                "val":"Culicoides impunctatus",
+                "count":3},
+              {
+                "val":"Culiseta fumipennis",
+                "count":3},
+              {
+                "val":"Aedes koreicus",
+                "count":2},
+              {
+                "val":"Culex torrentium",
+                "count":2}]}},
+        {
+          "val":"kz",
+          "count":3668,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles funestus",
+                "count":1085},
+              {
+                "val":"Anopheles gambiae",
+                "count":938},
+              {
+                "val":"Anopheles arabiensis",
+                "count":734},
+              {
+                "val":"Anopheles gambiae sensu lato",
+                "count":347},
+              {
+                "val":"Aedes aegypti",
+                "count":339},
+              {
+                "val":"Anopheles merus",
+                "count":78},
+              {
+                "val":"genus Anopheles",
+                "count":19},
+              {
+                "val":"Anopheles coustani",
+                "count":11},
+              {
+                "val":"Anopheles nili",
+                "count":9},
+              {
+                "val":"Anopheles squamosus",
+                "count":8},
+              {
+                "val":"Aedes mcintoshi",
+                "count":7},
+              {
+                "val":"Aedes ochraceus",
+                "count":7},
+              {
+                "val":"Aedes sudanensis",
+                "count":7},
+              {
+                "val":"Aedes tricholabis",
+                "count":7},
+              {
+                "val":"Culex pipiens",
+                "count":7},
+              {
+                "val":"Culex poicilipes",
+                "count":7},
+              {
+                "val":"Culex univittatus",
+                "count":7},
+              {
+                "val":"Mansonia africana",
+                "count":7},
+              {
+                "val":"Culex vansomereni",
+                "count":6},
+              {
+                "val":"Anopheles pharoensis",
+                "count":5},
+              {
+                "val":"Culex annulioris",
+                "count":5},
+              {
+                "val":"Anopheles vaneedeni",
+                "count":4},
+              {
+                "val":"Culex bitaeniorhynchus",
+                "count":4},
+              {
+                "val":"Lutzia tigripes",
+                "count":4},
+              {
+                "val":"Mansonia uniformis",
+                "count":4},
+              {
+                "val":"Anopheles leesoni",
+                "count":3},
+              {
+                "val":"Anopheles parensis",
+                "count":3},
+              {
+                "val":"Anopheles rivulorum",
+                "count":3},
+              {
+                "val":"Anopheles pretoriensis",
+                "count":2},
+              {
+                "val":"Aedes cumminsii",
+                "count":1}]}},
+        {
+          "val":"qq",
+          "count":3438,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles sundaicus",
+                "count":2353},
+              {
+                "val":"Anopheles barbirostris sensu lato",
+                "count":546},
+              {
+                "val":"Anopheles aconitus",
+                "count":289},
+              {
+                "val":"Anopheles annularis",
+                "count":100},
+              {
+                "val":"Anopheles balabacensis",
+                "count":43},
+              {
+                "val":"Aedes aegypti",
+                "count":30},
+              {
+                "val":"Anopheles maculatus sensu lato",
+                "count":27},
+              {
+                "val":"Anopheles sundaicus sensu lato",
+                "count":24},
+              {
+                "val":"Anopheles flavirostris",
+                "count":17},
+              {
+                "val":"Anopheles subpictus",
+                "count":8},
+              {
+                "val":"Anopheles vagus",
+                "count":1}]}},
+        {
+          "val":"kx",
+          "count":3171,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles gambiae sensu lato",
+                "count":2652},
+              {
+                "val":"Anopheles gambiae",
+                "count":160},
+              {
+                "val":"Culex quinquefasciatus",
+                "count":126},
+              {
+                "val":"Anopheles arabiensis",
+                "count":77},
+              {
+                "val":"Anopheles funestus",
+                "count":52},
+              {
+                "val":"genus Anopheles",
+                "count":50},
+              {
+                "val":"Aedes aegypti",
+                "count":48},
+              {
+                "val":"Anopheles funestus sensu lato",
+                "count":3},
+              {
+                "val":"Anopheles moucheti",
+                "count":3}]}},
+        {
+          "val":"rp",
+          "count":2659,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles farauti",
+                "count":1686},
+              {
+                "val":"Anopheles punctulatus",
+                "count":495},
+              {
+                "val":"Anopheles koliensis",
+                "count":288},
+              {
+                "val":"Anopheles longirostris",
+                "count":116},
+              {
+                "val":"Anopheles bancroftii",
+                "count":66},
+              {
+                "val":"Anopheles hinesorum",
+                "count":8}]}},
+        {
+          "val":"s8",
+          "count":2567,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles gambiae sensu lato",
+                "count":1320},
+              {
+                "val":"Anopheles gambiae",
+                "count":298},
+              {
+                "val":"Culex quinquefasciatus",
+                "count":251},
+              {
+                "val":"genus Anopheles",
+                "count":175},
+              {
+                "val":"Anopheles arabiensis",
+                "count":172},
+              {
+                "val":"Anopheles funestus sensu lato",
+                "count":143},
+              {
+                "val":"Anopheles funestus",
+                "count":136},
+              {
+                "val":"Aedes aegypti",
+                "count":71},
+              {
+                "val":"Anopheles nili",
+                "count":1}]}},
+        {
+          "val":"tt",
+          "count":2295,
+          "terms":{
+            "buckets":[{
+                "val":"Culex quinquefasciatus",
+                "count":1017},
+              {
+                "val":"Anopheles culicifacies sensu lato",
+                "count":340},
+              {
+                "val":"Anopheles stephensi",
+                "count":254},
+              {
+                "val":"Aedes albopictus",
+                "count":178},
+              {
+                "val":"Anopheles subpictus",
+                "count":135},
+              {
+                "val":"Aedes aegypti",
+                "count":113},
+              {
+                "val":"Culex tritaeniorhynchus",
+                "count":77},
+              {
+                "val":"Phagomyia cogilli",
+                "count":45},
+              {
+                "val":"Armigeres subalbatus",
+                "count":36},
+              {
+                "val":"Anopheles annularis",
+                "count":35},
+              {
+                "val":"genus Aedes",
+                "count":18},
+              {
+                "val":"Ochlerotatus",
+                "count":7},
+              {
+                "val":"Aedes w-albus",
+                "count":6},
+              {
+                "val":"Anopheles superpictus",
+                "count":5},
+              {
+                "val":"Culex fuscocephala",
+                "count":5},
+              {
+                "val":"Anopheles fluviatilis",
+                "count":4},
+              {
+                "val":"Culex bitaeniorhynchus",
+                "count":4},
+              {
+                "val":"Culex theileri",
+                "count":3},
+              {
+                "val":"Anopheles peditaeniatus",
+                "count":2},
+              {
+                "val":"Lutzia fuscanus",
+                "count":2},
+              {
+                "val":"genus Culex",
+                "count":2},
+              {
+                "val":"Anopheles dravidicus",
+                "count":1},
+              {
+                "val":"Anopheles maculatus sensu lato",
+                "count":1},
+              {
+                "val":"Anopheles nigerrimus",
+                "count":1},
+              {
+                "val":"Anopheles pulcherrimus",
+                "count":1},
+              {
+                "val":"Culex perexiguus",
+                "count":1},
+              {
+                "val":"Culex pipiens",
+                "count":1},
+              {
+                "val":"Mansonia bonneae",
+                "count":1}]}},
+        {
+          "val":"mh",
+          "count":2223,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles coustani",
+                "count":469},
+              {
+                "val":"Anopheles gambiae sensu lato",
+                "count":390},
+              {
+                "val":"Anopheles funestus",
+                "count":362},
+              {
+                "val":"Anopheles maculipalpis",
+                "count":263},
+              {
+                "val":"Anopheles arabiensis",
+                "count":246},
+              {
+                "val":"Anopheles squamosus",
+                "count":228},
+              {
+                "val":"Anopheles rufipes",
+                "count":147},
+              {
+                "val":"Anopheles gambiae",
+                "count":52},
+              {
+                "val":"Anopheles mascarensis",
+                "count":35},
+              {
+                "val":"Anopheles merus",
+                "count":24},
+              {
+                "val":"Anopheles pretoriensis",
+                "count":5},
+              {
+                "val":"Aedes albopictus",
+                "count":1},
+              {
+                "val":"Anopheles flavicosta",
+                "count":1}]}},
+        {
+          "val":"s2",
+          "count":2210,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles coluzzii",
+                "count":736},
+              {
+                "val":"Anopheles gambiae",
+                "count":665},
+              {
+                "val":"Aedes aegypti",
+                "count":277},
+              {
+                "val":"Anopheles gambiae sensu lato",
+                "count":160},
+              {
+                "val":"Anopheles funestus",
+                "count":109},
+              {
+                "val":"Anopheles moucheti",
+                "count":106},
+              {
+                "val":"Aedes albopictus",
+                "count":65},
+              {
+                "val":"Anopheles nili",
+                "count":50},
+              {
+                "val":"Anopheles melas",
+                "count":17},
+              {
+                "val":"Anopheles arabiensis",
+                "count":16},
+              {
+                "val":"Anopheles natalensis",
+                "count":7},
+              {
+                "val":"Anopheles coustani",
+                "count":2}]}},
+        {
+          "val":"w5",
+          "count":2192,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles annularis",
+                "count":253},
+              {
+                "val":"Anopheles minimus sensu lato",
+                "count":251},
+              {
+                "val":"Anopheles stephensi",
+                "count":235},
+              {
+                "val":"Anopheles aconitus",
+                "count":216},
+              {
+                "val":"Anopheles maculatus sensu lato",
+                "count":206},
+              {
+                "val":"Anopheles culicifacies sensu lato",
+                "count":201},
+              {
+                "val":"Anopheles barbirostris sensu lato",
+                "count":185},
+              {
+                "val":"Anopheles subpictus",
+                "count":167},
+              {
+                "val":"Anopheles dirus",
+                "count":163},
+              {
+                "val":"Anopheles sinensis sensu lato",
+                "count":119},
+              {
+                "val":"Anopheles sundaicus sensu lato",
+                "count":87},
+              {
+                "val":"Anopheles vagus",
+                "count":16},
+              {
+                "val":"Anopheles kochi",
+                "count":13},
+              {
+                "val":"Anopheles umbrosus",
+                "count":13},
+              {
+                "val":"Anopheles jamesii",
+                "count":9},
+              {
+                "val":"Culex quinquefasciatus",
+                "count":7},
+              {
+                "val":"Aedes aegypti",
+                "count":6},
+              {
+                "val":"Anopheles hyrcanus",
+                "count":6},
+              {
+                "val":"Anopheles tessellatus",
+                "count":6},
+              {
+                "val":"Aedes albopictus",
+                "count":4},
+              {
+                "val":"Anopheles philippinensis",
+                "count":4},
+              {
+                "val":"Anopheles campestris",
+                "count":3},
+              {
+                "val":"Anopheles indefinitus",
+                "count":3},
+              {
+                "val":"Anopheles peditaeniatus",
+                "count":3},
+              {
+                "val":"Anopheles varuna",
+                "count":3},
+              {
+                "val":"Anopheles nigerrimus",
+                "count":2},
+              {
+                "val":"Anopheles nivipes sensu lato",
+                "count":2},
+              {
+                "val":"Anopheles notanandai",
+                "count":2},
+              {
+                "val":"Anopheles pseudojamesi",
+                "count":2},
+              {
+                "val":"Anopheles dravidicus",
+                "count":1},
+              {
+                "val":"Anopheles minimus",
+                "count":1},
+              {
+                "val":"Anopheles pseudowillmori",
+                "count":1},
+              {
+                "val":"Anopheles sawadwongporni",
+                "count":1},
+              {
+                "val":"Anopheles willmori",
+                "count":1}]}},
+        {
+          "val":"6q",
+          "count":2136,
+          "terms":{
+            "buckets":[{
+                "val":"Culex",
+                "count":1316},
+              {
+                "val":"Anopheles",
+                "count":546},
+              {
+                "val":"Anopheles darlingi",
+                "count":197},
+              {
+                "val":"Aedes aegypti",
+                "count":65},
+              {
+                "val":"Anopheles albitarsis",
+                "count":7},
+              {
+                "val":"Anopheles nuneztovari",
+                "count":4},
+              {
+                "val":"Anopheles pseudopunctipennis",
+                "count":1}]}},
+        {
+          "val":"s0",
+          "count":1984,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles gambiae",
+                "count":1092},
+              {
+                "val":"Anopheles gambiae sensu lato",
+                "count":577},
+              {
+                "val":"Anopheles coluzzii",
+                "count":76},
+              {
+                "val":"Anopheles funestus",
+                "count":75},
+              {
+                "val":"Anopheles nili",
+                "count":70},
+              {
+                "val":"Anopheles melas",
+                "count":50},
+              {
+                "val":"Anopheles arabiensis",
+                "count":15},
+              {
+                "val":"Anopheles moucheti",
+                "count":12},
+              {
+                "val":"Aedes aegypti",
+                "count":10},
+              {
+                "val":"Aedes albopictus",
+                "count":7}]}},
+        {
+          "val":"dr",
+          "count":1825,
+          "terms":{
+            "buckets":[{
+                "val":"genus Culex",
+                "count":400},
+              {
+                "val":"Coquillettidia perturbans",
+                "count":196},
+              {
+                "val":"Aedes japonicus complex",
+                "count":169},
+              {
+                "val":"Anopheles punctipennis",
+                "count":135},
+              {
+                "val":"Aedes canadensis complex",
+                "count":118},
+              {
+                "val":"Aedes taeniorhynchus",
+                "count":113},
+              {
+                "val":"Aedes cantator",
+                "count":110},
+              {
+                "val":"Aedes vexans sensu lato",
+                "count":107},
+              {
+                "val":"Anopheles quadrimaculatus",
+                "count":96},
+              {
+                "val":"Culiseta morsitans",
+                "count":81},
+              {
+                "val":"Aedes thibaulti",
+                "count":66},
+              {
+                "val":"Aedes triseriatus",
+                "count":52},
+              {
+                "val":"Uranotaenia sapphirina",
+                "count":36},
+              {
+                "val":"Anopheles walkeri",
+                "count":35},
+              {
+                "val":"Ixodes scapularis",
+                "count":28},
+              {
+                "val":"Aedes abserratus",
+                "count":18},
+              {
+                "val":"Aedes sollicitans",
+                "count":16},
+              {
+                "val":"Psorophora ferox",
+                "count":16},
+              {
+                "val":"Aedes albopictus",
+                "count":9},
+              {
+                "val":"Culiseta melanura",
+                "count":8},
+              {
+                "val":"Aedes aurifer",
+                "count":7},
+              {
+                "val":"Aedes excrucians",
+                "count":4},
+              {
+                "val":"Aedes communis",
+                "count":2},
+              {
+                "val":"Aedes intrudens",
+                "count":1},
+              {
+                "val":"Aedes trivittatus",
+                "count":1},
+              {
+                "val":"Culex pipiens",
+                "count":1}]}},
+        {
+          "val":"s1",
+          "count":1708,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles gambiae",
+                "count":791},
+              {
+                "val":"Anopheles gambiae sensu lato",
+                "count":442},
+              {
+                "val":"Anopheles arabiensis",
+                "count":188},
+              {
+                "val":"Anopheles coluzzii",
+                "count":105},
+              {
+                "val":"Anopheles funestus",
+                "count":95},
+              {
+                "val":"Anopheles melas",
+                "count":62},
+              {
+                "val":"Anopheles moucheti",
+                "count":17},
+              {
+                "val":"Anopheles nili",
+                "count":4},
+              {
+                "val":"Culex quinquefasciatus",
+                "count":3},
+              {
+                "val":"Aedes aegypti",
+                "count":1}]}},
+        {
+          "val":"d5",
+          "count":1495,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes aegypti",
+                "count":1011},
+              {
+                "val":"Anopheles albimanus",
+                "count":181},
+              {
+                "val":"Anopheles darlingi",
+                "count":160},
+              {
+                "val":"Anopheles pseudopunctipennis",
+                "count":143}]}},
+        {
+          "val":"tf",
+          "count":1453,
+          "terms":{
+            "buckets":[{
+                "val":"genus Anopheles",
+                "count":978},
+              {
+                "val":"genus Culex",
+                "count":293},
+              {
+                "val":"genus Aedes",
+                "count":74},
+              {
+                "val":"Anopheles subpictus",
+                "count":42},
+              {
+                "val":"Anopheles stephensi",
+                "count":16},
+              {
+                "val":"Culex sitiens",
+                "count":4},
+              {
+                "val":"Culex tritaeniorhynchus",
+                "count":4},
+              {
+                "val":"Aedes aegypti",
+                "count":3},
+              {
+                "val":"Culex quinquefasciatus",
+                "count":3},
+              {
+                "val":"Anopheles barbirostris sensu lato",
+                "count":2},
+              {
+                "val":"Culex pseudovishnui",
+                "count":2},
+              {
+                "val":"Culex vishnui",
+                "count":2},
+              {
+                "val":"Aedeomyia catasticta",
+                "count":1},
+              {
+                "val":"Aedes albopictus",
+                "count":1},
+              {
+                "val":"Aedes vexans sensu lato",
+                "count":1},
+              {
+                "val":"Aedes vittatus",
+                "count":1},
+              {
+                "val":"Aedes wardi",
+                "count":1},
+              {
+                "val":"Anopheles culicifacies sensu lato",
+                "count":1},
+              {
+                "val":"Anopheles jamesii",
+                "count":1},
+              {
+                "val":"Anopheles pallidus",
+                "count":1},
+              {
+                "val":"Anopheles peditaeniatus",
+                "count":1},
+              {
+                "val":"Anopheles vagus",
+                "count":1},
+              {
+                "val":"Anopheles varuna",
+                "count":1},
+              {
+                "val":"Armigeres subalbatus",
+                "count":1},
+              {
+                "val":"Culex bitaeniorhynchus",
+                "count":1},
+              {
+                "val":"Culex brevipalpis",
+                "count":1},
+              {
+                "val":"Culex fuscocephala",
+                "count":1},
+              {
+                "val":"Culex gelidus",
+                "count":1},
+              {
+                "val":"Culex hutchinsoni",
+                "count":1},
+              {
+                "val":"Culex infantulus",
+                "count":1},
+              {
+                "val":"Culex malayi",
+                "count":1},
+              {
+                "val":"Culex minutissimus",
+                "count":1},
+              {
+                "val":"Culex nigropunctatus",
+                "count":1},
+              {
+                "val":"Culex rubithoracis",
+                "count":1},
+              {
+                "val":"Culex whitmorei",
+                "count":1},
+              {
+                "val":"Ficalbia minima",
+                "count":1},
+              {
+                "val":"Lutzia fuscanus",
+                "count":1},
+              {
+                "val":"Mansonia annulifera",
+                "count":1},
+              {
+                "val":"Mansonia uniformis",
+                "count":1},
+              {
+                "val":"Mimomyia chamberlaini",
+                "count":1},
+              {
+                "val":"Verrallina indica",
+                "count":1},
+              {
+                "val":"Verrallina lugubris",
+                "count":1}]}},
+        {
+          "val":"s4",
+          "count":1376,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles gambiae",
+                "count":681},
+              {
+                "val":"Anopheles arabiensis",
+                "count":332},
+              {
+                "val":"Anopheles gambiae sensu lato",
+                "count":217},
+              {
+                "val":"Anopheles coluzzii",
+                "count":137},
+              {
+                "val":"Anopheles funestus",
+                "count":7},
+              {
+                "val":"Anopheles nili",
+                "count":1},
+              {
+                "val":"Culex quinquefasciatus",
+                "count":1}]}},
+        {
+          "val":"tc",
+          "count":1350,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles culicifacies sensu lato",
+                "count":650},
+              {
+                "val":"Anopheles subpictus",
+                "count":467},
+              {
+                "val":"Anopheles barbirostris sensu lato",
+                "count":68},
+              {
+                "val":"Anopheles aconitus",
+                "count":58},
+              {
+                "val":"Anopheles annularis",
+                "count":54},
+              {
+                "val":"Anopheles maculatus sensu lato",
+                "count":21},
+              {
+                "val":"Aedes aegypti",
+                "count":9},
+              {
+                "val":"Anopheles fluviatilis",
+                "count":9},
+              {
+                "val":"Anopheles stephensi",
+                "count":4},
+              {
+                "val":"Aedes albopictus",
+                "count":2},
+              {
+                "val":"Aedes portonovoensis",
+                "count":2},
+              {
+                "val":"Culex tritaeniorhynchus",
+                "count":2},
+              {
+                "val":"Aedes wardi",
+                "count":1},
+              {
+                "val":"Culex quinquefasciatus",
+                "count":1},
+              {
+                "val":"Uranotaenia atra",
+                "count":1},
+              {
+                "val":"Verrallina lugubris",
+                "count":1}]}},
+        {
+          "val":"qz",
+          "count":1312,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles vagus",
+                "count":568},
+              {
+                "val":"Anopheles kochi",
+                "count":341},
+              {
+                "val":"Anopheles indefinitus",
+                "count":264},
+              {
+                "val":"Anopheles barbirostris sensu lato",
+                "count":82},
+              {
+                "val":"Anopheles farauti",
+                "count":22},
+              {
+                "val":"Anopheles hinesorum",
+                "count":18},
+              {
+                "val":"Anopheles tessellatus",
+                "count":13},
+              {
+                "val":"Anopheles punctulatus",
+                "count":3},
+              {
+                "val":"Anopheles dirus",
+                "count":1}]}},
+        {
+          "val":"s6",
+          "count":1284,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles arabiensis",
+                "count":1242},
+              {
+                "val":"Anopheles gambiae sensu lato",
+                "count":27},
+              {
+                "val":"Anopheles funestus",
+                "count":8},
+              {
+                "val":"Anopheles coluzzii",
+                "count":3},
+              {
+                "val":"Anopheles gambiae",
+                "count":3},
+              {
+                "val":"Anopheles gambiae chromosomal form Savanna",
+                "count":1}]}},
+        {
+          "val":"sc",
+          "count":1265,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles arabiensis",
+                "count":813},
+              {
+                "val":"Anopheles gambiae sensu lato",
+                "count":402},
+              {
+                "val":"Anopheles funestus",
+                "count":27},
+              {
+                "val":"Anopheles nili",
+                "count":20},
+              {
+                "val":"Anopheles gambiae",
+                "count":3}]}},
+        {
+          "val":"u2",
+          "count":1230,
+          "terms":{
+            "buckets":[{
+                "val":"Culicidae",
+                "count":751},
+              {
+                "val":"Anopheles atroparvus",
+                "count":183},
+              {
+                "val":"Anopheles messeae",
+                "count":172},
+              {
+                "val":"Aedes albopictus",
+                "count":50},
+              {
+                "val":"Anopheles superpictus",
+                "count":40},
+              {
+                "val":"Anopheles sacharovi",
+                "count":14},
+              {
+                "val":"Anopheles labranchiae",
+                "count":10},
+              {
+                "val":"Phlebotomus mascittii",
+                "count":10}]}},
+        {
+          "val":"u0",
+          "count":1213,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes albopictus",
+                "count":688},
+              {
+                "val":"Culicidae",
+                "count":329},
+              {
+                "val":"Anopheles atroparvus",
+                "count":72},
+              {
+                "val":"Anopheles messeae",
+                "count":38},
+              {
+                "val":"Anopheles labranchiae",
+                "count":12},
+              {
+                "val":"Anopheles superpictus",
+                "count":10},
+              {
+                "val":"Aedes punctor",
+                "count":8},
+              {
+                "val":"Culex pipiens",
+                "count":8},
+              {
+                "val":"Aedes geniculatus",
+                "count":7},
+              {
+                "val":"Aedes rusticus",
+                "count":5},
+              {
+                "val":"Anopheles maculipennis",
+                "count":5},
+              {
+                "val":"Anopheles plumbeus",
+                "count":5},
+              {
+                "val":"Aedes cantans",
+                "count":4},
+              {
+                "val":"Aedes japonicus complex",
+                "count":4},
+              {
+                "val":"Anopheles claviger",
+                "count":3},
+              {
+                "val":"Culex torrentium",
+                "count":3},
+              {
+                "val":"Aedes annulipes",
+                "count":2},
+              {
+                "val":"Aedes caspius",
+                "count":2},
+              {
+                "val":"Aedes cinereus",
+                "count":2},
+              {
+                "val":"Aedes communis",
+                "count":2},
+              {
+                "val":"Aedes vexans sensu lato",
+                "count":2},
+              {
+                "val":"Coquillettidia richiardii",
+                "count":2}]}},
+        {
+          "val":"ky",
+          "count":1209,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles arabiensis",
+                "count":369},
+              {
+                "val":"Anopheles funestus",
+                "count":260},
+              {
+                "val":"Anopheles gambiae sensu lato",
+                "count":182},
+              {
+                "val":"Anopheles gambiae",
+                "count":179},
+              {
+                "val":"Aedes aegypti",
+                "count":144},
+              {
+                "val":"Culex quinquefasciatus",
+                "count":41},
+              {
+                "val":"Anopheles merus",
+                "count":25},
+              {
+                "val":"genus Anopheles",
+                "count":7},
+              {
+                "val":"Anopheles funestus sensu lato",
+                "count":2}]}},
+        {
+          "val":"w4",
+          "count":1207,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles dirus",
+                "count":234},
+              {
+                "val":"Anopheles minimus sensu lato",
+                "count":202},
+              {
+                "val":"Aedes aegypti",
+                "count":174},
+              {
+                "val":"Anopheles maculatus sensu lato",
+                "count":138},
+              {
+                "val":"Culicidae",
+                "count":102},
+              {
+                "val":"Anopheles barbirostris sensu lato",
+                "count":89},
+              {
+                "val":"Anopheles annularis",
+                "count":59},
+              {
+                "val":"Anopheles subpictus",
+                "count":57},
+              {
+                "val":"Anopheles aconitus",
+                "count":48},
+              {
+                "val":"Anopheles sundaicus sensu lato",
+                "count":27},
+              {
+                "val":"Anopheles sinensis sensu lato",
+                "count":22},
+              {
+                "val":"Anopheles culicifacies sensu lato",
+                "count":18},
+              {
+                "val":"Anopheles vagus",
+                "count":8},
+              {
+                "val":"Anopheles stephensi",
+                "count":7},
+              {
+                "val":"Aedes albopictus",
+                "count":5},
+              {
+                "val":"Anopheles hyrcanus",
+                "count":3},
+              {
+                "val":"Culex sitiens",
+                "count":3},
+              {
+                "val":"Aedes wardi",
+                "count":2},
+              {
+                "val":"Anopheles kochi",
+                "count":2},
+              {
+                "val":"Culex gelidus",
+                "count":2},
+              {
+                "val":"Culex tritaeniorhynchus",
+                "count":2},
+              {
+                "val":"Armigeres subalbatus",
+                "count":1},
+              {
+                "val":"Culex pipiens",
+                "count":1},
+              {
+                "val":"Lutzia fuscanus",
+                "count":1}]}},
+        {
+          "val":"tg",
+          "count":1199,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles culicifacies BCE subgroup",
+                "count":449},
+              {
+                "val":"Anopheles culicifacies sensu lato",
+                "count":254},
+              {
+                "val":"Anopheles fluviatilis",
+                "count":173},
+              {
+                "val":"Anopheles fluviatilis T",
+                "count":76},
+              {
+                "val":"Aedes albopictus",
+                "count":71},
+              {
+                "val":"Anopheles annularis",
+                "count":49},
+              {
+                "val":"Anopheles subpictus",
+                "count":44},
+              {
+                "val":"Anopheles fluviatilis S",
+                "count":20},
+              {
+                "val":"Anopheles aconitus",
+                "count":13},
+              {
+                "val":"Anopheles barbirostris sensu lato",
+                "count":13},
+              {
+                "val":"Anopheles jeyporiensis",
+                "count":5},
+              {
+                "val":"Anopheles culicifacies AD subgroup",
+                "count":4},
+              {
+                "val":"Anopheles maculatus sensu lato",
+                "count":3},
+              {
+                "val":"Aedes aegypti",
+                "count":2},
+              {
+                "val":"Culex brevipalpis",
+                "count":2},
+              {
+                "val":"Culex quinquefasciatus",
+                "count":2},
+              {
+                "val":"Aedes fumidus",
+                "count":1},
+              {
+                "val":"Aedes pseudotaeniatus",
+                "count":1},
+              {
+                "val":"Anopheles aitkenii",
+                "count":1},
+              {
+                "val":"Anopheles minimus sensu lato",
+                "count":1},
+              {
+                "val":"Anopheles pallidus",
+                "count":1},
+              {
+                "val":"Anopheles splendidus",
+                "count":1},
+              {
+                "val":"Anopheles stephensi",
+                "count":1},
+              {
+                "val":"Anopheles sundaicus sensu lato",
+                "count":1},
+              {
+                "val":"Culex infantulus",
+                "count":1},
+              {
+                "val":"Culex minor",
+                "count":1},
+              {
+                "val":"Culex pallidothorax",
+                "count":1},
+              {
+                "val":"Culex tritaeniorhynchus",
+                "count":1},
+              {
+                "val":"Culex whitmorei",
+                "count":1},
+              {
+                "val":"Heizmannia chandi",
+                "count":1},
+              {
+                "val":"Malaya genurostris",
+                "count":1},
+              {
+                "val":"Orthopodomyia anopheloides",
+                "count":1},
+              {
+                "val":"Tripteroides aranoides",
+                "count":1},
+              {
+                "val":"Uranotaenia bicolor",
+                "count":1},
+              {
+                "val":"Uranotaenia recondita",
+                "count":1}]}},
+        {
+          "val":"rn",
+          "count":1134,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles farauti No. 4",
+                "count":523},
+              {
+                "val":"Anopheles farauti",
+                "count":328},
+              {
+                "val":"Anopheles punctulatus",
+                "count":160},
+              {
+                "val":"Anopheles koliensis",
+                "count":114},
+              {
+                "val":"Anopheles longirostris",
+                "count":3},
+              {
+                "val":"Anopheles subpictus",
+                "count":3},
+              {
+                "val":"Culex annulirostris",
+                "count":3}]}},
+        {
+          "val":"7n",
+          "count":1044,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes aegypti",
+                "count":826},
+              {
+                "val":"Aedes albopictus",
+                "count":204},
+              {
+                "val":"Lutzomyia longipalpis",
+                "count":14}]}},
+        {
+          "val":"w6",
+          "count":963,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles dirus",
+                "count":231},
+              {
+                "val":"Culicidae",
+                "count":171},
+              {
+                "val":"Anopheles minimus sensu lato",
+                "count":90},
+              {
+                "val":"Aedes aegypti",
+                "count":66},
+              {
+                "val":"Anopheles aconitus",
+                "count":52},
+              {
+                "val":"Anopheles maculatus sensu lato",
+                "count":47},
+              {
+                "val":"Anopheles nivipes sensu lato",
+                "count":38},
+              {
+                "val":"Anopheles vagus",
+                "count":35},
+              {
+                "val":"Anopheles barbirostris sensu lato",
+                "count":24},
+              {
+                "val":"Anopheles kochi",
+                "count":20},
+              {
+                "val":"Anopheles saeungae",
+                "count":16},
+              {
+                "val":"Anopheles philippinensis",
+                "count":14},
+              {
+                "val":"Anopheles sawadwongporni",
+                "count":14},
+              {
+                "val":"Anopheles rampae",
+                "count":13},
+              {
+                "val":"Anopheles annularis",
+                "count":12},
+              {
+                "val":"Anopheles epiroticus",
+                "count":12},
+              {
+                "val":"Anopheles barbirostris CLADE III",
+                "count":11},
+              {
+                "val":"Anopheles sinensis sensu lato",
+                "count":11},
+              {
+                "val":"Anopheles tessellatus",
+                "count":10},
+              {
+                "val":"Anopheles peditaeniatus",
+                "count":9},
+              {
+                "val":"Anopheles karwari",
+                "count":8},
+              {
+                "val":"Anopheles crawfordi",
+                "count":7},
+              {
+                "val":"Anopheles pampanai",
+                "count":6},
+              {
+                "val":"Anopheles splendidus",
+                "count":5},
+              {
+                "val":"Anopheles wejchoochotei",
+                "count":5},
+              {
+                "val":"Anopheles jeyporiensis",
+                "count":4},
+              {
+                "val":"Anopheles maculatus",
+                "count":4},
+              {
+                "val":"Anopheles nigerrimus",
+                "count":4},
+              {
+                "val":"Anopheles sundaicus sensu lato",
+                "count":4},
+              {
+                "val":"Anopheles hyrcanus",
+                "count":3},
+              {
+                "val":"Anopheles nitidus",
+                "count":3},
+              {
+                "val":"Anopheles pallidus",
+                "count":3},
+              {
+                "val":"Anopheles argyropus",
+                "count":2},
+              {
+                "val":"Anopheles campestris",
+                "count":2},
+              {
+                "val":"Anopheles minimus",
+                "count":2},
+              {
+                "val":"Anopheles subpictus",
+                "count":2},
+              {
+                "val":"Anopheles culicifacies sensu lato",
+                "count":1},
+              {
+                "val":"Anopheles dravidicus",
+                "count":1},
+              {
+                "val":"Culex quinquefasciatus",
+                "count":1}]}},
+        {
+          "val":"sf",
+          "count":831,
+          "terms":{
+            "buckets":[{
+                "val":"Culicinae",
+                "count":351},
+              {
+                "val":"Anopheles arabiensis",
+                "count":304},
+              {
+                "val":"Anopheles gambiae sensu lato",
+                "count":146},
+              {
+                "val":"Anopheles culicifacies sensu lato",
+                "count":14},
+              {
+                "val":"Anopheles gambiae",
+                "count":9},
+              {
+                "val":"Anopheles funestus",
+                "count":4},
+              {
+                "val":"Anopheles stephensi",
+                "count":2},
+              {
+                "val":"Anopheles coustani",
+                "count":1}]}},
+        {
+          "val":"wh",
+          "count":794,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles annularis",
+                "count":122},
+              {
+                "val":"Anopheles minimus sensu lato",
+                "count":94},
+              {
+                "val":"Anopheles dirus",
+                "count":90},
+              {
+                "val":"Anopheles sinensis sensu lato",
+                "count":89},
+              {
+                "val":"Anopheles barbirostris sensu lato",
+                "count":82},
+              {
+                "val":"Anopheles maculatus sensu lato",
+                "count":77},
+              {
+                "val":"Anopheles subpictus",
+                "count":72},
+              {
+                "val":"Anopheles culicifacies sensu lato",
+                "count":66},
+              {
+                "val":"Anopheles aconitus",
+                "count":60},
+              {
+                "val":"Anopheles stephensi",
+                "count":26},
+              {
+                "val":"Anopheles vagus",
+                "count":10},
+              {
+                "val":"Aedes aegypti",
+                "count":3},
+              {
+                "val":"Anopheles fluviatilis",
+                "count":2},
+              {
+                "val":"Aedes albopictus",
+                "count":1}]}},
+        {
+          "val":"gb",
+          "count":769,
+          "terms":{
+            "buckets":[{
+                "val":"subgenus Avaritia",
+                "count":314},
+              {
+                "val":"Culicoides pulicaris",
+                "count":143},
+              {
+                "val":"Culicoides obsoletus",
+                "count":65},
+              {
+                "val":"Culicoides punctatus",
+                "count":58},
+              {
+                "val":"Culicoides scoticus",
+                "count":43},
+              {
+                "val":"Culicoides",
+                "count":42},
+              {
+                "val":"Culicoides pulicaris group",
+                "count":31},
+              {
+                "val":"Culicoides dewulfi",
+                "count":26},
+              {
+                "val":"Culicoides chiopterus",
+                "count":23},
+              {
+                "val":"Anopheles atroparvus",
+                "count":17},
+              {
+                "val":"Anopheles messeae",
+                "count":6},
+              {
+                "val":"Culicoides impunctatus",
+                "count":1}]}},
+        {
+          "val":"w7",
+          "count":720,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles minimus sensu lato",
+                "count":134},
+              {
+                "val":"Aedes albopictus",
+                "count":127},
+              {
+                "val":"Aedes aegypti",
+                "count":78},
+              {
+                "val":"Anopheles aconitus",
+                "count":73},
+              {
+                "val":"Anopheles dirus",
+                "count":64},
+              {
+                "val":"Anopheles maculatus sensu lato",
+                "count":48},
+              {
+                "val":"Anopheles sinensis sensu lato",
+                "count":47},
+              {
+                "val":"Anopheles barbirostris sensu lato",
+                "count":33},
+              {
+                "val":"Anopheles nivipes sensu lato",
+                "count":25},
+              {
+                "val":"Anopheles annularis",
+                "count":22},
+              {
+                "val":"Anopheles hyrcanus",
+                "count":12},
+              {
+                "val":"Anopheles vagus",
+                "count":12},
+              {
+                "val":"Anopheles minimus",
+                "count":11},
+              {
+                "val":"Anopheles philippinensis",
+                "count":9},
+              {
+                "val":"Anopheles maculatus",
+                "count":8},
+              {
+                "val":"Anopheles culicifacies sensu lato",
+                "count":6},
+              {
+                "val":"Anopheles kochi",
+                "count":6},
+              {
+                "val":"Anopheles tessellatus",
+                "count":4},
+              {
+                "val":"Anopheles lesteri",
+                "count":1}]}},
+        {
+          "val":"tu",
+          "count":714,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles culicifacies sensu lato",
+                "count":146},
+              {
+                "val":"Anopheles fluviatilis",
+                "count":120},
+              {
+                "val":"Anopheles annularis",
+                "count":116},
+              {
+                "val":"Anopheles subpictus",
+                "count":116},
+              {
+                "val":"Anopheles stephensi",
+                "count":99},
+              {
+                "val":"Anopheles maculatus sensu lato",
+                "count":36},
+              {
+                "val":"Aedes albopictus",
+                "count":26},
+              {
+                "val":"Anopheles barbirostris sensu lato",
+                "count":24},
+              {
+                "val":"Anopheles aconitus",
+                "count":21},
+              {
+                "val":"Anopheles minimus sensu lato",
+                "count":6},
+              {
+                "val":"Aedes aegypti",
+                "count":2},
+              {
+                "val":"Anopheles dirus",
+                "count":1},
+              {
+                "val":"Anopheles sinensis sensu lato",
+                "count":1}]}},
+        {
+          "val":"ks",
+          "count":670,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles arabiensis",
+                "count":227},
+              {
+                "val":"Anopheles gambiae sensu lato",
+                "count":152},
+              {
+                "val":"Anopheles longipalpis",
+                "count":65},
+              {
+                "val":"genus Anopheles",
+                "count":40},
+              {
+                "val":"Anopheles quadriannulatus",
+                "count":36},
+              {
+                "val":"Anopheles parensis",
+                "count":34},
+              {
+                "val":"Anopheles funestus sensu lato",
+                "count":20},
+              {
+                "val":"Anopheles funestus",
+                "count":17},
+              {
+                "val":"Anopheles gambiae",
+                "count":12},
+              {
+                "val":"Aedes mcintoshi",
+                "count":4},
+              {
+                "val":"Anopheles distinctus",
+                "count":4},
+              {
+                "val":"Anopheles merus",
+                "count":4},
+              {
+                "val":"Anopheles squamosus",
+                "count":4},
+              {
+                "val":"Anopheles ziemanni",
+                "count":4},
+              {
+                "val":"Culex antennatus",
+                "count":4},
+              {
+                "val":"Culex bitaeniorhynchus",
+                "count":4},
+              {
+                "val":"Culex neavei",
+                "count":4},
+              {
+                "val":"Culex poicilipes",
+                "count":4},
+              {
+                "val":"Mansonia uniformis",
+                "count":4},
+              {
+                "val":"Anopheles pharoensis",
+                "count":3},
+              {
+                "val":"Uranotaenia balfouri",
+                "count":3},
+              {
+                "val":"Aedeomyia furfurea",
+                "count":2},
+              {
+                "val":"Anopheles leesoni",
+                "count":2},
+              {
+                "val":"Coquillettidia metallica",
+                "count":2},
+              {
+                "val":"Mimomyia mediolineata",
+                "count":2},
+              {
+                "val":"Mimomyia splendens",
+                "count":2},
+              {
+                "val":"Aedeomyia africana",
+                "count":1},
+              {
+                "val":"Aedes fowleri",
+                "count":1},
+              {
+                "val":"Aedes ledgeri",
+                "count":1},
+              {
+                "val":"Catageiomyia",
+                "count":1},
+              {
+                "val":"Coquillettidia chrysosoma",
+                "count":1},
+              {
+                "val":"Coquillettidia fuscopennata",
+                "count":1},
+              {
+                "val":"Culex annulioris",
+                "count":1},
+              {
+                "val":"Culex aurantapex",
+                "count":1},
+              {
+                "val":"Culex simpsoni",
+                "count":1},
+              {
+                "val":"Culex univittatus",
+                "count":1},
+              {
+                "val":"Mimomyia hispida",
+                "count":1}]}},
+        {
+          "val":"sr",
+          "count":658,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes albopictus",
+                "count":261},
+              {
+                "val":"Anopheles superpictus",
+                "count":143},
+              {
+                "val":"Anopheles labranchiae",
+                "count":95},
+              {
+                "val":"Anopheles messeae",
+                "count":65},
+              {
+                "val":"Anopheles atroparvus",
+                "count":59},
+              {
+                "val":"Anopheles sacharovi",
+                "count":35}]}},
+        {
+          "val":"9f",
+          "count":651,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles albimanus",
+                "count":379},
+              {
+                "val":"Aedes aegypti",
+                "count":206},
+              {
+                "val":"Anopheles pseudopunctipennis",
+                "count":59},
+              {
+                "val":"Anopheles darlingi",
+                "count":7}]}},
+        {
+          "val":"9v",
+          "count":616,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes aegypti",
+                "count":389},
+              {
+                "val":"Anopheles quadrimaculatus",
+                "count":120},
+              {
+                "val":"Culex quinquefasciatus",
+                "count":104},
+              {
+                "val":"Anopheles pseudopunctipennis",
+                "count":2},
+              {
+                "val":"Aedes albopictus",
+                "count":1}]}},
+        {
+          "val":"et",
+          "count":611,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes aegypti",
+                "count":611}]}},
+        {
+          "val":"d3",
+          "count":603,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles nuneztovari",
+                "count":203},
+              {
+                "val":"Anopheles albitarsis",
+                "count":144},
+              {
+                "val":"Aedes aegypti",
+                "count":81},
+              {
+                "val":"Anopheles albimanus",
+                "count":65},
+              {
+                "val":"Anopheles aquasalis",
+                "count":32},
+              {
+                "val":"Anopheles darlingi",
+                "count":27},
+              {
+                "val":"Anopheles pseudopunctipennis",
+                "count":27},
+              {
+                "val":"Anopheles marajoara",
+                "count":7},
+              {
+                "val":"Anopheles braziliensis",
+                "count":3},
+              {
+                "val":"Rhodnius prolixus",
+                "count":3},
+              {
+                "val":"Anopheles albitarsis complex",
+                "count":2},
+              {
+                "val":"Anopheles peryassui",
+                "count":2},
+              {
+                "val":"Anopheles triannulatus complex",
+                "count":2},
+              {
+                "val":"Rhodnius robustus I",
+                "count":2},
+              {
+                "val":"Anopheles neomaculipalpus",
+                "count":1},
+              {
+                "val":"Anopheles punctimacula",
+                "count":1},
+              {
+                "val":"Anopheles triannulatus",
+                "count":1}]}},
+        {
+          "val":"9g",
+          "count":599,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes aegypti",
+                "count":589},
+              {
+                "val":"Anopheles pseudopunctipennis",
+                "count":10}]}},
+        {
+          "val":"e9",
+          "count":598,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles gambiae",
+                "count":409},
+              {
+                "val":"Anopheles coluzzii",
+                "count":74},
+              {
+                "val":"Anopheles funestus",
+                "count":45},
+              {
+                "val":"Anopheles gambiae sensu lato",
+                "count":38},
+              {
+                "val":"Aedes aegypti",
+                "count":30},
+              {
+                "val":"Anopheles parensis",
+                "count":2}]}},
+        {
+          "val":"6g",
+          "count":596,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes aegypti",
+                "count":476},
+              {
+                "val":"Anopheles albitarsis",
+                "count":119},
+              {
+                "val":"Anopheles marajoara",
+                "count":1}]}},
+        {
+          "val":"rq",
+          "count":593,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles farauti",
+                "count":364},
+              {
+                "val":"Anopheles punctulatus",
+                "count":126},
+              {
+                "val":"Anopheles koliensis",
+                "count":86},
+              {
+                "val":"Anopheles subpictus",
+                "count":17}]}},
+        {
+          "val":"ke",
+          "count":579,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles arabiensis",
+                "count":183},
+              {
+                "val":"Anopheles funestus",
+                "count":126},
+              {
+                "val":"Anopheles gambiae sensu lato",
+                "count":63},
+              {
+                "val":"Anopheles merus",
+                "count":45},
+              {
+                "val":"Aedes aegypti",
+                "count":18},
+              {
+                "val":"Culex neavei",
+                "count":9},
+              {
+                "val":"Culex poicilipes",
+                "count":9},
+              {
+                "val":"Anopheles rivulorum",
+                "count":8},
+              {
+                "val":"Mansonia uniformis",
+                "count":8},
+              {
+                "val":"Anopheles quadriannulatus",
+                "count":7},
+              {
+                "val":"Anopheles vaneedeni",
+                "count":7},
+              {
+                "val":"Anopheles",
+                "count":6},
+              {
+                "val":"Anopheles squamosus",
+                "count":6},
+              {
+                "val":"Culex antennatus",
+                "count":6},
+              {
+                "val":"Anopheles leesoni",
+                "count":5},
+              {
+                "val":"Mansonia africana",
+                "count":5},
+              {
+                "val":"Mimomyia mimomyiaformis",
+                "count":5},
+              {
+                "val":"Anopheles coustani",
+                "count":4},
+              {
+                "val":"Anopheles funestus sensu lato",
+                "count":4},
+              {
+                "val":"Anopheles parensis",
+                "count":4},
+              {
+                "val":"Anopheles pharoensis",
+                "count":4},
+              {
+                "val":"Anopheles theileri",
+                "count":3},
+              {
+                "val":"Culex bitaeniorhynchus",
+                "count":3},
+              {
+                "val":"Culex pipiens",
+                "count":3},
+              {
+                "val":"Culex univittatus",
+                "count":3},
+              {
+                "val":"Aedes vittatus",
+                "count":2},
+              {
+                "val":"Anopheles gambiae",
+                "count":2},
+              {
+                "val":"Anopheles marshallii",
+                "count":2},
+              {
+                "val":"Anopheles rufipes",
+                "count":2},
+              {
+                "val":"Anopheles tenebrosus",
+                "count":2},
+              {
+                "val":"Anopheles ziemanni",
+                "count":2},
+              {
+                "val":"Coquillettidia fuscopennata",
+                "count":2},
+              {
+                "val":"Culex annulioris",
+                "count":2},
+              {
+                "val":"Culex rubinotus",
+                "count":2},
+              {
+                "val":"Mimomyia mediolineata",
+                "count":2},
+              {
+                "val":"Aedes metallicus",
+                "count":1},
+              {
+                "val":"Aedes ochraceus",
+                "count":1},
+              {
+                "val":"Anopheles longipalpis",
+                "count":1},
+              {
+                "val":"Coquillettidia chrysosoma",
+                "count":1},
+              {
+                "val":"Coquillettidia maculipennis",
+                "count":1},
+              {
+                "val":"Culex",
+                "count":1},
+              {
+                "val":"Culex aurantapex",
+                "count":1},
+              {
+                "val":"Culex duttoni",
+                "count":1},
+              {
+                "val":"Culex nebulosus",
+                "count":1},
+              {
+                "val":"Culex simpsoni",
+                "count":1},
+              {
+                "val":"Culex thalassius",
+                "count":1},
+              {
+                "val":"Culex theileri",
+                "count":1},
+              {
+                "val":"Culex tritaeniorhynchus",
+                "count":1},
+              {
+                "val":"Mimomyia hispida",
+                "count":1},
+              {
+                "val":"Mimomyia splendens",
+                "count":1}]}},
+        {
+          "val":"kv",
+          "count":520,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles funestus",
+                "count":235},
+              {
+                "val":"Anopheles gambiae sensu lato",
+                "count":87},
+              {
+                "val":"Anopheles funestus sensu lato",
+                "count":78},
+              {
+                "val":"Anopheles gambiae",
+                "count":67},
+              {
+                "val":"Anopheles arabiensis",
+                "count":53}]}},
+        {
+          "val":"d1",
+          "count":505,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes aegypti",
+                "count":302},
+              {
+                "val":"Aedes albopictus",
+                "count":103},
+              {
+                "val":"Anopheles albimanus",
+                "count":56},
+              {
+                "val":"Anopheles darlingi",
+                "count":18},
+              {
+                "val":"Anopheles aquasalis",
+                "count":17},
+              {
+                "val":"Anopheles pseudopunctipennis",
+                "count":9}]}},
+        {
+          "val":"6u",
+          "count":417,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes aegypti",
+                "count":390},
+              {
+                "val":"Anopheles darlingi",
+                "count":18},
+              {
+                "val":"Anopheles albitarsis",
+                "count":9}]}},
+        {
+          "val":"db",
+          "count":404,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles darlingi",
+                "count":206},
+              {
+                "val":"Aedes aegypti",
+                "count":109},
+              {
+                "val":"Anopheles nuneztovari",
+                "count":44},
+              {
+                "val":"Anopheles albitarsis",
+                "count":22},
+              {
+                "val":"Anopheles marajoara",
+                "count":14},
+              {
+                "val":"Anopheles aquasalis",
+                "count":6},
+              {
+                "val":"Rhodnius robustus IV",
+                "count":3}]}},
+        {
+          "val":"9t",
+          "count":397,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes aegypti",
+                "count":390},
+              {
+                "val":"Culex quinquefasciatus",
+                "count":7}]}},
+        {
+          "val":"sp",
+          "count":393,
+          "terms":{
+            "buckets":[{
+                "val":"Culicidae",
+                "count":224},
+              {
+                "val":"Anopheles labranchiae",
+                "count":50},
+              {
+                "val":"Aedes albopictus",
+                "count":47},
+              {
+                "val":"Anopheles atroparvus",
+                "count":44},
+              {
+                "val":"Anopheles superpictus",
+                "count":14},
+              {
+                "val":"Anopheles messeae",
+                "count":9},
+              {
+                "val":"Anopheles sacharovi",
+                "count":5}]}},
+        {
+          "val":"kt",
+          "count":357,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles gambiae sensu lato",
+                "count":159},
+              {
+                "val":"Anopheles funestus sensu lato",
+                "count":126},
+              {
+                "val":"Anopheles arabiensis",
+                "count":48},
+              {
+                "val":"Anopheles funestus",
+                "count":18},
+              {
+                "val":"Anopheles gambiae",
+                "count":4},
+              {
+                "val":"Anopheles parensis",
+                "count":1},
+              {
+                "val":"Anopheles quadriannulatus",
+                "count":1}]}},
+        {
+          "val":"6x",
+          "count":344,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes aegypti",
+                "count":136},
+              {
+                "val":"Anopheles nuneztovari",
+                "count":72},
+              {
+                "val":"Anopheles darlingi",
+                "count":71},
+              {
+                "val":"Anopheles albitarsis",
+                "count":60},
+              {
+                "val":"Anopheles marajoara",
+                "count":5}]}},
+        {
+          "val":"c2",
+          "count":342,
+          "terms":{
+            "buckets":[{
+                "val":"Culex tarsalis",
+                "count":79},
+              {
+                "val":"Aedes vexans sensu lato",
+                "count":57},
+              {
+                "val":"Aedes melanimon",
+                "count":31},
+              {
+                "val":"Aedes nigromaculis",
+                "count":26},
+              {
+                "val":"Culiseta inornata",
+                "count":26},
+              {
+                "val":"Aedes dorsalis",
+                "count":25},
+              {
+                "val":"Aedes increpitus",
+                "count":19},
+              {
+                "val":"Aedes cinereus",
+                "count":9},
+              {
+                "val":"Aedes trivittatus",
+                "count":8},
+              {
+                "val":"Anopheles earlei",
+                "count":8},
+              {
+                "val":"Aedes idahoensis",
+                "count":7},
+              {
+                "val":"Aedes flavescens",
+                "count":6},
+              {
+                "val":"Coquillettidia perturbans",
+                "count":6},
+              {
+                "val":"Aedes communis",
+                "count":5},
+              {
+                "val":"Aedes spencerii",
+                "count":5},
+              {
+                "val":"Aedes sticticus",
+                "count":5},
+              {
+                "val":"Culex pipiens",
+                "count":5},
+              {
+                "val":"Aedes fitchii",
+                "count":4},
+              {
+                "val":"Anopheles freeborni",
+                "count":3},
+              {
+                "val":"Aedes excrucians",
+                "count":2},
+              {
+                "val":"Anopheles punctipennis",
+                "count":2},
+              {
+                "val":"Aedes hendersoni",
+                "count":1},
+              {
+                "val":"Culiseta minnesotae",
+                "count":1},
+              {
+                "val":"Culiseta morsitans",
+                "count":1},
+              {
+                "val":"Psorophora signipennis",
+                "count":1}]}},
+        {
+          "val":"rw",
+          "count":341,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles farauti",
+                "count":212},
+              {
+                "val":"Anopheles punctulatus",
+                "count":100},
+              {
+                "val":"Anopheles koliensis",
+                "count":29}]}},
+        {
+          "val":"6z",
+          "count":322,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes aegypti",
+                "count":214},
+              {
+                "val":"Anopheles darlingi",
+                "count":36},
+              {
+                "val":"Anopheles nuneztovari",
+                "count":21},
+              {
+                "val":"Anopheles marajoara",
+                "count":15},
+              {
+                "val":"Rhodnius robustus III",
+                "count":14},
+              {
+                "val":"Lutzomyia longipalpis",
+                "count":10},
+              {
+                "val":"Anopheles aquasalis",
+                "count":7},
+              {
+                "val":"Anopheles albitarsis",
+                "count":4},
+              {
+                "val":"Rhodnius robustus IV",
+                "count":1}]}},
+        {
+          "val":"rh",
+          "count":319,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles farauti",
+                "count":162},
+              {
+                "val":"Aedes aegypti",
+                "count":156},
+              {
+                "val":"Culex annulirostris",
+                "count":1}]}},
+        {
+          "val":"d8",
+          "count":301,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes aegypti",
+                "count":103},
+              {
+                "val":"Anopheles darlingi",
+                "count":91},
+              {
+                "val":"Anopheles albitarsis",
+                "count":60},
+              {
+                "val":"Anopheles nuneztovari",
+                "count":41},
+              {
+                "val":"Anopheles aquasalis",
+                "count":3},
+              {
+                "val":"Anopheles marajoara",
+                "count":3}]}},
+        {
+          "val":"sz",
+          "count":301,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes aegypti",
+                "count":109},
+              {
+                "val":"Aedes albopictus",
+                "count":86},
+              {
+                "val":"Culex pipiens",
+                "count":80},
+              {
+                "val":"Anopheles superpictus",
+                "count":10},
+              {
+                "val":"Anopheles sacharovi",
+                "count":9},
+              {
+                "val":"Anopheles atroparvus",
+                "count":4},
+              {
+                "val":"Anopheles messeae",
+                "count":3}]}},
+        {
+          "val":"sx",
+          "count":294,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles superpictus",
+                "count":85},
+              {
+                "val":"Anopheles messeae",
+                "count":73},
+              {
+                "val":"Anopheles atroparvus",
+                "count":70},
+              {
+                "val":"Anopheles sacharovi",
+                "count":55},
+              {
+                "val":"Aedes zammitii",
+                "count":11}]}},
+        {
+          "val":"wy",
+          "count":291,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles sinensis sensu lato",
+                "count":263},
+              {
+                "val":"Anopheles lesteri",
+                "count":28}]}},
+        {
+          "val":"dd",
+          "count":288,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes aegypti",
+                "count":221},
+              {
+                "val":"Culex quinquefasciatus",
+                "count":37},
+              {
+                "val":"Anopheles pseudopunctipennis",
+                "count":17},
+              {
+                "val":"Anopheles aquasalis",
+                "count":13}]}},
+        {
+          "val":"d9",
+          "count":286,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes aegypti",
+                "count":151},
+              {
+                "val":"Anopheles aquasalis",
+                "count":73},
+              {
+                "val":"Anopheles marajoara",
+                "count":36},
+              {
+                "val":"Anopheles darlingi",
+                "count":13},
+              {
+                "val":"Anopheles albitarsis",
+                "count":11},
+              {
+                "val":"Anopheles pseudopunctipennis",
+                "count":2}]}},
+        {
+          "val":"r1",
+          "count":263,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes camptorhynchus",
+                "count":125},
+              {
+                "val":"Culex quinquefasciatus",
+                "count":35},
+              {
+                "val":"Culex pipiens molestus",
+                "count":14},
+              {
+                "val":"Culex globocoxitus",
+                "count":13},
+              {
+                "val":"Aedes notoscriptus",
+                "count":10},
+              {
+                "val":"Culex annulirostris",
+                "count":9},
+              {
+                "val":"Aedes alternans",
+                "count":5},
+              {
+                "val":"Aedes mallochi",
+                "count":5},
+              {
+                "val":"Aedes sagax",
+                "count":5},
+              {
+                "val":"Aedes theobaldi",
+                "count":5},
+              {
+                "val":"Aedes vittiger",
+                "count":5},
+              {
+                "val":"Aedes alboannulatus",
+                "count":4},
+              {
+                "val":"Aedes rubrithorax",
+                "count":4},
+              {
+                "val":"Aedes tremulus",
+                "count":4},
+              {
+                "val":"Coquillettidia linealis",
+                "count":4},
+              {
+                "val":"Aedes wattensis",
+                "count":3},
+              {
+                "val":"Tripteroides atripes",
+                "count":3},
+              {
+                "val":"Anopheles annulipes",
+                "count":2},
+              {
+                "val":"Culex australicus",
+                "count":2},
+              {
+                "val":"Culex palpalis",
+                "count":2},
+              {
+                "val":"Culex pipiens",
+                "count":2},
+              {
+                "val":"Aedes aegypti",
+                "count":1},
+              {
+                "val":"Aedes albopictus",
+                "count":1}]}},
+        {
+          "val":"w9",
+          "count":256,
+          "terms":{
+            "buckets":[{
+                "val":"Culicinae",
+                "count":39},
+              {
+                "val":"Aedes albopictus",
+                "count":33},
+              {
+                "val":"Aedes",
+                "count":30},
+              {
+                "val":"Anopheles balabacensis",
+                "count":28},
+              {
+                "val":"Anopheles flavirostris",
+                "count":26},
+              {
+                "val":"Culex",
+                "count":20},
+              {
+                "val":"Eumelanomyia",
+                "count":17},
+              {
+                "val":"Aedes aegypti",
+                "count":13},
+              {
+                "val":"Lophoceraomyia",
+                "count":13},
+              {
+                "val":"Anopheles maculatus sensu lato",
+                "count":9},
+              {
+                "val":"Anopheles subpictus",
+                "count":8},
+              {
+                "val":"Anopheles annularis",
+                "count":7},
+              {
+                "val":"Culiciomyia",
+                "count":6},
+              {
+                "val":"Culex quinquefasciatus",
+                "count":3},
+              {
+                "val":"Anopheles sundaicus sensu lato",
+                "count":2},
+              {
+                "val":"Oculeomyia",
+                "count":2}]}},
+        {
+          "val":"kr",
+          "count":247,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes aegypti",
+                "count":76},
+              {
+                "val":"Anopheles nili",
+                "count":62},
+              {
+                "val":"Anopheles funestus",
+                "count":52},
+              {
+                "val":"Anopheles moucheti",
+                "count":32},
+              {
+                "val":"Anopheles gambiae",
+                "count":14},
+              {
+                "val":"Anopheles gambiae sensu lato",
+                "count":9},
+              {
+                "val":"Anopheles arabiensis",
+                "count":1},
+              {
+                "val":"Anopheles melas",
+                "count":1}]}},
+        {
+          "val":"sd",
+          "count":241,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles arabiensis",
+                "count":230},
+              {
+                "val":"Anopheles gambiae",
+                "count":11}]}},
+        {
+          "val":"qv",
+          "count":237,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles farauti",
+                "count":236},
+              {
+                "val":"Culex annulirostris",
+                "count":1}]}},
+        {
+          "val":"rj",
+          "count":227,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles farauti",
+                "count":215},
+              {
+                "val":"Aedes aegypti",
+                "count":12}]}},
+        {
+          "val":"ws",
+          "count":226,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes albopictus",
+                "count":114},
+              {
+                "val":"Anopheles sinensis sensu lato",
+                "count":78},
+              {
+                "val":"Anopheles lesteri",
+                "count":17},
+              {
+                "val":"Anopheles minimus sensu lato",
+                "count":6},
+              {
+                "val":"Culex tritaeniorhynchus",
+                "count":6},
+              {
+                "val":"Anopheles aconitus",
+                "count":3},
+              {
+                "val":"Anopheles maculatus sensu lato",
+                "count":2}]}},
+        {
+          "val":"ts",
+          "count":222,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles culicifacies sensu lato",
+                "count":77},
+              {
+                "val":"Anopheles stephensi",
+                "count":60},
+              {
+                "val":"Anopheles subpictus",
+                "count":48},
+              {
+                "val":"Anopheles annularis",
+                "count":31},
+              {
+                "val":"Anopheles fluviatilis",
+                "count":4},
+              {
+                "val":"Anopheles aconitus",
+                "count":1},
+              {
+                "val":"Anopheles barbirostris sensu lato",
+                "count":1}]}},
+        {
+          "val":"w1",
+          "count":219,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles maculatus sensu lato",
+                "count":62},
+              {
+                "val":"Anopheles dirus",
+                "count":35},
+              {
+                "val":"Anopheles sundaicus sensu lato",
+                "count":23},
+              {
+                "val":"Anopheles barbirostris sensu lato",
+                "count":20},
+              {
+                "val":"Anopheles aconitus",
+                "count":16},
+              {
+                "val":"Anopheles minimus sensu lato",
+                "count":11},
+              {
+                "val":"Anopheles subpictus",
+                "count":11},
+              {
+                "val":"Anopheles sinensis sensu lato",
+                "count":8},
+              {
+                "val":"Aedes albopictus",
+                "count":7},
+              {
+                "val":"Culex quinquefasciatus",
+                "count":7},
+              {
+                "val":"Aedes aegypti",
+                "count":6},
+              {
+                "val":"Anopheles annularis",
+                "count":5},
+              {
+                "val":"Culex sitiens",
+                "count":3},
+              {
+                "val":"Anopheles culicifacies sensu lato",
+                "count":2},
+              {
+                "val":"Anopheles leucosphyrus",
+                "count":2},
+              {
+                "val":"Anopheles epiroticus",
+                "count":1}]}},
+        {
+          "val":"w3",
+          "count":217,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes aegypti",
+                "count":64},
+              {
+                "val":"Aedes albopictus",
+                "count":46},
+              {
+                "val":"Anopheles maculatus sensu lato",
+                "count":29},
+              {
+                "val":"Anopheles sundaicus sensu lato",
+                "count":21},
+              {
+                "val":"Anopheles dirus",
+                "count":18},
+              {
+                "val":"Anopheles minimus sensu lato",
+                "count":14},
+              {
+                "val":"Anopheles aconitus",
+                "count":9},
+              {
+                "val":"Anopheles sinensis sensu lato",
+                "count":5},
+              {
+                "val":"Anopheles barbirostris sensu lato",
+                "count":4},
+              {
+                "val":"Culex quinquefasciatus",
+                "count":3},
+              {
+                "val":"Anopheles annularis",
+                "count":2},
+              {
+                "val":"Anopheles culicifacies sensu lato",
+                "count":1},
+              {
+                "val":"Anopheles subpictus",
+                "count":1}]}},
+        {
+          "val":"kw",
+          "count":212,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles gambiae sensu lato",
+                "count":112},
+              {
+                "val":"Anopheles funestus sensu lato",
+                "count":82},
+              {
+                "val":"Anopheles funestus",
+                "count":8},
+              {
+                "val":"Anopheles gambiae",
+                "count":6},
+              {
+                "val":"Anopheles arabiensis",
+                "count":3},
+              {
+                "val":"Anopheles leesoni",
+                "count":1}]}},
+        {
+          "val":"m5",
+          "count":211,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles gambiae sensu lato",
+                "count":170},
+              {
+                "val":"Anopheles arabiensis",
+                "count":13},
+              {
+                "val":"Anopheles merus",
+                "count":11},
+              {
+                "val":"Anopheles gambiae",
+                "count":10},
+              {
+                "val":"Anopheles funestus",
+                "count":7}]}},
+        {
+          "val":"tv",
+          "count":207,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles culicifacies sensu lato",
+                "count":59},
+              {
+                "val":"Anopheles fluviatilis",
+                "count":47},
+              {
+                "val":"Anopheles annularis",
+                "count":40},
+              {
+                "val":"Anopheles maculatus sensu lato",
+                "count":35},
+              {
+                "val":"Anopheles subpictus",
+                "count":15},
+              {
+                "val":"Anopheles aconitus",
+                "count":5},
+              {
+                "val":"Anopheles barbirostris sensu lato",
+                "count":4},
+              {
+                "val":"Anopheles sinensis sensu lato",
+                "count":2}]}},
+        {
+          "val":"wt",
+          "count":206,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles sinensis sensu lato",
+                "count":159},
+              {
+                "val":"Anopheles lesteri",
+                "count":30},
+              {
+                "val":"Anopheles sinensis",
+                "count":8},
+              {
+                "val":"Aedes albopictus",
+                "count":3},
+              {
+                "val":"Anopheles pullus",
+                "count":3},
+              {
+                "val":"Culex tritaeniorhynchus",
+                "count":3}]}},
+        {
+          "val":"u3",
+          "count":203,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles atroparvus",
+                "count":111},
+              {
+                "val":"Anopheles messeae",
+                "count":92}]}},
+        {
+          "val":"kq",
+          "count":199,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles coluzzii",
+                "count":60},
+              {
+                "val":"Aedes aegypti",
+                "count":40},
+              {
+                "val":"Anopheles gambiae sensu lato",
+                "count":23},
+              {
+                "val":"Anopheles gambiae",
+                "count":19},
+              {
+                "val":"Anopheles melas",
+                "count":15},
+              {
+                "val":"Anopheles arabiensis",
+                "count":14},
+              {
+                "val":"genus Anopheles",
+                "count":14},
+              {
+                "val":"Anopheles funestus",
+                "count":11},
+              {
+                "val":"Anopheles moucheti",
+                "count":3}]}},
+        {
+          "val":"w0",
+          "count":199,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles sinensis sensu lato",
+                "count":46},
+              {
+                "val":"Anopheles maculatus sensu lato",
+                "count":40},
+              {
+                "val":"Anopheles aconitus",
+                "count":38},
+              {
+                "val":"Anopheles subpictus",
+                "count":38},
+              {
+                "val":"Anopheles barbirostris sensu lato",
+                "count":14},
+              {
+                "val":"Aedes aegypti",
+                "count":9},
+              {
+                "val":"Culex quinquefasciatus",
+                "count":6},
+              {
+                "val":"Anopheles sundaicus sensu lato",
+                "count":5},
+              {
+                "val":"Aedes albopictus",
+                "count":3}]}},
+        {
+          "val":"rr",
+          "count":198,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles farauti",
+                "count":138},
+              {
+                "val":"Anopheles punctulatus",
+                "count":59},
+              {
+                "val":"Anopheles koliensis",
+                "count":1}]}},
+        {
+          "val":"75",
+          "count":197,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes aegypti",
+                "count":137},
+              {
+                "val":"Anopheles aquasalis",
+                "count":28},
+              {
+                "val":"Anopheles darlingi",
+                "count":17},
+              {
+                "val":"Anopheles albitarsis",
+                "count":15}]}},
+        {
+          "val":"qw",
+          "count":190,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes aegypti aegypti",
+                "count":50},
+              {
+                "val":"Anopheles subpictus",
+                "count":25},
+              {
+                "val":"Anopheles barbirostris sensu lato",
+                "count":24},
+              {
+                "val":"Anopheles sundaicus sensu lato",
+                "count":24},
+              {
+                "val":"Anopheles flavirostris",
+                "count":19},
+              {
+                "val":"Anopheles aconitus",
+                "count":18},
+              {
+                "val":"Anopheles annularis",
+                "count":15},
+              {
+                "val":"Aedes aegypti",
+                "count":6},
+              {
+                "val":"Anopheles balabacensis",
+                "count":4},
+              {
+                "val":"Anopheles maculatus sensu lato",
+                "count":4},
+              {
+                "val":"Anopheles minimus sensu lato",
+                "count":1}]}},
+        {
+          "val":"de",
+          "count":188,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes aegypti",
+                "count":188}]}},
+        {
+          "val":"w2",
+          "count":187,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes albopictus",
+                "count":58},
+              {
+                "val":"Anopheles maculatus sensu lato",
+                "count":57},
+              {
+                "val":"Aedes aegypti",
+                "count":37},
+              {
+                "val":"Culex quinquefasciatus",
+                "count":24},
+              {
+                "val":"Anopheles sundaicus sensu lato",
+                "count":6},
+              {
+                "val":"Anopheles aconitus",
+                "count":2},
+              {
+                "val":"Anopheles barbirostris sensu lato",
+                "count":2},
+              {
+                "val":"Anopheles sinensis sensu lato",
+                "count":1}]}},
+        {
+          "val":"d4",
+          "count":177,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles albimanus",
+                "count":87},
+              {
+                "val":"Anopheles pseudopunctipennis",
+                "count":47},
+              {
+                "val":"Anopheles darlingi",
+                "count":43}]}},
+        {
+          "val":"d2",
+          "count":174,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes aegypti",
+                "count":105},
+              {
+                "val":"Anopheles albimanus",
+                "count":21},
+              {
+                "val":"Anopheles nuneztovari",
+                "count":18},
+              {
+                "val":"Aedes albopictus",
+                "count":13},
+              {
+                "val":"Anopheles darlingi",
+                "count":10},
+              {
+                "val":"Anopheles pseudopunctipennis",
+                "count":4},
+              {
+                "val":"Culex quinquefasciatus",
+                "count":2},
+              {
+                "val":"Anopheles marajoara",
+                "count":1}]}},
+        {
+          "val":"tw",
+          "count":174,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles stephensi",
+                "count":48},
+              {
+                "val":"Anopheles culicifacies sensu lato",
+                "count":22},
+              {
+                "val":"Anopheles superpictus",
+                "count":15},
+              {
+                "val":"Aedes aegypti",
+                "count":14},
+              {
+                "val":"Anopheles subpictus",
+                "count":11},
+              {
+                "val":"Culex quinquefasciatus",
+                "count":9},
+              {
+                "val":"Anopheles pulcherrimus",
+                "count":8},
+              {
+                "val":"Armigeres subalbatus",
+                "count":8},
+              {
+                "val":"Culex tritaeniorhynchus",
+                "count":7},
+              {
+                "val":"Anopheles peditaeniatus",
+                "count":6},
+              {
+                "val":"Collessius pseudotaeniatus",
+                "count":5},
+              {
+                "val":"Aedes albopictus",
+                "count":4},
+              {
+                "val":"Aedes w-albus",
+                "count":4},
+              {
+                "val":"Anopheles annularis",
+                "count":3},
+              {
+                "val":"Anopheles fluviatilis",
+                "count":3},
+              {
+                "val":"Anopheles maculatus sensu lato",
+                "count":2},
+              {
+                "val":"Anopheles splendidus",
+                "count":2},
+              {
+                "val":"Anopheles hyrcanus",
+                "count":1},
+              {
+                "val":"Culex mimeticus",
+                "count":1},
+              {
+                "val":"Phlebotomus papatasi",
+                "count":1}]}},
+        {
+          "val":"7h",
+          "count":167,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes aegypti",
+                "count":146},
+              {
+                "val":"Lutzomyia longipalpis",
+                "count":13},
+              {
+                "val":"Anopheles albitarsis",
+                "count":5},
+              {
+                "val":"Anopheles darlingi",
+                "count":3}]}},
+        {
+          "val":"sq",
+          "count":164,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles superpictus",
+                "count":57},
+              {
+                "val":"Anopheles labranchiae",
+                "count":47},
+              {
+                "val":"Aedes albopictus",
+                "count":46},
+              {
+                "val":"Anopheles sacharovi",
+                "count":12},
+              {
+                "val":"Anopheles atroparvus",
+                "count":1},
+              {
+                "val":"Anopheles messeae",
+                "count":1}]}},
+        {
+          "val":"7p",
+          "count":160,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes aegypti",
+                "count":131},
+              {
+                "val":"Lutzomyia longipalpis",
+                "count":29}]}},
+        {
+          "val":"ww",
+          "count":159,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles sinensis sensu lato",
+                "count":152},
+              {
+                "val":"Anopheles sinensis",
+                "count":3},
+              {
+                "val":"Anopheles lesteri",
+                "count":2},
+              {
+                "val":"Aedes albopictus",
+                "count":1},
+              {
+                "val":"Culex tritaeniorhynchus",
+                "count":1}]}},
+        {
+          "val":"wm",
+          "count":155,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles sinensis sensu lato",
+                "count":136},
+              {
+                "val":"Anopheles lesteri",
+                "count":8},
+              {
+                "val":"Anopheles aconitus",
+                "count":5},
+              {
+                "val":"Anopheles minimus sensu lato",
+                "count":5},
+              {
+                "val":"Aedes albopictus",
+                "count":1}]}},
+        {
+          "val":"wk",
+          "count":153,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles sinensis sensu lato",
+                "count":89},
+              {
+                "val":"Anopheles minimus sensu lato",
+                "count":24},
+              {
+                "val":"Anopheles aconitus",
+                "count":17},
+              {
+                "val":"Anopheles lesteri",
+                "count":5},
+              {
+                "val":"Aedes albopictus",
+                "count":4},
+              {
+                "val":"Anopheles annularis",
+                "count":3},
+              {
+                "val":"Anopheles barbirostris sensu lato",
+                "count":3},
+              {
+                "val":"Anopheles dirus",
+                "count":3},
+              {
+                "val":"Anopheles maculatus sensu lato",
+                "count":3},
+              {
+                "val":"Culex tritaeniorhynchus",
+                "count":2}]}},
+        {
+          "val":"tk",
+          "count":151,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles stephensi",
+                "count":66},
+              {
+                "val":"Anopheles culicifacies sensu lato",
+                "count":42},
+              {
+                "val":"Anopheles fluviatilis",
+                "count":27},
+              {
+                "val":"Aedes aegypti",
+                "count":5},
+              {
+                "val":"Anopheles culicifacies A",
+                "count":4},
+              {
+                "val":"Anopheles culicifacies D",
+                "count":4},
+              {
+                "val":"Anopheles superpictus",
+                "count":2},
+              {
+                "val":"Anopheles sergentii",
+                "count":1}]}},
+        {
+          "val":"u6",
+          "count":148,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles messeae",
+                "count":126},
+              {
+                "val":"Anopheles atroparvus",
+                "count":21},
+              {
+                "val":"Aedes sticticus",
+                "count":1}]}},
+        {
+          "val":"sg",
+          "count":140,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes aegypti",
+                "count":118},
+              {
+                "val":"Anopheles arabiensis",
+                "count":13},
+              {
+                "val":"Anopheles sergentii",
+                "count":9}]}},
+        {
+          "val":"6e",
+          "count":135,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles pseudopunctipennis",
+                "count":104},
+              {
+                "val":"Aedes aegypti",
+                "count":27},
+              {
+                "val":"Anopheles albitarsis",
+                "count":3},
+              {
+                "val":"Anopheles nuneztovari",
+                "count":1}]}},
+        {
+          "val":"ey",
+          "count":134,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles atroparvus",
+                "count":106},
+              {
+                "val":"Anopheles sergentii",
+                "count":14},
+              {
+                "val":"Anopheles labranchiae",
+                "count":13},
+              {
+                "val":"Aedes albopictus",
+                "count":1}]}},
+        {
+          "val":"eb",
+          "count":132,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles gambiae sensu lato",
+                "count":59},
+              {
+                "val":"Anopheles gambiae",
+                "count":25},
+              {
+                "val":"Anopheles coluzzii",
+                "count":14},
+              {
+                "val":"Anopheles funestus",
+                "count":13},
+              {
+                "val":"Anopheles melas",
+                "count":6},
+              {
+                "val":"Culex decens",
+                "count":6},
+              {
+                "val":"Anopheles arabiensis",
+                "count":4},
+              {
+                "val":"Aedes aegypti",
+                "count":2},
+              {
+                "val":"Aedes aegypti aegypti",
+                "count":1},
+              {
+                "val":"Aedes aegypti formosus",
+                "count":1},
+              {
+                "val":"Culex",
+                "count":1}]}},
+        {
+          "val":"ku",
+          "count":122,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles gambiae sensu lato",
+                "count":72},
+              {
+                "val":"Anopheles funestus sensu lato",
+                "count":19},
+              {
+                "val":"Anopheles funestus",
+                "count":9},
+              {
+                "val":"Anopheles arabiensis",
+                "count":5},
+              {
+                "val":"Anopheles gambiae",
+                "count":3},
+              {
+                "val":"Aedes metallicus",
+                "count":1},
+              {
+                "val":"Anopheles leesoni",
+                "count":1},
+              {
+                "val":"Anopheles merus",
+                "count":1},
+              {
+                "val":"Anopheles parensis",
+                "count":1},
+              {
+                "val":"Anopheles rivulorum",
+                "count":1},
+              {
+                "val":"Anopheles squamosus",
+                "count":1},
+              {
+                "val":"Anopheles tenebrosus",
+                "count":1},
+              {
+                "val":"Anopheles ziemanni",
+                "count":1},
+              {
+                "val":"Culex poicilipes",
+                "count":1},
+              {
+                "val":"Culex quinquefasciatus",
+                "count":1},
+              {
+                "val":"Culex thalassius",
+                "count":1},
+              {
+                "val":"Mansonia africana",
+                "count":1},
+              {
+                "val":"Mansonia uniformis",
+                "count":1},
+              {
+                "val":"Mimomyia mediolineata",
+                "count":1}]}},
+        {
+          "val":"wc",
+          "count":122,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes aegypti",
+                "count":114},
+              {
+                "val":"Anopheles flavirostris",
+                "count":8}]}},
+        {
+          "val":"sy",
+          "count":117,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles sacharovi",
+                "count":78},
+              {
+                "val":"Anopheles superpictus",
+                "count":38},
+              {
+                "val":"Phlebotomus tobbi",
+                "count":1}]}},
+        {
+          "val":"6v",
+          "count":112,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes aegypti",
+                "count":97},
+              {
+                "val":"Anopheles darlingi",
+                "count":8},
+              {
+                "val":"Anopheles albitarsis",
+                "count":7}]}},
+        {
+          "val":"te",
+          "count":100,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles culicifacies sensu lato",
+                "count":55},
+              {
+                "val":"Aedes aegypti",
+                "count":13},
+              {
+                "val":"Aedes albopictus",
+                "count":6},
+              {
+                "val":"Anopheles stephensi",
+                "count":6},
+              {
+                "val":"Anopheles subpictus",
+                "count":6},
+              {
+                "val":"Anopheles aconitus",
+                "count":4},
+              {
+                "val":"Anopheles fluviatilis",
+                "count":4},
+              {
+                "val":"Anopheles annularis",
+                "count":3},
+              {
+                "val":"Anopheles barbirostris sensu lato",
+                "count":3}]}},
+        {
+          "val":"d7",
+          "count":90,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes aegypti",
+                "count":53},
+              {
+                "val":"Anopheles albimanus",
+                "count":37}]}},
+        {
+          "val":"mj",
+          "count":90,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles gambiae sensu lato",
+                "count":45},
+              {
+                "val":"Anopheles funestus",
+                "count":24},
+              {
+                "val":"Anopheles gambiae",
+                "count":9},
+              {
+                "val":"Anopheles arabiensis",
+                "count":8},
+              {
+                "val":"Anopheles merus",
+                "count":4}]}},
+        {
+          "val":"9u",
+          "count":86,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes aegypti",
+                "count":80},
+              {
+                "val":"Anopheles pseudopunctipennis",
+                "count":5},
+              {
+                "val":"Anopheles quadrimaculatus",
+                "count":1}]}},
+        {
+          "val":"st",
+          "count":82,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles sergentii",
+                "count":82}]}},
+        {
+          "val":"wd",
+          "count":79,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles flavirostris",
+                "count":64},
+              {
+                "val":"Anopheles maculatus sensu lato",
+                "count":13},
+              {
+                "val":"Anopheles annularis",
+                "count":1},
+              {
+                "val":"Anopheles subpictus",
+                "count":1}]}},
+        {
+          "val":"km",
+          "count":75,
+          "terms":{
+            "buckets":[{
+                "val":"genus Anopheles",
+                "count":21},
+              {
+                "val":"Anopheles coustani",
+                "count":14},
+              {
+                "val":"Anopheles gambiae sensu lato",
+                "count":13},
+              {
+                "val":"Anopheles gambiae",
+                "count":11},
+              {
+                "val":"Anopheles funestus",
+                "count":8},
+              {
+                "val":"Anopheles arabiensis",
+                "count":4},
+              {
+                "val":"Anopheles melas",
+                "count":4}]}},
+        {
+          "val":"2s",
+          "count":73,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes aegypti",
+                "count":73}]}},
+        {
+          "val":"td",
+          "count":72,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles stephensi",
+                "count":31},
+              {
+                "val":"Anopheles culicifacies sensu lato",
+                "count":16},
+              {
+                "val":"Anopheles subpictus",
+                "count":5},
+              {
+                "val":"Aedes aegypti",
+                "count":2},
+              {
+                "val":"Anopheles barbirostris sensu lato",
+                "count":2},
+              {
+                "val":"Anopheles fluviatilis",
+                "count":2},
+              {
+                "val":"Armigeres subalbatus",
+                "count":2},
+              {
+                "val":"Aedes albopictus",
+                "count":1},
+              {
+                "val":"Aedes cogilli",
+                "count":1},
+              {
+                "val":"Aedes iyengari",
+                "count":1},
+              {
+                "val":"Anopheles aconitus",
+                "count":1},
+              {
+                "val":"Anopheles annularis",
+                "count":1},
+              {
+                "val":"Anopheles dirus",
+                "count":1},
+              {
+                "val":"Anopheles maculatus sensu lato",
+                "count":1},
+              {
+                "val":"Culex pluvialis",
+                "count":1},
+              {
+                "val":"Culex quinquefasciatus",
+                "count":1},
+              {
+                "val":"Heizmannia discrepans",
+                "count":1},
+              {
+                "val":"Uranotaenia atra",
+                "count":1},
+              {
+                "val":"Verrallina lugubris",
+                "count":1}]}},
+        {
+          "val":"w8",
+          "count":65,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles balabacensis",
+                "count":33},
+              {
+                "val":"Anopheles leucosphyrus",
+                "count":9},
+              {
+                "val":"Anopheles maculatus sensu lato",
+                "count":8},
+              {
+                "val":"Anopheles barbirostris sensu lato",
+                "count":7},
+              {
+                "val":"Anopheles subpictus",
+                "count":5},
+              {
+                "val":"Anopheles sundaicus sensu lato",
+                "count":3}]}},
+        {
+          "val":"t9",
+          "count":63,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles stephensi",
+                "count":14},
+              {
+                "val":"Anopheles subpictus",
+                "count":9},
+              {
+                "val":"Anopheles aconitus",
+                "count":5},
+              {
+                "val":"Anopheles annularis",
+                "count":5},
+              {
+                "val":"Anopheles barbirostris sensu lato",
+                "count":5},
+              {
+                "val":"Anopheles culicifacies sensu lato",
+                "count":5},
+              {
+                "val":"Anopheles dirus",
+                "count":5},
+              {
+                "val":"Anopheles fluviatilis",
+                "count":5},
+              {
+                "val":"Anopheles maculatus sensu lato",
+                "count":5},
+              {
+                "val":"Aedes aegypti",
+                "count":2},
+              {
+                "val":"Aedes albopictus",
+                "count":2},
+              {
+                "val":"Culex bitaeniorhynchus",
+                "count":1}]}},
+        {
+          "val":"we",
+          "count":58,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles sinensis sensu lato",
+                "count":47},
+              {
+                "val":"Anopheles aconitus",
+                "count":4},
+              {
+                "val":"Anopheles minimus sensu lato",
+                "count":4},
+              {
+                "val":"Anopheles flavirostris",
+                "count":2},
+              {
+                "val":"Anopheles maculatus sensu lato",
+                "count":1}]}},
+        {
+          "val":"7j",
+          "count":53,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes aegypti",
+                "count":51},
+              {
+                "val":"Anopheles darlingi",
+                "count":2}]}},
+        {
+          "val":"6y",
+          "count":52,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes aegypti",
+                "count":37},
+              {
+                "val":"Anopheles darlingi",
+                "count":6},
+              {
+                "val":"Rhodnius robustus III",
+                "count":5},
+              {
+                "val":"Anopheles marajoara",
+                "count":2},
+              {
+                "val":"Anopheles nuneztovari",
+                "count":2}]}},
+        {
+          "val":"rk",
+          "count":51,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes aegypti",
+                "count":49},
+              {
+                "val":"Anopheles farauti",
+                "count":2}]}},
+        {
+          "val":"ez",
+          "count":48,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles atroparvus",
+                "count":47},
+              {
+                "val":"Aedes albopictus",
+                "count":1}]}},
+        {
+          "val":"kg",
+          "count":48,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles gambiae sensu lato",
+                "count":28},
+              {
+                "val":"Anopheles funestus",
+                "count":7},
+              {
+                "val":"Anopheles arabiensis",
+                "count":6},
+              {
+                "val":"Anopheles gambiae",
+                "count":4},
+              {
+                "val":"Anopheles merus",
+                "count":3}]}},
+        {
+          "val":"u8",
+          "count":47,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles messeae",
+                "count":16},
+              {
+                "val":"Anopheles atroparvus",
+                "count":14},
+              {
+                "val":"Anopheles sacharovi",
+                "count":9},
+              {
+                "val":"Anopheles superpictus",
+                "count":8}]}},
+        {
+          "val":"kk",
+          "count":46,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles arabiensis",
+                "count":39},
+              {
+                "val":"Anopheles funestus",
+                "count":5},
+              {
+                "val":"Anopheles parensis",
+                "count":2}]}},
+        {
+          "val":"r3",
+          "count":44,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes bancroftianus",
+                "count":5},
+              {
+                "val":"Anopheles annulipes",
+                "count":5},
+              {
+                "val":"Culex cylindricus",
+                "count":5},
+              {
+                "val":"Culex globocoxitus",
+                "count":4},
+              {
+                "val":"Aedeomyia venustipes",
+                "count":3},
+              {
+                "val":"Coquillettidia linealis",
+                "count":3},
+              {
+                "val":"Culex australicus",
+                "count":3},
+              {
+                "val":"genus Tripteroides",
+                "count":3},
+              {
+                "val":"Aedes camptorhynchus",
+                "count":2},
+              {
+                "val":"Aedes notoscriptus",
+                "count":2},
+              {
+                "val":"Culex palpalis",
+                "count":2},
+              {
+                "val":"Culex pipiens",
+                "count":2},
+              {
+                "val":"Culiseta inconspicua",
+                "count":2},
+              {
+                "val":"Aedes macmillani",
+                "count":1},
+              {
+                "val":"Culex annulirostris",
+                "count":1},
+              {
+                "val":"Tripteroides tasmaniensis",
+                "count":1}]}},
+        {
+          "val":"tn",
+          "count":41,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles sacharovi",
+                "count":30},
+              {
+                "val":"Anopheles superpictus",
+                "count":10},
+              {
+                "val":"Anopheles culicifacies sensu lato",
+                "count":1}]}},
+        {
+          "val":"6t",
+          "count":38,
+          "terms":{
+            "buckets":[{
+                "val":"Rhodnius robustus II",
+                "count":13},
+              {
+                "val":"Anopheles darlingi",
+                "count":10},
+              {
+                "val":"Anopheles albitarsis",
+                "count":6},
+              {
+                "val":"Aedes aegypti",
+                "count":4},
+              {
+                "val":"Anopheles nuneztovari",
+                "count":3},
+              {
+                "val":"Anopheles marajoara",
+                "count":2}]}},
+        {
+          "val":"8e",
+          "count":38,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes aegypti",
+                "count":38}]}},
+        {
+          "val":"mk",
+          "count":38,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes mascarensis",
+                "count":26},
+              {
+                "val":"Aedes aegypti",
+                "count":12}]}},
+        {
+          "val":"u7",
+          "count":36,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles messeae",
+                "count":23},
+              {
+                "val":"Aedes annulipes",
+                "count":1},
+              {
+                "val":"Aedes cantans",
+                "count":1},
+              {
+                "val":"Aedes cinereus",
+                "count":1},
+              {
+                "val":"Aedes communis",
+                "count":1},
+              {
+                "val":"Aedes diantaeus",
+                "count":1},
+              {
+                "val":"Aedes intrudens",
+                "count":1},
+              {
+                "val":"Aedes punctor",
+                "count":1},
+              {
+                "val":"Aedes vexans sensu lato",
+                "count":1},
+              {
+                "val":"Coquillettidia richiardii",
+                "count":1},
+              {
+                "val":"Culex pipiens",
+                "count":1},
+              {
+                "val":"Culex torrentium",
+                "count":1},
+              {
+                "val":"Culiseta morsitans",
+                "count":1},
+              {
+                "val":"Culiseta ochroptera",
+                "count":1}]}},
+        {
+          "val":"ev",
+          "count":35,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes hodgkini",
+                "count":10},
+              {
+                "val":"Culex pipiens molestus",
+                "count":10},
+              {
+                "val":"Culex pipiens pipiens",
+                "count":10},
+              {
+                "val":"Culex pipiens",
+                "count":5}]}},
+        {
+          "val":"wv",
+          "count":33,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles sinensis sensu lato",
+                "count":32},
+              {
+                "val":"Aedes albopictus",
+                "count":1}]}},
+        {
+          "val":"6s",
+          "count":32,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles pseudopunctipennis",
+                "count":25},
+              {
+                "val":"Rhodnius robustus II",
+                "count":5},
+              {
+                "val":"Aedes aegypti",
+                "count":2}]}},
+        {
+          "val":"rt",
+          "count":32,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles farauti",
+                "count":32}]}},
+        {
+          "val":"wx",
+          "count":32,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes albopictus",
+                "count":17},
+              {
+                "val":"Anopheles sinensis sensu lato",
+                "count":15}]}},
+        {
+          "val":"ub",
+          "count":30,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles atroparvus",
+                "count":14},
+              {
+                "val":"Anopheles messeae",
+                "count":14},
+              {
+                "val":"Anopheles sacharovi",
+                "count":2}]}},
+        {
+          "val":"6d",
+          "count":28,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes aegypti",
+                "count":26},
+              {
+                "val":"Anopheles albitarsis",
+                "count":2}]}},
+        {
+          "val":"87",
+          "count":26,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes aegypti",
+                "count":25},
+              {
+                "val":"Aedes albopictus",
+                "count":1}]}},
+        {
+          "val":"9y",
+          "count":26,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles quadrimaculatus",
+                "count":26}]}},
+        {
+          "val":"ud",
+          "count":26,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles messeae",
+                "count":19},
+              {
+                "val":"Anopheles atroparvus",
+                "count":7}]}},
+        {
+          "val":"kd",
+          "count":24,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes caballus",
+                "count":2},
+              {
+                "val":"Aedes hirsutus",
+                "count":2},
+              {
+                "val":"Aedes mcintoshi",
+                "count":2},
+              {
+                "val":"Aedimorphus",
+                "count":2},
+              {
+                "val":"Anopheles arabiensis",
+                "count":2},
+              {
+                "val":"Anopheles squamosus",
+                "count":2},
+              {
+                "val":"Culex pipiens",
+                "count":2},
+              {
+                "val":"Culex theileri",
+                "count":2},
+              {
+                "val":"Culex univittatus",
+                "count":2},
+              {
+                "val":"Aedeomyia furfurea",
+                "count":1},
+              {
+                "val":"Aedes juppi",
+                "count":1},
+              {
+                "val":"Aedes simpsoni",
+                "count":1},
+              {
+                "val":"Aedes vittatus",
+                "count":1},
+              {
+                "val":"Anopheles merus",
+                "count":1},
+              {
+                "val":"Culex quinquefasciatus",
+                "count":1}]}},
+        {
+          "val":"kp",
+          "count":23,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles moucheti",
+                "count":11},
+              {
+                "val":"Anopheles funestus",
+                "count":10},
+              {
+                "val":"Anopheles gambiae",
+                "count":1},
+              {
+                "val":"Anopheles gambiae sensu lato",
+                "count":1}]}},
+        {
+          "val":"th",
+          "count":23,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes aegypti",
+                "count":11},
+              {
+                "val":"Anopheles dthali",
+                "count":5},
+              {
+                "val":"Anopheles fluviatilis",
+                "count":5},
+              {
+                "val":"Anopheles stephensi",
+                "count":2}]}},
+        {
+          "val":"sn",
+          "count":21,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles labranchiae",
+                "count":14},
+              {
+                "val":"Phlebotomus papatasi",
+                "count":6},
+              {
+                "val":"Anopheles sacharovi",
+                "count":1}]}},
+        {
+          "val":"d0",
+          "count":19,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles albimanus",
+                "count":15},
+              {
+                "val":"Aedes aegypti",
+                "count":2},
+              {
+                "val":"Anopheles albitarsis",
+                "count":1},
+              {
+                "val":"Anopheles pseudopunctipennis",
+                "count":1}]}},
+        {
+          "val":"u9",
+          "count":18,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles atroparvus",
+                "count":9},
+              {
+                "val":"Anopheles messeae",
+                "count":9}]}},
+        {
+          "val":"tj",
+          "count":17,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles fluviatilis",
+                "count":5},
+              {
+                "val":"Anopheles sacharovi",
+                "count":5},
+              {
+                "val":"Anopheles stephensi",
+                "count":4},
+              {
+                "val":"Anopheles superpictus",
+                "count":2},
+              {
+                "val":"Anopheles culicifacies sensu lato",
+                "count":1}]}},
+        {
+          "val":"eg",
+          "count":16,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles gambiae sensu lato",
+                "count":11},
+              {
+                "val":"Anopheles arabiensis",
+                "count":3},
+              {
+                "val":"Anopheles gambiae",
+                "count":2}]}},
+        {
+          "val":"uc",
+          "count":16,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles messeae",
+                "count":9},
+              {
+                "val":"Anopheles atroparvus",
+                "count":7}]}},
+        {
+          "val":"uf",
+          "count":16,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles atroparvus",
+                "count":8},
+              {
+                "val":"Anopheles messeae",
+                "count":8}]}},
+        {
+          "val":"tp",
+          "count":15,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles sacharovi",
+                "count":10},
+              {
+                "val":"Anopheles atroparvus",
+                "count":2},
+              {
+                "val":"Anopheles superpictus",
+                "count":2},
+              {
+                "val":"Anopheles messeae",
+                "count":1}]}},
+        {
+          "val":"k3",
+          "count":14,
+          "terms":{
+            "buckets":[{
+                "val":"Culex annulioris",
+                "count":2},
+              {
+                "val":"Culex pipiens",
+                "count":2},
+              {
+                "val":"Culex univittatus",
+                "count":2},
+              {
+                "val":"Aedes subdentatus",
+                "count":1},
+              {
+                "val":"Anopheles coustani",
+                "count":1},
+              {
+                "val":"Anopheles tenebrosus",
+                "count":1},
+              {
+                "val":"Culex chorleyi",
+                "count":1},
+              {
+                "val":"Culex lineata",
+                "count":1},
+              {
+                "val":"Culex salisburiensis",
+                "count":1},
+              {
+                "val":"Uranotaenia hopkinsi",
+                "count":1},
+              {
+                "val":"Uranotaenia mashonaensis",
+                "count":1}]}},
+        {
+          "val":"69",
+          "count":12,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes aegypti",
+                "count":10},
+              {
+                "val":"Anopheles albitarsis",
+                "count":2}]}},
+        {
+          "val":"s5",
+          "count":12,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles arabiensis",
+                "count":7},
+              {
+                "val":"Anopheles gambiae",
+                "count":5}]}},
+        {
+          "val":"v1",
+          "count":12,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles messeae",
+                "count":9},
+              {
+                "val":"Anopheles atroparvus",
+                "count":3}]}},
+        {
+          "val":"sv",
+          "count":11,
+          "terms":{
+            "buckets":[{
+                "val":"Phlebotomus papatasi",
+                "count":6},
+              {
+                "val":"Anopheles sergentii",
+                "count":2},
+              {
+                "val":"Anopheles sacharovi",
+                "count":1},
+              {
+                "val":"Anopheles stephensi",
+                "count":1},
+              {
+                "val":"Anopheles superpictus",
+                "count":1}]}},
+        {
+          "val":"u4",
+          "count":11,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles atroparvus",
+                "count":7},
+              {
+                "val":"Anopheles messeae",
+                "count":4}]}},
+        {
+          "val":"v0",
+          "count":11,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles messeae",
+                "count":7},
+              {
+                "val":"Anopheles atroparvus",
+                "count":2},
+              {
+                "val":"Anopheles sacharovi",
+                "count":1},
+              {
+                "val":"Anopheles superpictus",
+                "count":1}]}},
+        {
+          "val":"9s",
+          "count":10,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles pseudopunctipennis",
+                "count":10}]}},
+        {
+          "val":"ue",
+          "count":10,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles messeae",
+                "count":10}]}},
+        {
+          "val":"6p",
+          "count":9,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles albimanus",
+                "count":8},
+              {
+                "val":"Anopheles pseudopunctipennis",
+                "count":1}]}},
+        {
+          "val":"ug",
+          "count":9,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles messeae",
+                "count":9}]}},
+        {
+          "val":"k7",
+          "count":8,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles theileri",
+                "count":2},
+              {
+                "val":"Culex theileri",
+                "count":2},
+              {
+                "val":"Aedes aegypti",
+                "count":1},
+              {
+                "val":"Anopheles rufipes",
+                "count":1},
+              {
+                "val":"Culex neavei",
+                "count":1},
+              {
+                "val":"Culex simpsoni",
+                "count":1}]}},
+        {
+          "val":"qy",
+          "count":8,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles farauti",
+                "count":7},
+              {
+                "val":"Anopheles subpictus",
+                "count":1}]}},
+        {
+          "val":"ss",
+          "count":8,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles sergentii",
+                "count":8}]}},
+        {
+          "val":"ee",
+          "count":7,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles arabiensis",
+                "count":4},
+              {
+                "val":"Anopheles gambiae sensu lato",
+                "count":3}]}},
+        {
+          "val":"tm",
+          "count":7,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles culicifacies sensu lato",
+                "count":4},
+              {
+                "val":"Anopheles stephensi",
+                "count":3}]}},
+        {
+          "val":"tq",
+          "count":7,
+          "terms":{
+            "buckets":[{
+                "val":"Phlebotomus papatasi",
+                "count":4},
+              {
+                "val":"Anopheles culicifacies sensu lato",
+                "count":2},
+              {
+                "val":"Anopheles stephensi",
+                "count":1}]}},
+        {
+          "val":"6m",
+          "count":5,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles pseudopunctipennis",
+                "count":5}]}},
+        {
+          "val":"rv",
+          "count":5,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes aegypti",
+                "count":1},
+              {
+                "val":"Aedes fijiensis",
+                "count":1},
+              {
+                "val":"Aedes polynesiensis",
+                "count":1},
+              {
+                "val":"Aedes pseudoscutellaris",
+                "count":1},
+              {
+                "val":"Culex quinquefasciatus",
+                "count":1}]}},
+        {
+          "val":"r5",
+          "count":4,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles farauti",
+                "count":4}]}},
+        {
+          "val":"vf",
+          "count":4,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles messeae",
+                "count":4}]}},
+        {
+          "val":"e6",
+          "count":3,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes aegypti",
+                "count":3}]}},
+        {
+          "val":"rs",
+          "count":3,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles farauti",
+                "count":3}]}},
+        {
+          "val":"se",
+          "count":3,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles arabiensis",
+                "count":2},
+              {
+                "val":"Anopheles gambiae",
+                "count":1}]}},
+        {
+          "val":"v5",
+          "count":3,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles messeae",
+                "count":3}]}},
+        {
+          "val":"wq",
+          "count":3,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles sinensis sensu lato",
+                "count":2},
+              {
+                "val":"Aedes albopictus",
+                "count":1}]}},
+        {
+          "val":"qx",
+          "count":2,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles balabacensis",
+                "count":1},
+              {
+                "val":"Anopheles leucosphyrus",
+                "count":1}]}},
+        {
+          "val":"ru",
+          "count":2,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles farauti",
+                "count":2}]}},
+        {
+          "val":"wj",
+          "count":2,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles maculatus sensu lato",
+                "count":2}]}},
+        {
+          "val":"wu",
+          "count":2,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles minimus sensu lato",
+                "count":1},
+              {
+                "val":"Anopheles sinensis sensu lato",
+                "count":1}]}},
+        {
+          "val":"2t",
+          "count":1,
+          "terms":{
+            "buckets":[{
+                "val":"Aedes aegypti",
+                "count":1}]}},
+        {
+          "val":"qr",
+          "count":1,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles sundaicus sensu lato",
+                "count":1}]}},
+        {
+          "val":"su",
+          "count":1,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles sergentii",
+                "count":1}]}},
+        {
+          "val":"t0",
+          "count":1,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles arabiensis",
+                "count":1}]}},
+        {
+          "val":"t4",
+          "count":1,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles culicifacies sensu lato",
+                "count":1}]}},
+        {
+          "val":"us",
+          "count":1,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles messeae",
+                "count":1}]}},
+        {
+          "val":"v4",
+          "count":1,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles messeae",
+                "count":1}]}},
+        {
+          "val":"wb",
+          "count":1,
+          "terms":{
+            "buckets":[{
+                "val":"Anopheles barbirostris sensu lato",
+                "count":1}]}}]}}}

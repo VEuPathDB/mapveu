@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, forwardRef } from "react";
 import { MapVEuMapProps } from "./Types";
 import { Viewport, Map, TileLayer, LayersControl, ZoomControl, ScaleControl } from "react-leaflet";
 import SemanticMarkers from "./SemanticMarkers";
@@ -13,6 +13,8 @@ const { BaseLayer, Overlay } = LayersControl
  * @param props
  */
 export default function MapVEuMap({ viewport, height, width, onViewportChanged, markerData }: MapVEuMapProps) {
+  // export default function MapVEuMap({ viewport, height, width, onViewportChanged }: MapVEuMapProps) {
+  // const MapVEuMap = forwardRef(({ viewport, height, width, onViewportChanged, markerData }: MapVEuMapProps, mapRef) => {
 
   // this is the React Map component's onViewPortChanged handler
   // we may not need to use it.
@@ -34,6 +36,7 @@ export default function MapVEuMap({ viewport, height, width, onViewportChanged, 
       onViewportChanged={handleViewportChanged}
       zoomControl={false} //DKDK this is for disabling default zoomControl at top left
       minzoom='1'
+      // ref={mapRef}  //DKDK forwardRef
     >
       <ZoomControl position="topright" />
       <ScaleControl position="bottomright" />
@@ -88,9 +91,11 @@ export default function MapVEuMap({ viewport, height, width, onViewportChanged, 
 
       <SemanticMarkers
         onViewportChanged={onViewportChanged}
-      	data={markerData}
+        data={markerData}
+      	// data={}
       />
 
     </Map>
   );
+// })
 }
