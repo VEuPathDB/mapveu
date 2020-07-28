@@ -17,7 +17,7 @@ export default function DonutMarker(props) {
   /**
    * DKDK icon with demo data: mroe realistic example can be found at dk-donut1 branch
    */
-  const size = 40;  //DKDK donut marker size
+  const size = 40  //DKDK donut marker size
   let fullStat = []
   //DKDK need to make a temporary stats array of objects to show marker colors - only works for demo data, not real solr data
   for (let i = 0; i < props.values.length; i++) {
@@ -31,7 +31,7 @@ export default function DonutMarker(props) {
   // console.log(fullStat)
 
   //DKDK temporarily set atomic value: true or false for demo purpose
-  var atomicValue = Math.random() < 0.5 ? true : false;
+  var atomicValue = Math.random() < 0.5 ? true : false
 
   // make donut icon, donut
   const donut = new L.Icon.Canvas({
@@ -42,7 +42,7 @@ export default function DonutMarker(props) {
       id: '',   //DKDK geohash value for mapveu v1
       stats: fullStat,
       atomic: atomicValue,
-      });
+  })
 
   /**
    * DKDK initial trial for testing highlight marker but couple of issues to be resolved
@@ -51,26 +51,26 @@ export default function DonutMarker(props) {
    * - click event to show sidebar as well?
    * - may not be a React manner... more like js style by accessing to e.target directly?
    */
-  function handleClick (e) {
+  const handleClick = (e) => {
     /**
      * DKDK what about calling removeHighlight() at first? need jquery for convenience
      * this only works when selecting other marker: not working when clicking map
      * it may be achieved by setting all desirable events (e.g., map click, preserving highlight, etc.)
      * just stop here and leave detailed events to be handled later
      */
-    mapveuUtils.removeHighlight();
+    mapveuUtils.removeHighlight()
     //DKDK native manner, but not React style? Either way this is arguably the simplest solution
     e.target._icon.classList.add('highlight-marker')
     //DKDK here, perhaps we can add additional click event, like opening sidebar when clicking
   }
 
   //DKDK top-marker test: mouseOver and mouseOut
-  function onMouseOver (e) {
+  const onMouseOver = (e) => {
     e.target._icon.classList.add('top-marker')
     // console.log('onMouseOver', e)
   }
 
-  function onMouseOut (e) {
+  const onMouseOut = (e) => {
     e.target._icon.classList.remove('top-marker')
     // console.log('onMouseOut', e)
   }
