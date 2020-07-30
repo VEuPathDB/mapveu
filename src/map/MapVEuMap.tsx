@@ -3,6 +3,9 @@ import { MapVEuMapProps } from "./Types";
 import { Viewport, Map, TileLayer, LayersControl, ZoomControl, ScaleControl } from "react-leaflet";
 import SemanticMarkers from "./SemanticMarkers";
 import 'leaflet/dist/leaflet.css';
+//DKDK sample Legend MapVeuLegend
+import Legend from "./Legend"
+import MapVeuLegend from "./MapVeuLegend"
 
 const { BaseLayer, Overlay } = LayersControl
 
@@ -94,6 +97,16 @@ export default function MapVEuMap({ viewport, height, width, onViewportChanged, 
         data={markerData}
       	// data={}
       />
+
+      <MapVeuLegend className="supportLegend">
+          <ul className="legendList">
+            <li className="legendItem1">Strong Support</li>
+            <li className="legendItem2">Weak Support</li>
+            <li className="legendItem3">Weak Oppose</li>
+            <li className="legendItem4">Strong Oppose</li>
+          </ul>
+      </MapVeuLegend>
+      <Legend />
 
     </Map>
   );

@@ -182,7 +182,7 @@ export const Basic = () => {
   return (
     <MapVEuMap
     viewport={{center: [ 54.561781, -3.143297 ], zoom: 13}}
-    height="98vh" width="98vw"
+    height="100vh" width="100vw"
     onViewportChanged={(bvp : BoundsViewport) => setMarkerData(getMarkerData(bvp))}
     markerData={markerData}
     />
@@ -222,7 +222,7 @@ export const Donut = () => {
       <MapVEuMap
         //   viewport={{center: [ 54.561781, -3.143297 ], zoom: 13}}
         viewport={{center: [ 54.011722, -4.694708 ], zoom: 6}}  //DKDk centering to UK area
-        height="98vh" width="98vw"
+        height="100vh" width="100vw"
         //DKDK send response: doesn't make sense in real situation but just for test purpose
         onViewportChanged={(bvp : BoundsViewport) => setMarkerData(getDonutMarkerData(bvp, response))}
         // onViewportChanged={(bvp : BoundsViewport) => setMarkerData(getDonutMarkerData(bvp))}
