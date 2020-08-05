@@ -1,7 +1,7 @@
 import { CSSProperties, ReactElement } from "react";
 // import type { Viewport } from "react-leaflet";  // react-leaflet is flow not TS. Not sure how to do thus
 
-export type LatLong = number[];  // TO DO: bounds checking? and enforce exactly two numbers
+export type LatLong = [number, number];  // TO DO: bounds checking?
 
 // does this need to be imported from react-leaflet properly? (see above)
 export interface Viewport {
