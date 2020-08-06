@@ -24,6 +24,7 @@ const getMarkerElements = ({ bounds, zoomLevel }: BoundsViewport, numMarkers : n
 
     return <BarMarker
       key={`marker_${index}`}
+      id={`marker_${index}`}
       position={[lat, long]}
       labels={labels}
       values={values}
@@ -32,18 +33,18 @@ const getMarkerElements = ({ bounds, zoomLevel }: BoundsViewport, numMarkers : n
 }
 
 
-export const FiveCategories = () => {
+export const ThreeCategories = () => {
   const [ markerElements, setMarkerElements ] = useState<ReactElement<MarkerProps>[]>([]);
   const handleViewportChanged = useCallback((bvp: BoundsViewport) => {
-    setMarkerElements(getMarkerElements(bvp, 10, 6));
+    setMarkerElements(getMarkerElements(bvp, 10, 3));
   }, [setMarkerElements])
 
   return (
     <MapVEuMap
-    viewport={{center: [ 54.561781, -3.143297 ], zoom: 12}}
-    height="600px" width="800px"
-    onViewportChanged={handleViewportChanged}
-    markers={markerElements}
+        viewport={{center: [ 54.561781, -3.143297 ], zoom: 12}}
+        height="600px" width="800px"
+        onViewportChanged={handleViewportChanged}
+        markers={markerElements}
     />
   );
 }

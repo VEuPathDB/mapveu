@@ -9,6 +9,6 @@ export default {
 
 export const BarChartStory = () => {
   return (
-    <BarChart labels={['America', 'Europe', 'Africa']} values={[3, 1, 4]} />
+    <BarChart labels={['America', 'Europe', 'Africa']} values={[3, 1, 4]} width={100} height={100} />
   );
 }
