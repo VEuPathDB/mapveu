@@ -1,7 +1,7 @@
 import React, { ReactElement, useEffect } from "react"; //  { useState, useCallback } from "react";
-import { GeoBBox, MarkerProps, BoundsViewport } from "./Types";
+import { MarkerProps, BoundsViewport } from "./Types";
 import { useLeaflet } from "react-leaflet";
-import { LatLngBounds } from 'leaflet'
+import { LatLngBounds, latLngBounds, latLng } from 'leaflet'
 
 interface SemanticMarkersProps {
   onViewportChanged: (bvp: BoundsViewport) => void,
@@ -10,9 +10,9 @@ interface SemanticMarkersProps {
 
 /**
  * Renders the semantic markers layer
- * 
- * 
- * @param props 
+ *
+ *
+ * @param props
  */
 export default function SemanticMarkers({ onViewportChanged, markers }: SemanticMarkersProps) {
   const { map } = useLeaflet();
@@ -22,7 +22,8 @@ export default function SemanticMarkers({ onViewportChanged, markers }: Semantic
 
     function updateMap() {
       if (map != null) {
-	const bounds = boundsToGeoBBox(map.getBounds());
+  const bounds = boundsToGeoBBox(map.getBounds());
+  // console.log('SemanticMarkers bounds', map.getBounds())
 	const zoomLevel = map.getZoom();
 	onViewportChanged({ bounds, zoomLevel });
       }
@@ -36,7 +37,7 @@ export default function SemanticMarkers({ onViewportChanged, markers }: Semantic
     };
   }, [map, onViewportChanged]);
 
-  
+  // console.log(markers)
 
   /* also think about animating from the previous markers
      hopefully react can do that for free?  (I saw something about prevProps in lifecycle methods.)
@@ -58,8 +59,8 @@ export default function SemanticMarkers({ onViewportChanged, markers }: Semantic
 }
 
 
-
-function boundsToGeoBBox(bounds : LatLngBounds) : GeoBBox {
+//DKDK change to standard leaflet typescript definition, LatLngBounds
+function boundsToGeoBBox(bounds : LatLngBounds) : LatLngBounds {
 
   var south = bounds.getSouth();
   if (south < -90) {
@@ -82,9 +83,9 @@ function boundsToGeoBBox(bounds : LatLngBounds) : GeoBBox {
   }
   if (east < -180) {
     east = -180;
-  }  
+  }
 
-  return { southWest: [south, west],
-	   northEast: [north, east] }
+  //DKDK change to standard leaflet object using latLngBounds
+  return latLngBounds(latLng(south, west), latLng(north, east))
 }
 

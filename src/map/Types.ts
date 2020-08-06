@@ -1,17 +1,14 @@
 import { CSSProperties, ReactElement } from "react";
+import { LatLngExpression, LatLngBounds } from "leaflet";
 // import type { Viewport } from "react-leaflet";  // react-leaflet is flow not TS. Not sure how to do thus
 
-export type LatLong = number[];  // TO DO: bounds checking? and enforce exactly two numbers
+//DKDK change to standard leaflet typescript definition, LatLngExpression
+export type LatLong = LatLngExpression;  // TO DO: bounds checking? and enforce exactly two numbers
 
 // does this need to be imported from react-leaflet properly? (see above)
 export interface Viewport {
   center: LatLong,
   zoom: number
-}
-
-export interface GeoBBox {
-  southWest: LatLong,
-  northEast: LatLong
 }
 
 export interface MarkerProps {
@@ -23,7 +20,7 @@ export interface MarkerProps {
 export interface MapVEuMapProps {
   /** Center lat/long and zoom level */
   viewport: Viewport,
-  
+
   /** Height and width of plot element */
   height: CSSProperties['height'],
   width: CSSProperties['width'],
@@ -34,10 +31,11 @@ export interface MapVEuMapProps {
 
 
 /*
-  This is the geo-related information that any marker data request will need 
+  This is the geo-related information that any marker data request will need
 */
 
 export interface BoundsViewport {
-  bounds: GeoBBox,
+//DKDK change to standard leaflet typescript definition, LatLngBounds
+  bounds: LatLngBounds,
   zoomLevel: number
 }

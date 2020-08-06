@@ -3,13 +3,13 @@ import { MapVEuMapProps } from "./Types";
 import { Viewport, Map, TileLayer } from "react-leaflet";
 import SemanticMarkers from "./SemanticMarkers";
 import 'leaflet/dist/leaflet.css';
-
+import MapVeuLegendSample from './MapVeuLegendSample'
 
 /**
  * Renders a Leaflet map with semantic zooming markers
- * 
- * 
- * @param props 
+ *
+ *
+ * @param props
  */
 export default function MapVEuMap({ viewport, height, width, onViewportChanged, markers }: MapVEuMapProps) {
 
@@ -20,11 +20,11 @@ export default function MapVEuMap({ viewport, height, width, onViewportChanged, 
   // which is useful for fetching data to show on the map.
   // The Viewport info (center and zoom) handled here would be useful for saving a
   // 'bookmarkable' state of the map.
-  const [ state, updateState ] = useState<Viewport>(viewport as Viewport);
+  const [ state, setState ] = useState<Viewport>(viewport as Viewport);
   const handleViewportChanged = (viewport : Viewport) => {
-    updateState(viewport);
+    setState(viewport);
   };
-  
+
   return (
     <Map
       viewport={state}
@@ -33,14 +33,24 @@ export default function MapVEuMap({ viewport, height, width, onViewportChanged, 
     >
 
       <TileLayer
-	url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-	attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
+	      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+	      attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
       />
 
       <SemanticMarkers
         onViewportChanged={onViewportChanged}
-	markers={markers}
+	      markers={markers}
       />
+
+      <MapVeuLegendSample className="supportLegend">
+          <ul className="legendList">
+            <li className="legendItem1">Strong Support</li>
+            <li className="legendItem2">Weak Support</li>
+            <li className="legendItem3">Weak Oppose</li>
+            <li className="legendItem4">Strong Oppose</li>
+          </ul>
+      </MapVeuLegendSample>
+
     </Map>
   );
 }

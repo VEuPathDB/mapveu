@@ -4,6 +4,11 @@ import MapVEuMap from './MapVEuMap';
 import { BoundsViewport, MarkerProps } from './Types';
 import DonutMarker from './DonutMarker'; // TO BE CREATED
 
+//DKDK load necessary functions/classes
+import { latLng, LeafletMouseEvent } from "leaflet";
+// import './popbio/Icon.Canvas.popbio.dk1.simple1.js'   //DKDK call custom canvas icon - may not be used anymore
+import * as mapveuUtils from './popbio/mapveuUtils.dk1.simple1.js'  //DKDK call util functions
+
 export default {
   title: 'Donut Markers',
   component: MapVEuMap,
@@ -37,27 +42,72 @@ const all_colors_hex = [
   "#232C16" // Dark Olive Green
 ];
 
+  /**
+   * DKDK moved below mount events from DonutMarker.tsx to this place for avoiding typescript errors
+   * - initial trial for testing highlight marker but couple of issues to be resolved
+   * - remove highlight after click: more detailed event handling will be required - partially resolved (only marker clicks)
+   * - highlight seems to have a margin or padding: a gap exists - fixed by implementing marker coloring
+   * - click event to show sidebar as well?
+   * - may not be a React manner... more like js style by accessing to e.target directly?
+   */
+  const handleClick = (e: LeafletMouseEvent) => {
+    /**
+     * DKDK this only works when selecting other marker: not working when clicking map
+     * it may be achieved by setting all desirable events (e.g., map click, preserving highlight, etc.)
+     * just stop here and leave detailed events to be handled later
+     */
+    // DKDK use a resuable function to remove a class
+    mapveuUtils.removeClassName('highlight-marker')
+    //DKDK native manner, but not React style? Either way this is arguably the simplest solution
+    e.target._icon.classList.add('highlight-marker')
+    //DKDK here, perhaps we can add additional click event, like opening sidebar when clicking
+    // console.log(e)
+  }
+
+  //DKDK top-marker test: mouseOver and mouseOut
+  const handleMouseOver = (e: LeafletMouseEvent) => {
+    e.target._icon.classList.add('top-marker')
+    // console.log('onMouseOver', e)
+  }
+
+  const handleMouseOut = (e: LeafletMouseEvent) => {
+    e.target._icon.classList.remove('top-marker')
+    // console.log('onMouseOut', e)
+  }
+
 /*
    This is a trivial marker data generator.  It returns 10 random points within the given bounds.
    The real thing should something with zoomLevel.
 */
 const getMarkerElements = ({ bounds, zoomLevel }: BoundsViewport, numMarkers : number, numCategories : number) => {
-  console.log("I've been triggered with bounds=["+bounds.southWest+" TO "+bounds.northEast+"] and zoom="+zoomLevel);
+  //DKDK change bounds as standard leaflet LatLngBounds
+  console.log("I've been triggered with bounds=["+bounds.getSouthWest()+" TO "+bounds.getNorthEast()+"] and zoomLevel="+zoomLevel);
   return Array(numMarkers).fill(undefined).map((_, index) => {
-    const lat = bounds.southWest[0] + Math.random()*(bounds.northEast[0] - bounds.southWest[0]);
-    const long = bounds.southWest[1] + Math.random()*(bounds.northEast[1] - bounds.southWest[1]);
+    // console.log('getMarkerElements',bounds)
+    //DKDK change bounds as standard leaflet LatLngBounds
+    const lat = bounds.getSouth() + Math.random()*(bounds.getNorth() - bounds.getSouth());
+    const long = bounds.getWest() + Math.random()*(bounds.getEast() - bounds.getWest());
 
     const labels = Array(numCategories).fill(0).map((_, index) => 'category_'+index);
     const values = Array(numCategories).fill(0).map(() => Math.floor(Math.random()*100.0));
     const colors = all_colors_hex.slice(0,numCategories);
+    //DKDK passing temporarily set atomic value: true or false for demo purpose
+    let atomicValue = Math.random() < 0.5 ? true : false
 
-    return <DonutMarker
+    return (
+    <DonutMarker
       key={`marker_${index}`}
-      position={[lat, long]}
+      //DKDK change position format
+      position={latLng(lat, long)}
       labels={labels}
       values={values}
       colors={colors}
+      isAtomic={atomicValue}
+      onClick={handleClick}
+      onMouseOut={handleMouseOut}
+      onMouseOver={handleMouseOver}
     />
+    )
   });
 }
 
@@ -71,7 +121,7 @@ export const SixCategories = () => {
   return (
     <MapVEuMap
     viewport={{center: [ 54.561781, -3.143297 ], zoom: 12}}
-    height="600px" width="800px"
+    height="100vh" width="100vw"
     onViewportChanged={handleViewportChanged}
     markers={markerElements}
     />

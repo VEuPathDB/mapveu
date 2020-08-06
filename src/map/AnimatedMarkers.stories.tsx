@@ -5,7 +5,8 @@ import { BoundsViewport, MarkerProps } from './Types';
 import { Marker } from 'react-leaflet';
 import Geohash from 'latlon-geohash';
 import './TempIconHack';
-
+//DKDK load necessary functions/classes
+import { latLng } from "leaflet";
 
 export default {
   title: 'Animated Markers',
@@ -35,11 +36,14 @@ const zoomLevelToGeohashLevel = [
 ];
 
 const getMarkerElements = ({ bounds, zoomLevel }: BoundsViewport, numMarkers : number) => {
-  console.log("I've been triggered with bounds=["+bounds.southWest+" TO "+bounds.northEast+"] and zoom="+zoomLevel);
+  //DKDK change bounds as standard leaflet LatLngBounds
+  console.log("I've been triggered with bounds=["+bounds.getSouthWest()+" TO "+bounds.getNorthEast()+"] and zoomLevel="+zoomLevel);
+
   let aggsByGeohash = new Map();
   Array(numMarkers).fill(undefined).map(() => {
-    const lat = bounds.southWest[0] + Math.random()*(bounds.northEast[0] - bounds.southWest[0]);
-    const long = bounds.southWest[1] + Math.random()*(bounds.northEast[1] - bounds.southWest[1]);
+    //DKDK change bounds as standard leaflet LatLngBounds
+    const lat = bounds.getSouth() + Math.random()*(bounds.getNorth() - bounds.getSouth());
+    const long = bounds.getWest() + Math.random()*(bounds.getEast() - bounds.getWest());
     const geohash : string = Geohash.encode(lat, long, zoomLevelToGeohashLevel[zoomLevel]);
 
     let agg = aggsByGeohash.get(geohash);
@@ -57,7 +61,7 @@ const getMarkerElements = ({ bounds, zoomLevel }: BoundsViewport, numMarkers : n
     const meanLong = agg.long/agg.count;
     return <Marker
       key={agg.geohash}
-      position={[meanLat, meanLong]}
+      position={latLng(meanLat, meanLong)}
       title={agg.geohash}
       />
   })
@@ -74,7 +78,7 @@ export const GeohashIds = () => {
   return (
     <MapVEuMap
     viewport={{center: [ 54.561781, -3.013297 ], zoom: 11}}
-    height="600px" width="800px"
+    height="100vh" width="100vw"
     onViewportChanged={handleViewportChanged}
     markers={markerElements}
     />

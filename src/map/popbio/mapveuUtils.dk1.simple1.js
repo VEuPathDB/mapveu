@@ -1,15 +1,14 @@
 /**
- * DKDK gathering functions temporarily
+ * DKDK gathering functions here temporarily
  * Need to add export to be used in the other component
  */
 
-//DKDK import jquery here for typescript - both worked
-// import * as $ from 'jquery';
-import $ from 'jquery';
-
-//DKDK remove highlighted marker - need jquery
-export function removeHighlight(marker) {
-    //DKDK much convenient to use jquery here
-    $(".highlight-marker").removeClass("highlight-marker")
+//DKDK making a reusable function to remove a class
+export function removeClassName(targetClass) {
+    //DKDK much convenient to use jquery here but try not to use it
+    let targetElement = document.getElementsByClassName(targetClass)[0]
+    if(targetElement !== undefined) {
+        targetElement.classList.remove(targetClass)
+    }
 }
 
