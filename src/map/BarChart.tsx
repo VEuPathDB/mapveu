@@ -41,7 +41,10 @@ export default function BarChart(props: BarChartProps) {
         plotOptions: {
             column: {
                 groupPadding: 0.025,
-            }
+            },
+	    series: {
+	        animation: false,
+	    }
         }
     }
 

@@ -22,6 +22,10 @@ export default function BarMarker(props: BarMarkerProps) {
             <BarChart labels={props.labels} values={props.values} width={40} height={40}></BarChart>,
             document.getElementById(props.id)
         );
+      return () => {
+	const el = document.getElementById(props.id);
+	if (el) ReactDOM.unmountComponentAtNode(el);
+      }
     });
 
     return (

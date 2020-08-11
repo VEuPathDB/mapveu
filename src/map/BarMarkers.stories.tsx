@@ -42,7 +42,40 @@ export const ThreeCategories = () => {
   return (
     <MapVEuMap
         viewport={{center: [ 54.561781, -3.143297 ], zoom: 12}}
-        height="600px" width="800px"
+        height="100vh" width="100vw"
+        onViewportChanged={handleViewportChanged}
+        markers={markerElements}
+    />
+  );
+}
+
+export const ThreeCategories100 = () => {
+  const [ markerElements, setMarkerElements ] = useState<ReactElement<MarkerProps>[]>([]);
+  const handleViewportChanged = useCallback((bvp: BoundsViewport) => {
+    setMarkerElements(getMarkerElements(bvp, 100, 3));
+  }, [setMarkerElements])
+
+  return (
+    <MapVEuMap
+        viewport={{center: [ 54.561781, -3.143297 ], zoom: 12}}
+        height="100vh" width="100vw"
+        onViewportChanged={handleViewportChanged}
+        markers={markerElements}
+    />
+  );
+}
+
+
+export const FiveCategories100 = () => {
+  const [ markerElements, setMarkerElements ] = useState<ReactElement<MarkerProps>[]>([]);
+  const handleViewportChanged = useCallback((bvp: BoundsViewport) => {
+    setMarkerElements(getMarkerElements(bvp, 100, 5));
+  }, [setMarkerElements])
+
+  return (
+    <MapVEuMap
+        viewport={{center: [ 54.561781, -3.143297 ], zoom: 12}}
+        height="100vh" width="100vw"
         onViewportChanged={handleViewportChanged}
         markers={markerElements}
     />
