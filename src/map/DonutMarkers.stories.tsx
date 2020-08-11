@@ -128,3 +128,19 @@ export const SixCategories = () => {
   );
 }
 
+export const TenCategories100 = () => {
+  const [ markerElements, setMarkerElements ] = useState<ReactElement<MarkerProps>[]>([]);
+  const handleViewportChanged = useCallback((bvp: BoundsViewport) => {
+    setMarkerElements(getMarkerElements(bvp, 100, 10));
+  }, [setMarkerElements])
+
+  return (
+    <MapVEuMap
+    viewport={{center: [ 54.561781, -3.143297 ], zoom: 12}}
+    height="100vh" width="100vw"
+    onViewportChanged={handleViewportChanged}
+    markers={markerElements}
+    />
+  );
+}
+
