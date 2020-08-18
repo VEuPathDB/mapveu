@@ -2,7 +2,7 @@ import React, { ReactElement, useState, useCallback } from 'react';
 // import { action } from '@storybook/addon-actions';
 import MapVEuMap from './MapVEuMap';
 import { BoundsViewport, MarkerProps } from './Types';
-import DonutMarker from './DonutMarker'; // TO BE CREATED
+import HistogramMarkerSVG from './HistogramMarkerSVG'; // TO BE CREATED
 
 //DKDK load necessary functions/classes
 import { latLng, LeafletMouseEvent } from "leaflet";
@@ -10,7 +10,7 @@ import { latLng, LeafletMouseEvent } from "leaflet";
 import * as mapveuUtils from './popbio/mapveuUtils.dk1.simple1.js'  //DKDK call util functions
 
 export default {
-  title: 'Donut Markers',
+  title: 'Histogram Markers SVG',
   component: MapVEuMap,
 };
 
@@ -95,7 +95,7 @@ const getMarkerElements = ({ bounds, zoomLevel }: BoundsViewport, numMarkers : n
     let atomicValue = Math.random() < 0.5 ? true : false
 
     return (
-    <DonutMarker
+    <HistogramMarkerSVG
       key={`marker_${index}`}
       //DKDK change position format
       position={latLng(lat, long)}
