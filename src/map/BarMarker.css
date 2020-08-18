@@ -10,7 +10,9 @@
     transform: translate(-50%, -50%);
 }
 
-.bar-marker-highcharts {
+.bar-marker-chart {
+    height: 40px;
+    width: 40px;
     position: absolute;
     top: 50%;
     left: 50%;

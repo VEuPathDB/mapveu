@@ -14,7 +14,7 @@ export interface BarMarkerProps extends MarkerProps {
 
 export default function BarMarker(props: BarMarkerProps) {
     const divIcon = L.divIcon({
-        html: `<div class="bar-marker-icon"><div id=${props.id} class="bar-marker-highcharts"></div></div>`,
+        html: `<div class="bar-marker-icon"><div id=${props.id} class="bar-marker-chart"></div></div>`,
     });
 
     useEffect(() => {

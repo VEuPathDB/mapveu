@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactHighcharts from 'react-highcharts';
+import Plot from 'react-plotly.js';
 
 interface BarChartProps {
     labels: string[],
@@ -9,46 +9,39 @@ interface BarChartProps {
 }
 
 export default function BarChart(props: BarChartProps) {
-    let config = {
-        chart: {
-            type: 'column',
-            width: props.width,
-            height: props.height,
-            margin: 0,
-        },
-        title: {
-            text: undefined,
-        },
-        legend: {
-            enabled: false,
-        },
-        tooltip: {
-            enabled: false,
-        },
-        xAxis: {
-            categories: props.labels,
-            visible: false,
-        },
-        yAxis: {
-            visible: false,
-        },
-        series: [{
-            data: props.values,
-        }],
-        credits: {
-            enabled: false,
-        },
-        plotOptions: {
-            column: {
-                groupPadding: 0.025,
+    let data = [
+        {
+            x: props.labels,
+            y: props.values,
+            type: 'bar',
+            marker: {
+                color: '#7cb5ec',
             },
-	    series: {
-	        animation: false,
-	    }
         }
-    }
+    ];
+
+    let layout = {
+        width: props.width,
+        height: props.height,
+        xaxis: {
+            visible: false,
+        },
+        yaxis: {
+            visible: false,
+        },
+        margin: {
+            l: 0,
+            r: 0,
+            t: 0,
+            b: 0,
+        }
+    };
+
+    let config = {
+        staticPlot: true
+    };
 
     return (
-        <ReactHighcharts config={config}></ReactHighcharts>
+        <Plot data={data} layout={layout} config={config}></Plot>
     )
 }
