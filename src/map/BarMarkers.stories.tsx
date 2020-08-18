@@ -41,10 +41,10 @@ export const ThreeCategories = () => {
 
   return (
     <MapVEuMap
-        viewport={{center: [ 54.561781, -3.143297 ], zoom: 12}}
-        height="100vh" width="100vw"
-        onViewportChanged={handleViewportChanged}
-        markers={markerElements}
+      viewport={{center: [ 54.561781, -3.143297 ], zoom: 12}}
+      height="100vh" width="100vw"
+      onViewportChanged={handleViewportChanged}
+      markers={markerElements}
     />
   );
 }
@@ -57,10 +57,10 @@ export const ThreeCategories100 = () => {
 
   return (
     <MapVEuMap
-        viewport={{center: [ 54.561781, -3.143297 ], zoom: 12}}
-        height="100vh" width="100vw"
-        onViewportChanged={handleViewportChanged}
-        markers={markerElements}
+      viewport={{center: [ 54.561781, -3.143297 ], zoom: 12}}
+      height="100vh" width="100vw"
+      onViewportChanged={handleViewportChanged}
+      markers={markerElements}
     />
   );
 }
@@ -74,10 +74,10 @@ export const FiveCategories100 = () => {
 
   return (
     <MapVEuMap
-        viewport={{center: [ 54.561781, -3.143297 ], zoom: 12}}
-        height="100vh" width="100vw"
-        onViewportChanged={handleViewportChanged}
-        markers={markerElements}
+      viewport={{center: [ 54.561781, -3.143297 ], zoom: 12}}
+      height="100vh" width="100vw"
+      onViewportChanged={handleViewportChanged}
+      markers={markerElements}
     />
   );
 }

@@ -13,7 +13,7 @@ export const BarChartStory = () => {
   );
 }
 
-export const BarChartStorySmall = () => {
+export const SmallBarChartStory = () => {
   return (
     <BarChart labels={['America', 'Europe', 'Africa']} values={[3, 1, 4]} width={40} height={40} />
   );
