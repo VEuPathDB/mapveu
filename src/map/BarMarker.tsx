@@ -10,6 +10,7 @@ export interface BarMarkerProps extends MarkerProps {
   id: string,
   labels: string[],
   values: number[],
+  yRange: [number, number],
 }
 /**
  * A marker containing a small bar chart
@@ -26,7 +27,7 @@ export default function BarMarker(props: BarMarkerProps) {
   // Render the chart after the marker is rendered
   useEffect(() => {
     ReactDOM.render(
-      <BarChart labels={props.labels} values={props.values} width={40} height={40}></BarChart>,
+      <BarChart labels={props.labels} values={props.values} yRange={props.yRange} width={40} height={40}></BarChart>,
       document.getElementById(props.id)
     );
 

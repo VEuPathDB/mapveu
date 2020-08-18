@@ -4,6 +4,7 @@ import Plot from 'react-plotly.js';
 interface BarChartProps {
   labels: string[],
   values: number[],
+  yRange: [number, number],
   width: number,
   height: number,
 }
@@ -34,6 +35,7 @@ export default function BarChart(props: BarChartProps) {
     },
     yaxis: {
       visible: false,
+      range: props.yRange,
     },
     margin: {
       l: 0,

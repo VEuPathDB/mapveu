@@ -28,6 +28,7 @@ const getMarkerElements = ({ bounds, zoomLevel }: BoundsViewport, numMarkers : n
       position={[lat, long]}
       labels={labels}
       values={values}
+      yRange={[0, 100]}
     />
   });
 }
