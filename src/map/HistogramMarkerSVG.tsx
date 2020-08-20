@@ -49,6 +49,8 @@ export default function HistogramMarkerSVG(props: HistogramMarkerSVGProps) {
   //DKDK draw outer box with round corners
   svgHTML += '<rect x="0" y="0" rx=' + roundX + ' ry=' + roundY + ' width=' + size + ' height=' + size + ' fill="white" stroke="grey" stroke-width="1" opacity="1.0" />'
 
+  // //DKDK add text?
+  // svgHTML += '<text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" opacity="0.5" style="position:relative;z-index:10000">' + sumValues + '</text>'
   //DKDK set globalMaxValue non-zero if props.yAxisRange exists
   let globalMaxValue: number = 0
   if (props.yAxisRange) {
@@ -92,7 +94,10 @@ export default function HistogramMarkerSVG(props: HistogramMarkerSVGProps) {
       iter += 1
     })
   }
-  svgHTML += '</svg>'   //DKDK closing svg tag
+  //DKDK a test to add text (here, total sum) at the center of the marker icon: please uncomment for testing
+  // svgHTML += '<text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" opacity="0.7">' + sumValues + '</text>'
+  //DKDK closing svg tag
+  svgHTML += '</svg>'
 
   //DKDK set icon
   let HistogramIcon: any = L.divIcon({
