@@ -14,6 +14,21 @@ export default {
   component: MapVEuMap,
 };
 
+//DKDK interface from viz group
+interface HistogramProps {
+  data: {
+    binStart: number;
+    value: number;
+    label?: string;
+    color?: string;
+  }[][];
+  width: number;
+  isStacked?: boolean;
+  isRelative?: boolean;
+  yAxisRange?: [number, number];
+  orientation?: 'vertical' | 'horizontal';
+  isDateVariable?: boolean
+}
 
 // some colors randomly pasted from the old mapveu code
 // these are NOT the final decided colors for MapVEu 2.0
@@ -79,7 +94,7 @@ const all_colors_hex = [
    This is a trivial marker data generator.  It returns 10 random points within the given bounds.
    The real thing should something with zoomLevel.
 */
-const getMarkerElements = ({ bounds, zoomLevel }: BoundsViewport, numMarkers : number, numCategories : number) => {
+const getMarkerElements = ({ bounds, zoomLevel }: BoundsViewport, numMarkers : number, numCategories : number, yAxisRange: Array<number> | null) => {
   //DKDK change bounds as standard leaflet LatLngBounds
   console.log("I've been triggered with bounds=["+bounds.getSouthWest()+" TO "+bounds.getNorthEast()+"] and zoomLevel="+zoomLevel);
   return Array(numMarkers).fill(undefined).map((_, index) => {
@@ -91,8 +106,16 @@ const getMarkerElements = ({ bounds, zoomLevel }: BoundsViewport, numMarkers : n
     const labels = Array(numCategories).fill(0).map((_, index) => 'category_'+index);
     const values = Array(numCategories).fill(0).map(() => Math.floor(Math.random()*100.0));
     const colors = all_colors_hex.slice(0,numCategories);
-    //DKDK passing temporarily set atomic value: true or false for demo purpose
-    let atomicValue = Math.random() < 0.5 ? true : false
+    // //DKDK passing temporarily set atomic value: true or false for demo purpose
+    // let atomicValue = Math.random() < 0.5 ? true : false
+
+    //DKDK set yAxisRange for global comparison: global max will be used
+    // const yAxisRange: Array<number> | null = [0, 100]                   //based on the random() above
+    //DKDK all four test cases below lead to local max
+    // const yAxisRange = [0]                        //check 0
+    // const yAxisRange = [0,0]                      //check [0,0]
+    // const yAxisRange: Array<number> | null = null //check null
+    // const yAxisRange: Array<number> | null = []   //check empty
 
     return (
     <HistogramMarkerSVG
@@ -102,7 +125,9 @@ const getMarkerElements = ({ bounds, zoomLevel }: BoundsViewport, numMarkers : n
       labels={labels}
       values={values}
       colors={colors}
-      isAtomic={atomicValue}
+      // isAtomic={atomicValue}
+      //DKDK yAxisRange can be commented out - defined as optional at HistogramMarkerSVG.tsx (HistogramMarkerSVGProps)
+      yAxisRange ={yAxisRange}
       onClick={handleClick}
       onMouseOut={handleMouseOut}
       onMouseOver={handleMouseOver}
@@ -112,10 +137,10 @@ const getMarkerElements = ({ bounds, zoomLevel }: BoundsViewport, numMarkers : n
 }
 
 
-export const SixCategories = () => {
+export const SixCat10GlobalMax = () => {
   const [ markerElements, setMarkerElements ] = useState<ReactElement<MarkerProps>[]>([]);
   const handleViewportChanged = useCallback((bvp: BoundsViewport) => {
-    setMarkerElements(getMarkerElements(bvp, 10, 6));
+    setMarkerElements(getMarkerElements(bvp, 10, 6, [0,100]));
   }, [setMarkerElements])
 
   return (
@@ -128,10 +153,10 @@ export const SixCategories = () => {
   );
 }
 
-export const TenCategories100 = () => {
+export const SixCat10LocalMax = () => {
   const [ markerElements, setMarkerElements ] = useState<ReactElement<MarkerProps>[]>([]);
   const handleViewportChanged = useCallback((bvp: BoundsViewport) => {
-    setMarkerElements(getMarkerElements(bvp, 100, 10));
+    setMarkerElements(getMarkerElements(bvp, 10, 6, [0]));
   }, [setMarkerElements])
 
   return (
@@ -144,10 +169,10 @@ export const TenCategories100 = () => {
   );
 }
 
-export const TenCategories250 = () => {
+export const TenCat100GlobalMax = () => {
   const [ markerElements, setMarkerElements ] = useState<ReactElement<MarkerProps>[]>([]);
   const handleViewportChanged = useCallback((bvp: BoundsViewport) => {
-    setMarkerElements(getMarkerElements(bvp, 250, 10));
+    setMarkerElements(getMarkerElements(bvp, 100, 10, [0,100]));
   }, [setMarkerElements])
 
   return (
@@ -160,10 +185,10 @@ export const TenCategories250 = () => {
   );
 }
 
-export const FiveCategories250 = () => {
+export const TenCat100LocalMax = () => {
   const [ markerElements, setMarkerElements ] = useState<ReactElement<MarkerProps>[]>([]);
   const handleViewportChanged = useCallback((bvp: BoundsViewport) => {
-    setMarkerElements(getMarkerElements(bvp, 250, 5));
+    setMarkerElements(getMarkerElements(bvp, 100, 10, []));
   }, [setMarkerElements])
 
   return (
@@ -176,10 +201,10 @@ export const FiveCategories250 = () => {
   );
 }
 
-export const TwoCategories100 = () => {
+export const TenCat250GlobalMax = () => {
   const [ markerElements, setMarkerElements ] = useState<ReactElement<MarkerProps>[]>([]);
   const handleViewportChanged = useCallback((bvp: BoundsViewport) => {
-    setMarkerElements(getMarkerElements(bvp, 100, 2));
+    setMarkerElements(getMarkerElements(bvp, 250, 10, [0,100]));
   }, [setMarkerElements])
 
   return (
@@ -191,3 +216,84 @@ export const TwoCategories100 = () => {
     />
   );
 }
+
+export const TenCat250LocalMax = () => {
+  const [ markerElements, setMarkerElements ] = useState<ReactElement<MarkerProps>[]>([]);
+  const handleViewportChanged = useCallback((bvp: BoundsViewport) => {
+    setMarkerElements(getMarkerElements(bvp, 250, 10, null));
+  }, [setMarkerElements])
+
+  return (
+    <MapVEuMap
+    viewport={{center: [ 54.561781, -3.143297 ], zoom: 12}}
+    height="100vh" width="100vw"
+    onViewportChanged={handleViewportChanged}
+    markers={markerElements}
+    />
+  );
+}
+
+export const FiveCat250GlobalMax = () => {
+  const [ markerElements, setMarkerElements ] = useState<ReactElement<MarkerProps>[]>([]);
+  const handleViewportChanged = useCallback((bvp: BoundsViewport) => {
+    setMarkerElements(getMarkerElements(bvp, 250, 5, [0,100]));
+  }, [setMarkerElements])
+
+  return (
+    <MapVEuMap
+    viewport={{center: [ 54.561781, -3.143297 ], zoom: 12}}
+    height="100vh" width="100vw"
+    onViewportChanged={handleViewportChanged}
+    markers={markerElements}
+    />
+  );
+}
+
+export const FiveCat250LocalMax = () => {
+  const [ markerElements, setMarkerElements ] = useState<ReactElement<MarkerProps>[]>([]);
+  const handleViewportChanged = useCallback((bvp: BoundsViewport) => {
+    setMarkerElements(getMarkerElements(bvp, 250, 5, [0,0]));
+  }, [setMarkerElements])
+
+  return (
+    <MapVEuMap
+    viewport={{center: [ 54.561781, -3.143297 ], zoom: 12}}
+    height="100vh" width="100vw"
+    onViewportChanged={handleViewportChanged}
+    markers={markerElements}
+    />
+  );
+}
+
+export const TwoCat100GlobalMax = () => {
+  const [ markerElements, setMarkerElements ] = useState<ReactElement<MarkerProps>[]>([]);
+  const handleViewportChanged = useCallback((bvp: BoundsViewport) => {
+    setMarkerElements(getMarkerElements(bvp, 100, 2, [0,100]));
+  }, [setMarkerElements])
+
+  return (
+    <MapVEuMap
+    viewport={{center: [ 54.561781, -3.143297 ], zoom: 12}}
+    height="100vh" width="100vw"
+    onViewportChanged={handleViewportChanged}
+    markers={markerElements}
+    />
+  );
+}
+
+export const TwoCat100LocalMax = () => {
+  const [ markerElements, setMarkerElements ] = useState<ReactElement<MarkerProps>[]>([]);
+  const handleViewportChanged = useCallback((bvp: BoundsViewport) => {
+    setMarkerElements(getMarkerElements(bvp, 100, 2, []));
+  }, [setMarkerElements])
+
+  return (
+    <MapVEuMap
+    viewport={{center: [ 54.561781, -3.143297 ], zoom: 12}}
+    height="100vh" width="100vw"
+    onViewportChanged={handleViewportChanged}
+    markers={markerElements}
+    />
+  );
+}
+

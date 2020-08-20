@@ -1,5 +1,5 @@
 import React from "react";
-import { Marker } from "react-leaflet";
+import { Marker, Tooltip } from "react-leaflet";
 // import { DonutMarkerProps } from "./Types";  //DKDK typescript is not set yet
 import { MarkerProps } from './Types';
 // import { Point, PointExpression, IconOptions } from 'leaflet';
@@ -84,13 +84,14 @@ export default function DonutMarker(props: DonutMarkerProps) {
     stats: fullStat,
     atomic: props.isAtomic,
   })
-  // console.log(donut)
 
   return (
-    <Marker {...props} icon={donut} title={props.position.toString()}>
-      {/* <Popup>Donut marker popup.<br />Easily customizable.</Popup> */}
+    <Marker {...props} icon={donut}>
+      {/* <Popup>{props.position.toString()}</Popup> */}
       {/* DKDK Below Tooltip also works but we may simply use title attribute as well */}
-      {/* <Tooltip>Donut marker Tooltip</Tooltip> */}
+      {/* Connor found an issue of wrong coordinates and I realized that somehow "title" didnot update correctly */}
+      {/* But both Popup and Tooltip do not have such an issue */}
+      <Tooltip>{props.position.toString()}</Tooltip>
     </Marker>
   );
 }

@@ -2,7 +2,7 @@ import React, { ReactElement, useState, useCallback } from 'react';
 // import { action } from '@storybook/addon-actions';
 import MapVEuMap from './MapVEuMap';
 import { BoundsViewport, MarkerProps } from './Types';
-import { Marker } from 'react-leaflet';
+import { Marker, Tooltip } from 'react-leaflet';
 import './TempIconHack';
 //DKDK load necessary functions/classes
 import { latLng } from "leaflet";
@@ -27,10 +27,17 @@ const getMarkerElements = ({ bounds, zoomLevel }: BoundsViewport, numMarkers : n
   const lat = bounds.getSouth() + Math.random()*(bounds.getNorth() - bounds.getSouth());
   const long = bounds.getWest() + Math.random()*(bounds.getEast() - bounds.getWest());
 
-  return <Marker
-      key={`marker_${index}`}
-      position={latLng(lat, long)}
-    />
+  console.log(latLng(lat, long))
+
+  return (
+      <Marker
+        key={`marker_${index}`}
+        position={latLng(lat, long)}
+      >
+        {/* <Popup>{latLng(lat, long).toString()}</Popup> */}
+        <Tooltip>{latLng(lat, long).toString()}</Tooltip>
+      </Marker>
+      )
   });
 }
 
