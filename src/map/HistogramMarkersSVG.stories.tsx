@@ -14,22 +14,6 @@ export default {
   component: MapVEuMap,
 };
 
-//DKDK interface from viz group
-interface HistogramProps {
-  data: {
-    binStart: number;
-    value: number;
-    label?: string;
-    color?: string;
-  }[][];
-  width: number;
-  isStacked?: boolean;
-  isRelative?: boolean;
-  yAxisRange?: [number, number];
-  orientation?: 'vertical' | 'horizontal';
-  isDateVariable?: boolean
-}
-
 // some colors randomly pasted from the old mapveu code
 // these are NOT the final decided colors for MapVEu 2.0
 const all_colors_hex = [
