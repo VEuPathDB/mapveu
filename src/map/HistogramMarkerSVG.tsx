@@ -9,7 +9,7 @@ import L from "leaflet";
 interface HistogramMarkerSVGProps extends MarkerProps {
   labels: Array<string>, // the labels (not likely to be shown at normal marker size)
   values: Array<number>, // the counts or totals to be shown in the donut
-  colors: Array<string>, // the labels (not likely to be shown at normal marker size)
+  colors?: Array<string> | null, // bar colors: set to be optional with array or null type
   // isAtomic?: boolean,      // add a special thumbtack icon if this is true (it's a marker that won't disaggregate if zoomed in further)
   yAxisRange?: Array<number> | null, // y-axis range for setting global max
   onClick?: (event: L.LeafletMouseEvent) => void | undefined,
@@ -26,17 +26,28 @@ export default function HistogramMarkerSVG(props: HistogramMarkerSVGProps) {
    * DKDK icon with demo data: mroe realistic example can be found at dk-donut1 branch
    */
   let fullStat = []
+  //DKDK set defaultColor to be skyblue (#7cb5ec) if props.colors does not exist
+  let defaultColor: string = ''
+  let defaultLineColor: string = ''
   //DKDK need to make a temporary stats array of objects to show marker colors - only works for demo data, not real solr data
   for (let i = 0; i < props.values.length; i++) {
+    if (props.colors) {
+      defaultColor = props.colors[i]
+      defaultLineColor = 'grey'
+    } else {
+      defaultColor = '#7cb5ec'
+      defaultLineColor = '#7cb5ec'
+    }
     fullStat.push({
-      color: props.colors[i],
+      // color: props.colors[i],
+      color: defaultColor,
       label: props.labels[i],
       value: props.values[i],
     })
   }
 
   //DKDK construct histogram marker icon
-  const size = 40  //DKDK histogram marker icon size: the same size with popbio/mapveu donut marker icons
+  const size = 50  //DKDK histogram marker icon size: note that popbio/mapveu donut marker icons = 40
   let svgHTML: string = ''  //DKDK divIcon HTML contents
   svgHTML += '<svg width="' + size + '" height="' + size + '">'   //DKDK initiate svg marker icon
   let count = fullStat.length
@@ -46,8 +57,8 @@ export default function HistogramMarkerSVG(props: HistogramMarkerSVGProps) {
   const roundY = 10     //DKDK round corner in pixel
   const marginX = 5     //DKDK margin to start drawing bars in left and right ends of svg marker: plot area = (size - 2*marginX)
   const marginY = 5     //DKDK margin to start drawing bars in Y
-  //DKDK draw outer box with round corners
-  svgHTML += '<rect x="0" y="0" rx=' + roundX + ' ry=' + roundY + ' width=' + size + ' height=' + size + ' fill="white" stroke="grey" stroke-width="1" opacity="1.0" />'
+  //DKDK draw outer box with round corners: changed border color (stroke)
+  svgHTML += '<rect x="0" y="0" rx=' + roundX + ' ry=' + roundY + ' width=' + size + ' height=' + size + ' fill="white" stroke="' + defaultLineColor +'" stroke-width="1" opacity="1.0" />'
 
   // //DKDK add text?
   // svgHTML += '<text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" opacity="0.5" style="position:relative;z-index:10000">' + sumValues + '</text>'

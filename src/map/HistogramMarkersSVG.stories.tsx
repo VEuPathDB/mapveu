@@ -108,7 +108,9 @@ const getMarkerElements = ({ bounds, zoomLevel }: BoundsViewport, numMarkers : n
       position={latLng(lat, long)}
       labels={labels}
       values={values}
+      //DKDK colors is set to be optional props, if null (e.g., comment out) then bars will have skyblue-like defaultColor
       colors={colors}
+      //DKDK disable isAtomic for histogram
       // isAtomic={atomicValue}
       //DKDK yAxisRange can be commented out - defined as optional at HistogramMarkerSVG.tsx (HistogramMarkerSVGProps)
       yAxisRange ={yAxisRange}
