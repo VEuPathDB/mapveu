@@ -11,6 +11,8 @@ export interface BarMarkerProps extends MarkerProps {
   labels: string[],
   values: number[],
   yRange: [number, number],
+  type: 'bar' | 'line',
+  library: 'highcharts' | 'plotly',
 }
 /**
  * A marker containing a small bar chart
@@ -21,13 +23,13 @@ export default function BarMarker(props: BarMarkerProps) {
   // Create the divIcon to pass to the Leaflet marker
   // Give it an ID so we can know which plot goes in which marker
   const divIcon = L.divIcon({
-    html: `<div class="bar-marker-icon"><div id=${props.id} class="bar-marker-chart"></div></div>`,
+    html: `<div class="chart-marker-icon ${props.type}-marker-icon"><div id=${props.id} class="chart-marker-chart ${props.type}-marker-chart"></div></div>`,
   });
 
   // Render the chart after the marker is rendered
   useEffect(() => {
     ReactDOM.render(
-      <BarChart labels={props.labels} values={props.values} yRange={props.yRange} width={40} height={40}></BarChart>,
+      <BarChart labels={props.labels} values={props.values} yRange={props.yRange} width={40} height={40} type={props.type} library={props.library}></BarChart>,
       document.getElementById(props.id)
     );
 

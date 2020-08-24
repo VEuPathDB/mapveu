@@ -5,7 +5,7 @@ import { BoundsViewport, MarkerProps } from './Types';
 import BarMarker from './BarMarker'; // TO BE CREATED
 
 export default {
-  title: 'Bar Markers',
+  title: 'Line Markers',
   component: MapVEuMap,
 };
 
@@ -29,7 +29,7 @@ const getMarkerElements = ({ bounds, zoomLevel }: BoundsViewport, numMarkers : n
       labels={labels}
       values={values}
       yRange={[0, 100]}
-      type='bar'
+      type='line'
       library={library}
     />
   });

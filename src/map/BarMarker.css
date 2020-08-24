@@ -1,7 +1,5 @@
-.bar-marker-icon {
-    width: 50px;
-    height: 50px;
-    border: 5px solid #7cb5ec;
+.chart-marker-icon {
+    border: solid #7cb5ec;
     border-radius: 10px;
     background-color: white;
     position: absolute;
@@ -10,7 +8,19 @@
     transform: translate(-50%, -50%);
 }
 
-.bar-marker-chart {
+.bar-marker-icon {
+    width: 50px;
+    height: 50px;
+    border-width: 5px;
+}
+
+.line-marker-icon {
+    width: 45px;
+    height: 45px;
+    border-width: 3px;
+}
+
+.chart-marker-chart {
     height: 40px;
     width: 40px;
     position: absolute;
