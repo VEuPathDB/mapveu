@@ -69,12 +69,12 @@ const getMarkerElements = ({ bounds, zoomLevel }: BoundsViewport, numMarkers : n
 export const GeohashIds = () => {
   const [ markerElements, setMarkerElements ] = useState<ReactElement<MarkerProps>[]>([]);
   const handleViewportChanged = useCallback((bvp: BoundsViewport) => {
-    setMarkerElements(getMarkerElements(bvp, 500));
+    setMarkerElements(getMarkerElements(bvp, 50));
   }, [setMarkerElements])
   return (
     <MapVEuMap
     viewport={{center: [ 54.561781, -3.013297 ], zoom: 11}}
-    height="600px" width="800px"
+    height="100vh" width="100vw"
     onViewportChanged={handleViewportChanged}
     markers={markerElements}
     />

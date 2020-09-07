@@ -1,4 +1,4 @@
-import React, { ReactElement, useEffect } from "react"; //  { useState, useCallback } from "react";
+import React, { ReactElement, useEffect, useState } from "react"; //  { useState, useCallback } from "react";
 import { GeoBBox, MarkerProps, BoundsViewport } from "./Types";
 import { useLeaflet } from "react-leaflet";
 import { LatLngBounds } from 'leaflet'
@@ -36,7 +36,15 @@ export default function SemanticMarkers({ onViewportChanged, markers }: Semantic
     };
   }, [map, onViewportChanged]);
 
-  
+
+  const [ prevMarkers, setPrevMarkers ] = useState<ReactElement<MarkerProps>[]>([]);
+  // keep track of the previous markers
+  // using the cleanup callback
+  useEffect(() => {
+    return () => {
+      setPrevMarkers(markers);
+    };
+  }, [ markers ]);
 
   /* also think about animating from the previous markers
      hopefully react can do that for free?  (I saw something about prevProps in lifecycle methods.)
@@ -52,7 +60,7 @@ export default function SemanticMarkers({ onViewportChanged, markers }: Semantic
 
   return (
     <>
-      {markers}
+      {prevMarkers}  {markers}
     </>
   );
 }
