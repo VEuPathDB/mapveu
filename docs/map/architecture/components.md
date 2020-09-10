@@ -12,13 +12,16 @@ selection.  Once a polygon is drawn, does it become a child component
 
 ### Props
 
-* center (lat,long)
-* zoom level (Leaflet zoom, integer)
-* data
-  * markers
-  * layers? (raster and vector layer data)
+* viewport
+  * center (lat,long)
+  * zoom level (Leaflet zoom, integer)
+* height
+* width
+* markers (array of ReactElement)
+* nudge ("geohash" | "none" | null)
+* layers? (raster and vector layer data)
 
-* onMapUpdate : `({ bounds, zoomLevel }) => void` 
+* onViewportChanged : `({ bounds, zoomLevel }) => void` 
 * onDrawnPolygon : `( { id, geometry }) => void`  (communicate newly drawn polygon to outside world)
 
 ### Children
@@ -36,9 +39,8 @@ Displays markers of different component types.
 
 ### Props
 
-* data (from data.markers, see map component above)
-
-* onMapUpdate (see map component above)
+* markers (see map component above)
+* onViewportChanged (see map component above)
 
 ## Classic Donut Marker
 
@@ -140,79 +142,55 @@ Or will it be scalable to 100s of fields using hierarchical nesting and OWL-file
 
 ## Filter/legend
 
+For categorical variables (first example with "overflow")
+
 ![screenshot](images/filter-legend.png)
 
-The legend in MapVEu 1.0 went through several iterations.  It started
-being simply a legend panel to show the colour scheme for the
-currently active filter field.  Colours are always going to be tricky
-because you users can distinguish max 20 (and that's pushing it). Grey
-shades are used for the remainder.  The "default colors" in MapVEu 1.0
-are not simply assigned to the 20 most populous categories. There is
-an algorithm to distribute the colours across the globe (and there was
-a separate AJAX request to get the data for this, e.g. smplPalette,
-abndPalette etc), which prevented Africa having all the colours
-(because most data was there).  Nowadays the USA would hog all the
-colours because the largest numbers of samples are there (e.g. Aedes
-vexans sensu lato).  Then we added the "Optimize Colors" functionality
-and this assigned the 20 colours to the 20 most populous categories in
-the markers currently on screen (in the current viewport and
-satisfying all active filters).  The numbers on the right hand side of
-the legend were a similarly recent addition, as were the sorting
-options.
+For numeric and date variables
 
-The legend has always been a filter, by which we mean that when you
-click on a category name, it adds a filter for that category.
-(Ctrl-click adds a NOT filter.)  Adding multiple filters from the
-legend wasn't really possible, unless you went to the "Complete list"
-which was not 100% intuitive and also a bit buggy.
+![screenshot](images/filter-legend-numeric.png)
 
-Therefore in MapVEu 2.0 we can completely revisit the legend/filter panel.
-Here are some things we can consider in 2.0:
+### Behaviour
 
-1. Simplify the colour palette behaviour. Maybe have the map always
-   colour the 20 most populous categories in the currently visible data.
-   Allow the user to freeze the current colour palette when they need to.
+There needs to be a button/link to open up the filter (see the thing
+hanging off the bottom).
 
-2. Build multi-select in from the start.  This may require an extra click
-   (e.g. "Apply" and "Cancel" buttons that appear, like in site search),
-   but that should be fairly intuitive for users.
+#### Categorical
 
-3. The footprint must be small by default, but often the filter will
-   need to display many categories (or wide numeric and date ranges,
-   see next point) - so it should have a "compact mode" where it acts
-   like a legend - providing critical colour palette info for the most
-   populous categories (or date distributions), and an "extended mode"
-   where it's possible to see all categories (by paging/scrolling or
-   whatever) and to see numeric variable and date distributions in
-   full. Maybe the filter functionality should only be available in
-   extended mode?
-   
-4. It will handle numeric and date variables, not just categorical
-   text variables (as present, e.g. species, collection protocol, ...).
-   In MapVEu 1.0 the date variable had special filter UI elements below
-   the search box.  But this would break if a dataset had more than one
-   date (e.g enrollment date, clinic visit date), so date should be
-   treated just like any other variable.  This means the legend/filter
-   needs to handle non-categorical fields.
+It will only display the top 10 (sorting reverse numeric order on
+'values') categories. If there are more than 10 it will show the
+Others link (and total).  Clicking anywhere on the Others line will
+open the "full filter" for this variable.
+
+Clicking on items in the legend will NOT add a filter for that category.
+We may decide that **any** click will open up the actual filter (which
+can handle multiple selections).
+
+#### Numeric
+
+There will never be more than 5 bins (plus an optional 6th bin for "no data" counts).
+
+The values will be counts or some other aggregate statistic returned from the back end.
 
 ### Props
 
-* data:
-  - xType: 'categorical' | 'numeric' | 'date'   (very close to Datum type: string|number|Date)
-  - x: Datum[]
-  - y: number[]
-  - colors: colorSpec[]   (definitely needed for categorical data)
-  - xLabel: string        (this is basically the field name, e.g. species)
-  - yLabel: string        (e.g. 'count' or 'total specimens'**)
-* mode: 'compact' | 'extended'
-* onZoomed  (callback after zooming - might need new data (semantic zoom))
-* onSelected (callback that communicates selection either discrete x values and/or a range x1-x2)
+```typescript
+  legendType : 'categorical' | 'numeric' | 'date',
+  data : {
+    label : string,
+    value : number,
+    color : string
+  }[],
+  quantityLabel : string, // ** comment below
+
+```
 
 
-
-But how about multiple data series (e.g. grey and red histograms of WDK filters)?
-
-
-** MapVEu 1.0 Sample View shows counts of records in the legend/filter, but Abundance View
-   shows the sum of the sample_size_i field for all filter fields (e.g. species, collection method etc)
+** MapVEu 1.0 Sample View shows counts of records in the
+   legend/filter, but Abundance View shows an aggregate statistic
+   based on sample_size_i and the unique number of values for another
+   field.  So we will want to provide this and display it in the
+   legend. In numeric/date legends it is obviously located next to the
+   y-axis.  In categorical legends, I'm not sure where it could go.
+   
 
