@@ -12,17 +12,25 @@ selection.  Once a polygon is drawn, does it become a child component
 
 ### Props
 
-* viewport
-  * center (lat,long)
-  * zoom level (Leaflet zoom, integer)
-* height
-* width
-* markers (array of ReactElement)
-* nudge ("geohash" | "none" | null)
-* layers? (raster and vector layer data)
+```
+  viewport: Viewport,  // { center : LatLong, zoom : number }
 
-* onViewportChanged : `({ bounds, zoomLevel }) => void` 
-* onDrawnPolygon : `( { id, geometry }) => void`  (communicate newly drawn polygon to outside world)
+  markers: ReactElement<MarkerProps>[]
+
+  nudge? : 'geohash' | 'none'
+
+  height : CSSProperties['height'],
+  width : CSSProperties['width'],
+
+  onViewportChanged : (bvp: BoundsViewport) => void,
+
+  // future things
+  layers? : ???, // layer data or URLs
+
+  // polygon drawing callbacks?
+  onDrawnPolygon? : ???
+
+```
 
 ### Children
 
@@ -39,8 +47,13 @@ Displays markers of different component types.
 
 ### Props
 
-* markers (see map component above)
-* onViewportChanged (see map component above)
+```
+  markers : ReactElement<MarkerProps>[],
+  nudge? : 'geohash' | 'none'
+
+  onViewportChanged : (bvp: BoundsViewport) => void,
+```
+
 
 ## Classic Donut Marker
 
@@ -57,17 +70,29 @@ Not sure if that requires a function prop?
 
 ### Props
 
-* id : string (if aggregating on geohash strings, this should be the geohash string)
-* position : LatLong
-* extent : Geometry (bbox or other geometry (e.g. convex hull) to show geographic extent of data aggregated "under" the marker)
-* selected : Boolean
-* values : number[] (these are the amounts represented in the mini-donut chart, e.g. the counts per species)
-* labels : string[] (these are the labels, e.g. species names, that won't normally be displayed due to space limits, but might be if you mouse-over a marker to expand it)
-* colors : colorSpec[]  (array of colours, or mapping from label to colour?)
-* value : string | number (value to be shown in the center of the donut)
+```
+  key : string, // usually the geohash string that was used to aggregate the data under this marker
+  position : LatLong, // [ number, number ]
+  data : {
+    value : number,
+    label : string, // not displayed but good to have the data available for an enlarged version
+    color : string  // hex rgb
+  }[],
+  yAxisRange? : [ number, number ], // if absent, do automatic range (local scaling)
+  isAtomic : boolean, // show thumbtack marker if zooming in won't disaggregate
+  onMouseOut :  (e: LeafletMouseEvent) => void,
+  onMouseOver :  (e: LeafletMouseEvent) => void,
 
-* onSelected : `({id, extent}) => void`
-* onDeselected : `({id, extent}) => void`
+  // future things
+  extent? : polygon/GeoJSON, // in MV1.0 this would be the bounding box of the points aggregated into the
+                             // marker, which is shown as a grey rectangle upon mouseover
+			     // in MV2.0 it could be a rectangle, or perhaps a more complex polygon
+			     // (e.g. convex hull, or a polygon representing the data point, e.g.
+			     // a health center catchement area (clinepi UMSP dataset) - but for
+			     // non-atomic markers, we would have to merge/union polygons.
+  onSelected : () => {},
+  onDeselected : () => {}
+```
 
 
 ## Mini Histogram Marker
@@ -97,47 +122,11 @@ Colours? Not sure individual colours per bin are needed.  Or a gradient?
 * onDeselected : `({id, extent}) => void`
 
 
-## View select menu
-
-![screenshot](images/view-select.png)
-
-Allows the user to switch between "views".  Each view shows one type
-of record (or a back-end hardcoded subset of a type of record) and
-there may be different fields available in different views.  The idea
-is that some fields are the same between views (e.g. species).
-
-### Props
-
-* availableViews : id[]  (list of view IDs)
-* labels : string[]      (labels to show)
-* defaultView : id       (default view ID)
-* onViewChange: (viewId : id) => void
-
-
 ## Filter field select menu
 
 ![screenshot](images/filter-field-select.png)
 
-Allows user to choose a which field to filter on in the legend panel.
-
-Note that when the view changes, the availableFields must change too.
-If the currently selected field exists in both fromView and toView on
-view change, then it should remain selected, otherwise fall back to
-defaultField.
-
-Will this be limited to showing a relatively small number of fields (<15) ?
-(as in MapVEu 1.0)
-
-Or will it be scalable to 100s of fields using hierarchical nesting and OWL-file config?
-
-
-
-### Props
-
-* availableFields : id[]  (list of field IDs)
-* labels : string[]       (labels to show)
-* defaultField : id       (default field ID)
-* onFieldChange : (fieldId : id) => void
+This will be a shared component with EDA.
 
 
 ## Filter/legend
@@ -146,7 +135,7 @@ For categorical variables (first example with "overflow")
 
 ![screenshot](images/filter-legend.png)
 
-For numeric and date variables
+For numeric and date variables (bars will likely be colored with a gradient, unlike in the screenshot above)
 
 ![screenshot](images/filter-legend-numeric.png)
 
@@ -160,17 +149,20 @@ hanging off the bottom).
 It will only display the top 10 (sorting reverse numeric order on
 'values') categories. If there are more than 10 it will show the
 Others link (and total).  Clicking anywhere on the Others line will
-open the "full filter" for this variable.
+open the "full filter" for this variable.  (The component will have to calculate the Others total.)
 
 Clicking on items in the legend will NOT add a filter for that category.
 We may decide that **any** click will open up the actual filter (which
 can handle multiple selections).
 
-#### Numeric
+#### Numeric/date
 
 There will never be more than 5 bins (plus an optional 6th bin for "no data" counts).
 
 The values will be counts or some other aggregate statistic returned from the back end.
+
+I'm not sure if legendType needs to differentiate between numeric and date, but it might
+be necessary for formatting the bin labels differently for dates?
 
 ### Props
 
@@ -191,6 +183,6 @@ The values will be counts or some other aggregate statistic returned from the ba
    based on sample_size_i and the unique number of values for another
    field.  So we will want to provide this and display it in the
    legend. In numeric/date legends it is obviously located next to the
-   y-axis.  In categorical legends, I'm not sure where it could go.
+   y-axis.  In categorical legends, I'm not sure where it could go (tidily).
    
 
