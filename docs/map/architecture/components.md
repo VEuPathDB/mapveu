@@ -17,7 +17,8 @@ selection.  Once a polygon is drawn, does it become a child component
 
   markers: ReactElement<MarkerProps>[]
 
-  nudge? : 'geohash' | 'none'
+  nudge? : 'geohash' | 'none',   // would { method : 'geohash', other_props: ... } be better?
+  grid? : { type: 'geohash', level: number },
 
   height : CSSProperties['height'],
   width : CSSProperties['width'],
