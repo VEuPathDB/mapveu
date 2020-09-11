@@ -187,17 +187,18 @@ be necessary for formatting the bin labels differently for dates?
 ```typescript
   legendType : 'categorical' | 'numeric' | 'date',
   data : {
-    label : string, // categorical e.g. "Anopheles gambaie"
+    label : string, // categorical e.g. "Anopheles gambiae"
                     // numeric e.g. "10-20"
     value : number,
     color : string
   }[],
+  variableLabel : stirng, // e.g. Species or Age
   quantityLabel : string, // ** comment below
 
 ```
 
 Note the string values for labels for the histogram. If using a
-plot-component to render this, we should probably use the bar chart (not the
+**plot-component** to render this, we should probably use the bar chart (not the
 histogram) because it expects string labels (histogram expects numeric
 x-coords).
 
