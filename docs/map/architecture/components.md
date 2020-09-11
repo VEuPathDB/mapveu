@@ -140,7 +140,7 @@ Colours? Not sure individual colours per bin are needed.  Or a gradient?
 ```
 
 
-## Filter field select menu
+## Legend field/variable select menu
 
 ![screenshot](images/filter-field-select.png)
 
@@ -148,6 +148,10 @@ This will be a shared component with EDA.
 
 
 ## Legend
+
+At the moment do not try to implement a select menu for changing the
+variable. This will likely be a separate component (see previous
+component above).
 
 For categorical variables (first example with "overflow")
 
@@ -161,6 +165,10 @@ For numeric and date variables (bars will likely be colored with a gradient (see
 
 There needs to be a button/link to open up the filter (see the thing
 hanging off the bottom).
+
+Clicking on the "Others..." row should also open up the filter.
+
+The onShowFilter handler will take care of that.
 
 #### Categorical
 
@@ -182,6 +190,14 @@ The values will be counts or some other aggregate statistic returned from the ba
 I'm not sure if legendType needs to differentiate between numeric and date, but it might
 be necessary for formatting the bin labels differently for dates?
 
+Note the string values for labels for the histogram (in the props
+below). If using a **plot-component** to render this, we should
+probably use the bar chart (not the histogram) because it expects
+string labels (histogram expects numeric x-coords).
+
+There shouldn't be any gaps between the bars.
+
+
 ### Props
 
 ```typescript
@@ -195,12 +211,11 @@ be necessary for formatting the bin labels differently for dates?
   variableLabel : string, // e.g. Species or Age
   quantityLabel : string, // ** comment below
 
+  onShowFilter : () => {},  // callback to open up filter panel
+  onShowVariableChooser : () => {}, // callback to open up variable selector
+
 ```
 
-Note the string values for labels for the histogram. If using a
-**plot-component** to render this, we should probably use the bar chart (not the
-histogram) because it expects string labels (histogram expects numeric
-x-coords).
 
 
 ** MapVEu 1.0 Sample View shows counts of records in the
