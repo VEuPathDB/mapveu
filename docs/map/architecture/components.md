@@ -152,7 +152,7 @@ For categorical variables (first example with "overflow")
 
 ![screenshot](images/filter-legend.png)
 
-For numeric and date variables (bars will likely be colored with a gradient, unlike in the screenshot above)
+For numeric and date variables (bars will likely be colored with a gradient (see histogram markers above), unlike in the screenshot below)
 
 ![screenshot](images/filter-legend-numeric.png)
 
@@ -196,7 +196,7 @@ be necessary for formatting the bin labels differently for dates?
 ```
 
 Note the string values for labels for the histogram. If using a
-plot-component, we should probably use the bar chart (not the
+plot-component to render this, we should probably use the bar chart (not the
 histogram) because it expects string labels (histogram expects numeric
 x-coords).
 
