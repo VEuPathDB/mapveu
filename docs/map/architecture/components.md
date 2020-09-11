@@ -147,7 +147,7 @@ Colours? Not sure individual colours per bin are needed.  Or a gradient?
 This will be a shared component with EDA.
 
 
-## Filter/legend
+## Legend
 
 For categorical variables (first example with "overflow")
 
@@ -192,7 +192,7 @@ be necessary for formatting the bin labels differently for dates?
     value : number,
     color : string
   }[],
-  variableLabel : stirng, // e.g. Species or Age
+  variableLabel : string, // e.g. Species or Age
   quantityLabel : string, // ** comment below
 
 ```
