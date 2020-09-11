@@ -75,10 +75,9 @@ Not sure if that requires a function prop?
   position : LatLong, // [ number, number ]
   data : {
     value : number,
-    label : string, // not displayed but good to have the data available for an enlarged version
+    label : string, // see legend.data[].label; not displayed but good to have the data available for an enlarged version
     color : string  // hex rgb
   }[],
-  yAxisRange? : [ number, number ], // if absent, do automatic range (local scaling)
   isAtomic : boolean, // show thumbtack marker if zooming in won't disaggregate
   onMouseOut :  (e: LeafletMouseEvent) => void,
   onMouseOver :  (e: LeafletMouseEvent) => void,
@@ -97,7 +96,7 @@ Not sure if that requires a function prop?
 
 ## Mini Histogram Marker
 
-(no screenshot or mock-up yet)
+![screenshot](images/histogram-marker.png)
 
 Non-categorical fields (numeric or date) will probably have to have
 tiny histogram markers.  That's because it doesn't make much sense to
@@ -107,19 +106,37 @@ should 1970 be next to 2020?).
 Should be NO MORE THAN ABOUT 5 BINS in my opinion.  For interpretability
 the bins should be the same for all markers.
 
+6th bin can be for 'no data'
+
 Colours? Not sure individual colours per bin are needed.  Or a gradient?
 
 ### Props
 
-* id : string (if aggregating on geohash strings, this should be the geohash string)
-* position : LatLong
-* extent : Geometry (bbox or other geometry (e.g. convex hull) to show geographic extent of data aggregated "under" the marker)
-* selected : Boolean
-* values : number[] (these are the amounts represented by bar height, e.g. the counts per year bin)
-* labels : string[] (string labels, e.g. 1982-1994, 1995-2003, possibly for click/mouseover enlarged version)
+(same as donut marker except addition of optional yAxisRange (though we probably won't use it))
 
-* onSelected : `({id, extent}) => void`
-* onDeselected : `({id, extent}) => void`
+```
+  key : string, // usually the geohash string that was used to aggregate the data under this marker
+  position : LatLong, // [ number, number ]
+  data : {
+    value : number,
+    label : string, // see legend.data[].label; not displayed but good to have the data available for an enlarged version
+    color : string  // hex rgb
+  }[],
+  yAxisRange? : [ number, number ], // if absent, do automatic range (local scaling)
+  isAtomic : boolean, // show thumbtack marker if zooming in won't disaggregate
+  onMouseOut :  (e: LeafletMouseEvent) => void,
+  onMouseOver :  (e: LeafletMouseEvent) => void,
+
+  // future things
+  extent? : polygon/GeoJSON, // in MV1.0 this would be the bounding box of the points aggregated into the
+                             // marker, which is shown as a grey rectangle upon mouseover
+			     // in MV2.0 it could be a rectangle, or perhaps a more complex polygon
+			     // (e.g. convex hull, or a polygon representing the data point, e.g.
+			     // a health center catchement area (clinepi UMSP dataset) - but for
+			     // non-atomic markers, we would have to merge/union polygons.
+  onSelected : () => {},
+  onDeselected : () => {}
+```
 
 
 ## Filter field select menu
@@ -169,13 +186,19 @@ be necessary for formatting the bin labels differently for dates?
 ```typescript
   legendType : 'categorical' | 'numeric' | 'date',
   data : {
-    label : string,
+    label : string, // categorical e.g. "Anopheles gambaie"
+                    // numeric e.g. "10-20"
     value : number,
     color : string
   }[],
   quantityLabel : string, // ** comment below
 
 ```
+
+Note the string values for labels for the histogram. If using a
+plot-component, we should probably use the bar chart (not the
+histogram) because it expects string labels (histogram expects numeric
+x-coords).
 
 
 ** MapVEu 1.0 Sample View shows counts of records in the
