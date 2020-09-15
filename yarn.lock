@@ -7065,6 +7065,11 @@ lazy-universal-dotenv@^3.0.1:
     dotenv "^8.0.0"
     dotenv-expand "^5.1.0"
 
+leaflet-drift-marker@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/leaflet-drift-marker/-/leaflet-drift-marker-1.0.3.tgz#4b178dc22b918b4713570302461ca636241fac3f"
+  integrity sha512-2b5EqL11+reMqS+RTZAwW9oglWk05V02LQzMSe3D8cPPSvz42RpoqjRI8aGvD8Yjsc31ZwLZMeJ0s3waaj3VEQ==
+
 leaflet@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/leaflet/-/leaflet-1.6.0.tgz#aecbb044b949ec29469eeb31c77a88e2f448f308"
