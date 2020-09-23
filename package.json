@@ -16,6 +16,7 @@
     "leaflet": "^1.6.0",
     "leaflet-drift-marker": "^1.0.3",
     "lodash": "^4.17.19",
+    "md5": "^2.3.0",
     "plotly.js": "^1.54.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
