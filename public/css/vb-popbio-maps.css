@@ -95,10 +95,18 @@ body {
     text-align    : left;
     line-height   : 15px;
     color         : #555555;
-    margin-bottom : 5px !important;
+    /* DKDK changed margin-bottom from 5 to 0 */
+    margin-bottom : 0px !important;
     border-radius : 0 !important;
+    /* DKDK change these for mapveu v2
     width         : 280px;
-    min-height    : 300px;
+    min-height    : 300px; */
+    width         : 240px;
+    min-height    : 210px;
+    /* DKDK combine with other CSS defined */
+    /* padding: 6px 8px 6px 8px; */
+    padding: 0px 0px 0px 0px;
+    background: white;
     /*max-width     : 230px;
     position: absolute;
     right: 0px;
@@ -108,7 +116,7 @@ body {
     width         : 14px;
     height        : 14px;
     float         : left;
-    margin-right  : 8px;
+    margin-right  : 6px;
     opacity       : 1;
     border-radius : 10px;
 }
@@ -119,7 +127,7 @@ body {
     text-align: right;
     font-weight: 600;
     /*DKDK VB-8650*/
-    width: 21%;
+    width: 27%;
 }
 
 .summ-by-value {
@@ -131,11 +139,33 @@ body {
 /*DKDK VB-8650 add below class to handle active-legend and external link separately*/
 .active-legend-area {
     float: left;
-    width: 79%;
+    width: 73%;
 }
 
 .legend-others {
     margin-left: 68px;
+}
+
+.legend {
+    position: absolute;
+    /* DKDK set bottom to be smaller
+    bottom: 40px; */
+    bottom: 10px;
+    right: 0px;
+    z-index: 10000;
+}
+
+.legend > div {
+    /* DKDK change padding from 0 8px to 0 4px */
+    padding: 0 2px;
+}
+
+.legend p {
+    font-size: smaller;
+    word-wrap: break-word;
+    max-width: 280px;
+    margin-top: 20px;
+    text-align: justify;
 }
 
 .min-value, .max-value {
@@ -892,30 +922,6 @@ div.error div, div.warning div, div.info div, div.hint div {
     position: absolute;
     right: 0;
     bottom: 10px;
-}
-
-.legend {
-    position: absolute;
-    bottom: 40px;
-    right: 0px;
-    z-index: 10000;
-}
-
-.legend > div {
-    padding: 0 8px;
-}
-
-.legend p {
-    font-size: smaller;
-    word-wrap: break-word;
-    max-width: 280px;
-    margin-top: 20px;
-    text-align: justify;
-}
-
-.legend-contents {
-    padding: 6px 8px 6px 8px;
-    background: white;
 }
 
 .leaflet-top.leaflet-left {
