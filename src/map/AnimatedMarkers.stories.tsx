@@ -1,12 +1,12 @@
 import React, { ReactElement, useState, useCallback } from 'react';
-// import { action } from '@storybook/addon-actions';
 import MapVEuMap from './MapVEuMap';
 import { BoundsViewport, MarkerProps } from './Types';
 import { Tooltip } from 'react-leaflet';
 import Geohash from 'latlon-geohash';
 import './TempIconHack';
 import {DriftMarker} from "leaflet-drift-marker";
-
+import geohashAnimation from "./animation_functions/geohash";
+import md5 from 'md5';
 
 export default {
   title: 'Animated Markers',
@@ -36,7 +36,7 @@ const zoomLevelToGeohashLevel = [
   7  // 18
 ];
 
-const getMarkerElements = ({ bounds, zoomLevel }: BoundsViewport, numMarkers : number) => {
+const getMarkerElements = ({ bounds, zoomLevel }: BoundsViewport, numMarkers : number, duration: number, scrambleKeys: boolean = false) => {
   console.log("I've been triggered with bounds=["+bounds.southWest+" TO "+bounds.northEast+"] and zoom="+zoomLevel);
 
   let aggsByGeohash = new Map();
@@ -75,7 +75,7 @@ const getMarkerElements = ({ bounds, zoomLevel }: BoundsViewport, numMarkers : n
       lat = lat + (lats[idx]-lat)*0.999;
       long = long + (longs[idx]-long)*0.999;
     }
-    
+
     // is it within the viewport bounds?
     if (lat > bounds.southWest[0] &&
 	lat < bounds.northEast[0] &&
@@ -100,13 +100,14 @@ const getMarkerElements = ({ bounds, zoomLevel }: BoundsViewport, numMarkers : n
   return Array.from(aggsByGeohash.values()).map((agg) => {
     const meanLat = agg.lat/agg.count;
     const meanLong = agg.long/agg.count;
+    const key = scrambleKeys ? md5(agg.geohash).substring(0, zoomLevel) : agg.geohash;
     return <DriftMarker
-        duration={300}
-        key={agg.geohash}
+        duration={duration}
+        key={key}
         position={[meanLat, meanLong]}>
         <Tooltip>
-          <span>{`key: ${agg.geohash}`}</span><br/>
-	  <span>{`#aggregated: ${agg.count}`}</span><br/>
+          <span>{`key: ${key}`}</span><br/>
+	      <span>{`#aggregated: ${agg.count}`}</span><br/>
           <span>{`lat: ${meanLat}`}</span><br/>
           <span>{`lon: ${meanLong}`}</span>
         </Tooltip>
@@ -121,9 +122,9 @@ const getMarkerElements = ({ bounds, zoomLevel }: BoundsViewport, numMarkers : n
 export const GeohashIds = () => {
   const [ markerElements, setMarkerElements ] = useState<ReactElement<MarkerProps>[]>([]);
 
-  const handleViewportChanged = useCallback((bvp: BoundsViewport) => {
-    setMarkerElements(getMarkerElements(bvp, 100000));
-  }, [setMarkerElements])
+  const handleViewportChanged = useCallback((bvp: BoundsViewport, duration: number) => {
+    setMarkerElements(getMarkerElements(bvp, 100000, duration));
+  }, [setMarkerElements]);
 
   return (
     <MapVEuMap
@@ -131,11 +132,58 @@ export const GeohashIds = () => {
     height="96vh" width="98vw"
     onViewportChanged={handleViewportChanged}
     markers={markerElements}
-    setMarkerElements={setMarkerElements}
+    animation={{
+      method: "geohash",
+      duration: 300,
+      animationFunction: geohashAnimation
+    }}
     />
   );
 };
 
+export const NoAnimation = () => {
+  const [ markerElements, setMarkerElements ] = useState<ReactElement<MarkerProps>[]>([]);
+
+  const handleViewportChanged = useCallback((bvp: BoundsViewport, duration: number) => {
+    setMarkerElements(getMarkerElements(bvp, 100000, duration));
+  }, [setMarkerElements]);
+
+  return (
+    <MapVEuMap
+    viewport={{center: [ 20, -3 ], zoom: 6}}
+    height="96vh" width="98vw"
+    onViewportChanged={handleViewportChanged}
+    markers={markerElements}
+    />
+  );
+};
+
+
+//
+// keys are junk and should not break the animation code
+// they should not animate either - just appear/disappear as if animation was off
+//
+export const ScrambledGeohashIds = () => {
+  const [ markerElements, setMarkerElements ] = useState<ReactElement<MarkerProps>[]>([]);
+
+  const handleViewportChanged = useCallback((bvp: BoundsViewport, duration: number) => {
+    setMarkerElements(getMarkerElements(bvp, 100000, duration, true));
+  }, [setMarkerElements]);
+
+  return (
+    <MapVEuMap
+    viewport={{center: [ 20, -3 ], zoom: 6}}
+    height="96vh" width="98vw"
+    onViewportChanged={handleViewportChanged}
+    markers={markerElements}
+    animation={{
+      method: "geohash",
+      duration: 300,
+      animationFunction: geohashAnimation
+    }}
+    />
+  );
+};
 
 
 //
