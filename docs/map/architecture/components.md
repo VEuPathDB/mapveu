@@ -319,9 +319,14 @@ The following is very preliminary
   </Sidebar>
 ```
 
-However, note that (as briefly mentioned in the Sidebar Tab section above) the tabs are likely to be dynamically added/removed depending on which entity we are dealing with, so we're not likely to hardcode them like I have done here...?
+However, note that (as briefly mentioned in the Sidebar Tab section
+above) the tabs are likely to be dynamically added/removed depending
+on which entity we are dealing with, so we're not likely to hardcode
+them like I have done here...?
 
-
+Question: how do we wire things such that clicking on the "Donut
+Chart" SidebarTab would signal to the SidebarDonutChart component that
+it needed to do a data request?
 
 
 
