@@ -6,6 +6,7 @@ import geohashAnimation from "./animation_functions/geohash";
 import Geohash from 'latlon-geohash';
 import {DriftMarker} from "leaflet-drift-marker";
 import { Tooltip } from 'react-leaflet';
+import { LeafletMouseEvent } from 'leaflet';
 import './TempIconHack';
 
 /*
@@ -34,7 +35,7 @@ const zoomLevelToGeohashLevel = [
   7  // 18
 ];
 
-const getMarkerElements = (datasetName : string, { bounds, zoomLevel }: BoundsViewport, numMarkers : number, duration : number) => {
+const getMarkerElements = (datasetName : string, { bounds, zoomLevel }: BoundsViewport, numMarkers : number, duration : number, onMarkerClick : (e : LeafletMouseEvent) => void) => {
   console.log(`I'm pretending to get data from ${datasetName}`);
 
   let aggsByGeohash = new Map();
@@ -99,10 +100,14 @@ const getMarkerElements = (datasetName : string, { bounds, zoomLevel }: BoundsVi
     const meanLat = agg.lat/agg.count;
     const meanLong = agg.long/agg.count;
     const key = agg.geohash; // scrambleKeys ? md5(agg.geohash).substring(0, zoomLevel) : agg.geohash;
+
+
+    // typescript error for the onClick prop below ... works but needs addressing
     return <DriftMarker
         duration={duration}
         key={key}
-        position={[meanLat, meanLong]}>
+        position={[meanLat, meanLong]}
+        onClick={onMarkerClick}> 
         <Tooltip>
           <span>{`key: ${key}`}</span><br/>
 	      <span>{`#aggregated: ${agg.count}`}</span><br/>
@@ -130,23 +135,33 @@ export default function MapVEuApp({ datasetName } : MapVEuAppProps) {
   const [ markerElements, setMarkerElements ] = useState<ReactElement<MarkerProps>[]>([]);
   const [ bounds, setBounds ] = useState<GeoBBox>();
   
+  const [ selectedMarkers, setSelectedMarkers ] = useState<string[]>([]);
+  const handleMarkerClick = useCallback((e : LeafletMouseEvent) => {
+    console.log(e.target);
+    setSelectedMarkers([ e.target._leaflet_id ]); // this is very crude - doesn't handle multiple selection or anything
+                                                  // also it fails to get the geohash_id from the element
+  }, [setSelectedMarkers]);
+
   const handleViewportChanged = useCallback((bvp: BoundsViewport, duration: number) => {
-    setMarkerElements(getMarkerElements(datasetName, bvp, 100000, duration));
+    setMarkerElements(getMarkerElements(datasetName, bvp, 100000, duration, handleMarkerClick));
     setBounds(bvp.bounds);
   }, [setMarkerElements, setBounds]);
+
+
   
   return (
     <div>
       <InfoPanel
         datasetName={datasetName}
         bounds={bounds}
+        selectedMarkers={selectedMarkers}
       />
     
       <MapVEuMap
 	viewport={{center: [ 53, 9.5 ], zoom: 6}}
-	height="100vh" width="100vw"
+	height="400px" width="96vw"
 	onViewportChanged={handleViewportChanged}
-	markers={markerElements}
+        markers={markerElements}
         animation={{
 	  method: "geohash",
 	  duration: 300,

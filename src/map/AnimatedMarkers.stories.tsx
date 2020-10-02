@@ -154,6 +154,7 @@ export const NoAnimation = () => {
     height="96vh" width="98vw"
     onViewportChanged={handleViewportChanged}
     markers={markerElements}
+    animation={null}
     />
   );
 };
@@ -200,8 +201,8 @@ export const ScrambledGeohashIds = () => {
 export const EdgeCase = () => {
   const [ markerElements, setMarkerElements ] = useState<ReactElement<MarkerProps>[]>([]);
 
-  const handleViewportChanged = useCallback((bvp: BoundsViewport) => {
-    setMarkerElements(getMarkerElements(bvp, 100000));
+  const handleViewportChanged = useCallback((bvp: BoundsViewport, duration: number) => {
+    setMarkerElements(getMarkerElements(bvp, 100000, duration));
   }, [setMarkerElements])
 
   return (
@@ -210,7 +211,6 @@ export const EdgeCase = () => {
     height="96vh" width="98vw"
     onViewportChanged={handleViewportChanged}
     markers={markerElements}
-    setMarkerElements={setMarkerElements}
     />
   );
 };
