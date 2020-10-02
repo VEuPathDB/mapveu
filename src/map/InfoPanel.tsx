@@ -22,7 +22,8 @@ export default function InfoPanel({ datasetName, bounds, selectedMarkers } : Inf
       This component is pretending to be a sidebar chart panel. In order to make the appropriate data requests, the chart panel will need access to the current bounding box, filters, selected markers and the current active variable in the Legend. Here I am testing some of the 'wiring' to make this possible.<br/>
       Dataset name = {datasetName} <br/>
       Current bounding box = {bounds ? `${bounds.southWest} to ${bounds.northEast}` : 'not known yet'} <br/>
-      Selected markers = {selectedMarkers.length ? selectedMarkers : 'none'} (that's e.target._leaflet_id, but we want the React element's key (a geohash string))
+      Selected markers* = {selectedMarkers.length ? selectedMarkers : 'none'} <br/>
+      (* at the moment, this is really just the last clicked marker)
     </div>
   );
 }

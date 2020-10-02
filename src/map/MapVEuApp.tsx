@@ -35,7 +35,7 @@ const zoomLevelToGeohashLevel = [
   7  // 18
 ];
 
-const getMarkerElements = (datasetName : string, { bounds, zoomLevel }: BoundsViewport, numMarkers : number, duration : number, onMarkerClick : (e : LeafletMouseEvent) => void) => {
+const getMarkerElements = (datasetName : string, { bounds, zoomLevel }: BoundsViewport, numMarkers : number, duration : number, onMarkerClick : (geohashId : string) => void) => {
   console.log(`I'm pretending to get data from ${datasetName}`);
 
   let aggsByGeohash = new Map();
@@ -99,15 +99,18 @@ const getMarkerElements = (datasetName : string, { bounds, zoomLevel }: BoundsVi
   return Array.from(aggsByGeohash.values()).map((agg) => {
     const meanLat = agg.lat/agg.count;
     const meanLong = agg.long/agg.count;
-    const key = agg.geohash; // scrambleKeys ? md5(agg.geohash).substring(0, zoomLevel) : agg.geohash;
+    const key = agg.geohash;
 
+    const handleMarkerClick = () => {
+      onMarkerClick(key)
+    };
 
     // typescript error for the onClick prop below ... works but needs addressing
     return <DriftMarker
         duration={duration}
         key={key}
         position={[meanLat, meanLong]}
-        onClick={onMarkerClick}> 
+        onClick={handleMarkerClick}> 
         <Tooltip>
           <span>{`key: ${key}`}</span><br/>
 	      <span>{`#aggregated: ${agg.count}`}</span><br/>
@@ -136,10 +139,9 @@ export default function MapVEuApp({ datasetName } : MapVEuAppProps) {
   const [ bounds, setBounds ] = useState<GeoBBox>();
   
   const [ selectedMarkers, setSelectedMarkers ] = useState<string[]>([]);
-  const handleMarkerClick = useCallback((e : LeafletMouseEvent) => {
-    console.log(e.target);
-    setSelectedMarkers([ e.target._leaflet_id ]); // this is very crude - doesn't handle multiple selection or anything
-                                                  // also it fails to get the geohash_id from the element
+  const handleMarkerClick = useCallback((geohashId : string) => {
+    setSelectedMarkers([ geohashId ]); // this is very crude - doesn't handle multiple selection or anything
+                                       // also it fails to get the geohash_id from the element
   }, [setSelectedMarkers]);
 
   const handleViewportChanged = useCallback((bvp: BoundsViewport, duration: number) => {
