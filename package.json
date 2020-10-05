@@ -5,6 +5,9 @@
   "dependencies": {
     "@babel/core": "^7.10.5",
     "@storybook/addon-console": "^1.2.1",
+    "@storybook/addon-controls": "^6.0.22",
+    "@storybook/addon-docs": "^6.0.22",
+    "@storybook/addon-essentials": "^6.0.22",
     "@storybook/addon-knobs": "^6.0.21",
     "@storybook/preset-typescript": "^3.0.0",
     "@types/latlon-geohash": "^2.0.0",
