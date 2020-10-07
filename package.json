@@ -22,6 +22,7 @@
     "react-dom": "^16.13.1",
     "react-leaflet": "^2.7.0",
     "react-plotly.js": "^2.4.0",
+    "shape2geohash": "^1.2.5",
     "typescript": "~3.7.2"
   },
   "scripts": {
