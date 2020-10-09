@@ -282,6 +282,8 @@ or should the tabs simply disappear if they are not relevant for the current act
 
 ### Sidebar Donut Chart
 
+![screenshot](images/bigdonut.png)
+
 Note that we might not have this type of plot in the final MapVEu2.0
 (because we might prefer to have enlarged donut/histogram markers on
 mouse-over in the actual map) but it would be the easiest plot type to
@@ -291,12 +293,17 @@ implement to get something working in the sidebar.
 
 The following is very preliminary
 ```
-  dataSource : 'selectedMarkers' | 'visible' | 'allFiltered' | 'unfiltered' // These are the options that would be available in a select menu.
+  dataSource : 'selectedMarkers'
+  dataSourceOptions : 'selectedMarkers' | 'visible' | 'allFiltered' | 'unfiltered' // These are the options that would be available in a select menu.
                                                                             // They control how much data the chart will show.
 									    // All Chart tabs would have this select menu, so perhaps
 									    // there needs to be a SidebarChart 'super'-component
 
-  // no 'data' prop here? let the SidebarDonutChart component fetch it...
+
+  stratificationVariable : VariableSpec           // the current variable used for stratification
+  stratificationVariableOptions : VariableSpec[]  // the options the user can select in the dropdown
+
+  // no 'data' prop here - let the SidebarDonutChart component fetch it!
 
 ```
 
