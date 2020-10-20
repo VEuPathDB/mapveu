@@ -12,6 +12,7 @@
     "@types/react-leaflet": "^2.5.2",
     "@types/react-plotly.js": "^2.2.4",
     "babel-loader": "^8.1.0",
+    "jest": "^26.5.3",
     "latlon-geohash": "^2.0.0",
     "leaflet": "^1.6.0",
     "leaflet-drift-marker": "^1.0.3",
@@ -22,6 +23,7 @@
     "react-dom": "^16.13.1",
     "react-leaflet": "^2.7.0",
     "react-plotly.js": "^2.4.0",
+    "ts-jest": "^26.4.1",
     "typescript": "~3.7.2"
   },
   "scripts": {
@@ -48,5 +50,8 @@
     "@storybook/addon-links": "^5.3.18",
     "@storybook/addons": "^5.3.18",
     "@storybook/react": "^5.3.18"
+  },
+  "jest": {
+    "preset": "ts-jest"
   }
 }
