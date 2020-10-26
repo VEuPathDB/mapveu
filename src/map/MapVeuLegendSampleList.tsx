@@ -39,6 +39,8 @@ export interface LegendProps {
   dropdownItemText: string[],
   //DKDK use yAxisRange[1]
   yAxisRangeValue: number,
+  //DKDK send legend number text
+  legendInfoNumberText: string,
 }
 
 //DKDK make legend at the map without using L.Control: perhaps send props to make circle or square?
@@ -75,6 +77,8 @@ const MapVeuLegendSampleList = (props: LegendProps) => {
           // divElement={div}
           //DKDK add legendType props for handling icons
           legendType={props.legendType}
+          //DKDK used for legend info text, e.g., Collections
+          legendInfoNumberText={props.legendInfoNumberText}
         />
         {/* DKDK add radio button component here */}
         <LegendListRadioButton
@@ -85,8 +89,11 @@ const MapVeuLegendSampleList = (props: LegendProps) => {
         />
         {/* DKDK add tutorial info component here */}
         <LegendListInfo
-        //DKDK for now, let's use image
+          //DKDK for now, let's use image
           legendType={props.legendType}
+          //DKDK used for legend info texts, e.g., Collection Date, Collections
+          dropdownTitle={props.dropdownTitle}
+          legendInfoNumberText={props.legendInfoNumberText}
         />
       </div>
     </div>
