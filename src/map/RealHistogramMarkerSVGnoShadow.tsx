@@ -130,6 +130,7 @@ export default function RealHistogramMarkerSVGnoShadow(props: HistogramMarkerSVG
     svgHTML += `<foreignObject x=${marginX+borderWidth} y=${marginY+borderWidth} width=${chart_width} height=${chart_height}><div id=${id}></div></foreignObject>`;
 
     // Render the chart after the marker is rendered
+    // (technically dangerous - hooks shouldn't be conditionally called)
     useEffect(() => {
       ReactDOM.render(
         <BarChart

@@ -24,7 +24,6 @@ export interface LegendProps {
   }[],
   variableLabel? : string, // e.g. Species or Age
   quantityLabel? : string, // ** comment below
-  tickLabelsVisible?: boolean,
 
   onShowFilter? : () => {},  // callback to open up filter panel
   onShowVariableChooser? : () => {}, // callback to open up variable selector

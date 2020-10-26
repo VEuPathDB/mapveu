@@ -244,7 +244,6 @@ export const CollectionDateList = () => {
   const knob_colorMethod = knob_type === 'line' ?
     radios('Color method', {Bins: 'discrete', Solid: 'solid', Gradient: 'gradient'}, 'discrete') :
     radios('Color method', {Bins: 'discrete', Solid: 'solid'}, 'discrete');
-  const knob_legendTickLabelsVisible = boolean('Show legend tick labels', true);
   //DKDK block this
   // const knob_YAxisRangeMethod = radios('Y-axis range', {Local: 'local', Regional: 'regional'}, 'local');
 
@@ -283,7 +282,6 @@ export const CollectionDateList = () => {
         //DKDK send x-/y-axes lables here
         variableLabel={variableLabel}    //DKDK: x-axis label
         quantityLabel={quantityLabel}    //DKDK: y-axis label
-        tickLabelsVisible={knob_legendTickLabelsVisible}
         //DKDK legend radio button props
         onChange={legendRadioChange}
         selectedOption={legendRadioValue}

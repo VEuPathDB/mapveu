@@ -115,7 +115,7 @@ export default function BarChart(props: BarChartProps) {
       }
     }
 
-    if (!(props.yAxisRange === null || props.yAxisRange === [])) {
+    if (props.yAxisRange !== null && props.yAxisRange.length) {
       yAxisProps = {
         min: props.yAxisRange[0],
         max: props.yAxisRange[1],
@@ -176,9 +176,14 @@ export default function BarChart(props: BarChartProps) {
       xAxis: {
         categories: props.labels,
         visible: false,
+        minPadding: 0,
+        maxPadding: 0,
       },
       yAxis: {
         visible: false,
+        endOnTick: false,
+        minPadding: 0,
+        maxPadding: 0,
         ...yAxisProps
       },
       series: [{
