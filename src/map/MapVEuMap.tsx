@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import { MapVEuMapProps } from "./Types";
+import React, {useState, CSSProperties, ReactElement} from "react";
+import { BoundsViewport, MarkerProps, AnimationFunction } from "./Types";
+const { BaseLayer } = LayersControl
 import { Viewport, Map, TileLayer, LayersControl } from "react-leaflet";
 import SemanticMarkers from "./SemanticMarkers";
 import 'leaflet/dist/leaflet.css';
-
-const { BaseLayer, Overlay } = LayersControl
-
+import '../styles/map_styles.css'
+import CustomGridLayer from "./CustomGridLayer";
 
 /**
  * Renders a Leaflet map with semantic zooming markers
@@ -13,26 +13,55 @@ const { BaseLayer, Overlay } = LayersControl
  * 
  * @param props 
  */
-export default function MapVEuMap({ viewport, height, width, onViewportChanged, markers, nudge }: MapVEuMapProps) {
 
-  // this is the React Map component's onViewPortChanged handler
-  // we may not need to use it.
-  // onViewportchanged in SemanticMarkers is more relevant
-  // because it can access the map's bounding box (aka bounds)
-  // which is useful for fetching data to show on the map.
-  // The Viewport info (center and zoom) handled here would be useful for saving a
-  // 'bookmarkable' state of the map.
-  const [ state, updateState ] = useState<Viewport>(viewport as Viewport);
-  const handleViewportChanged = (viewport : Viewport) => {
-    updateState(viewport);
-  };
-  
-  return (
-    <Map
-      viewport={state}
-      style={{ height, width }}
-      onViewportChanged={handleViewportChanged}
-    >
+interface MapVEuMapProps {
+  /** Center lat/long and zoom level */
+  viewport: Viewport,
+
+  /** Height and width of plot element */
+  height: CSSProperties['height'],
+  width: CSSProperties['width'],
+  onViewportChanged: (bvp: BoundsViewport) => void,
+  markers: ReactElement<MarkerProps>[],
+  nudge?: 'geohash' | 'none',
+
+  //DKDK add this for closing sidebar at MapVEuMap: passing setSidebarCollapsed()
+  sidebarOnClose?: (value: React.SetStateAction<boolean>) => void
+  animation: {
+    method: string,
+    duration: number,
+    animationFunction: AnimationFunction
+  } | null,
+  showGrid: boolean
+}
+
+
+
+export default function MapVEuMap({viewport, height, width, onViewportChanged, markers, animation, nudge, showGrid}: MapVEuMapProps) {
+
+
+    // this is the React Map component's onViewPortChanged handler
+    // we may not need to use it.
+    // onViewportchanged in SemanticMarkers is more relevant
+    // because it can access the map's bounding box (aka bounds)
+    // which is useful for fetching data to show on the map.
+    // The Viewport info (center and zoom) handled here would be useful for saving a
+    // 'bookmarkable' state of the map.
+    const [state, updateState] = useState<Viewport>(viewport as Viewport);
+    const handleViewportChanged = (viewport: Viewport) => {
+        updateState(viewport);
+    };
+
+    return (
+        <Map
+            viewport={state}
+            style={{height, width}}
+            onViewportChanged={handleViewportChanged}
+        >
+            <TileLayer
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                attribution="&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
+            />
 
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -42,8 +71,11 @@ export default function MapVEuMap({ viewport, height, width, onViewportChanged, 
       <SemanticMarkers
         onViewportChanged={onViewportChanged}
         markers={markers}
+        animation={animation}
         nudge={nudge}
       />
+
+      { showGrid ? <CustomGridLayer /> : null }
 
       <LayersControl position="topright">
         <BaseLayer checked name="street">
@@ -96,3 +128,4 @@ export default function MapVEuMap({ viewport, height, width, onViewportChanged, 
     </Map>
   );
 }
+

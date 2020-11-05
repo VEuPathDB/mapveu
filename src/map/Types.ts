@@ -1,4 +1,4 @@
-import { CSSProperties, ReactElement } from "react";
+import { ReactElement } from "react";
 // import type { Viewport } from "react-leaflet";  // react-leaflet is flow not TS. Not sure how to do thus
 
 export type LatLong = number[];  // TO DO: bounds checking? and enforce exactly two numbers
@@ -19,23 +19,17 @@ export interface MarkerProps {
   key: string
 }
 
-/** React Props that are passed to a Map Component. */
-export interface MapVEuMapProps {
-  /** Center lat/long and zoom level */
-  viewport: Viewport,
-
-  /** Height and width of plot element */
-  height: CSSProperties['height'],
-  width: CSSProperties['width'],
-
-  onViewportChanged: (bvp: BoundsViewport) => void,
-  markers: ReactElement<MarkerProps>[],
-
-  nudge?: 'geohash' | 'none',
-
-  //DKDK add this for closing sidebar at MapVEuMap: passing setSidebarCollapsed()
-  sidebarOnClose?: (value: React.SetStateAction<boolean>) => void
-}
+export type AnimationFunction = (
+    {
+      prevMarkers,
+      markers
+    }: {
+      prevMarkers: ReactElement<MarkerProps>[];
+      markers: ReactElement<MarkerProps>[];
+    }) => {
+        zoomType: string | null;
+        markers: ReactElement<MarkerProps>[];
+    };
 
 
 /*
