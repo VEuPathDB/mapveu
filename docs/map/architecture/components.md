@@ -269,6 +269,7 @@ or should the tabs simply disappear if they are not relevant for the current act
   name: string,  // e.g. 'Home'
   tabIcon: string, // see Sidebar.closeIcon
   tabGroup: string, // e.g. 'top' or 'middle'
+  isActive: boolean, // true => normal, false => grayed out
   
   onSelected : () => {},   // Do we need handlers like this?
   onDeselected : () => {}, // When a tab is active/selected it may need a trigger to fetch data for plotting?
@@ -319,7 +320,7 @@ The following is very preliminary
 	My Home content.
       </div>
     </SidebarTab>
-    <SidebarTab name="Donut Chart" tabIcon="fas fa-donut" tabGroup="middle"
+    <SidebarTab name="Donut Chart" tabIcon="fas fa-donut" tabGroup="middle" isActive={true}
                 onSelected=? onDeselected=?>
       <SidebarDonutChart dataSource="visible"/>
     </SidebarTab>
