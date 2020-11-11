@@ -1,0 +1,3 @@
+## Mouse modes
+
+Not a component as such, but ...
