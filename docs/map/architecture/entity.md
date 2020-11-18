@@ -55,6 +55,7 @@ Note: the data for the pink/grey shading will come at a later date (and it will 
   data : StudyData;  // is there a typescript def for this already?
   isExpanded : boolean;
   highlightedEntityId : string; // e.g. 'GEMS_HouseObs'
+  orientation: 'horizontal' | 'vertical';
 
   // TO DO:
   // click handlers for mini and expanded
