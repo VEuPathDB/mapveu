@@ -1,18 +1,26 @@
-import React, {ReactElement, useEffect, useState, cloneElement} from "react";
-import {GeoBBox, MarkerProps, BoundsViewport, AnimationFunction} from "./Types";
+import React, {
+  ReactElement,
+  useEffect,
+  useState,
+  cloneElement,
+  SetStateAction,
+  Dispatch
+} from "react";
+import {GeoBBox, MarkerProps, BoundsViewport, AnimationFunction, ViewportObject} from "./Types";
 import { useLeaflet } from "react-leaflet";
 import { LatLngBounds } from 'leaflet'
 import Geohash from 'latlon-geohash';
 
 interface SemanticMarkersProps {
-  onViewportChanged: (bvp: BoundsViewport) => void,
+  onViewportChanged: (bvp: BoundsViewport, setDblClickBounds: Dispatch<SetStateAction<ViewportObject | null>>) => void,
   markers: Array<ReactElement<MarkerProps>>,
   nudge?: "geohash" | "none",
   animation: {
     method: string,
     duration: number,
     animationFunction: AnimationFunction
-  } | null
+  } | null,
+  setDblClickBounds: Dispatch<SetStateAction<ViewportObject | null>>
 }
 
 /**
@@ -21,7 +29,7 @@ interface SemanticMarkersProps {
  * 
  * @param props 
  */
-export default function SemanticMarkers({ onViewportChanged, markers, animation, nudge}: SemanticMarkersProps) {
+export default function SemanticMarkers({ onViewportChanged, markers, animation, nudge, setDblClickBounds}: SemanticMarkersProps) {
   const { map } = useLeaflet();
 
   const [prevMarkers, setPrevMarkers] = useState<ReactElement<MarkerProps>[]>(markers);
@@ -37,7 +45,7 @@ export default function SemanticMarkers({ onViewportChanged, markers, animation,
       if (map != null) {
         const bounds = boundsToGeoBBox(map.getBounds());
         const zoomLevel = map.getZoom();
-        onViewportChanged({ bounds, zoomLevel });
+        onViewportChanged({ bounds, zoomLevel }, setDblClickBounds);
       }
     }
 

@@ -1,4 +1,5 @@
 import { ReactElement } from "react";
+import {number} from "@storybook/addon-knobs";
 // import type { Viewport } from "react-leaflet";  // react-leaflet is flow not TS. Not sure how to do thus
 
 export type LatLong = number[];  // TO DO: bounds checking? and enforce exactly two numbers
@@ -39,4 +40,9 @@ export type AnimationFunction = (
 export interface BoundsViewport {
   bounds: GeoBBox,
   zoomLevel: number
+}
+
+export interface ViewportObject {
+  zoom: number,
+  center: number[]
 }

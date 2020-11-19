@@ -1,5 +1,5 @@
-import React, {ReactElement, useCallback, useState} from "react";
-import {BoundsViewport, MarkerProps} from "./Types";
+import React, {Dispatch, ReactElement, SetStateAction, useCallback, useState} from "react";
+import {BoundsViewport, MarkerProps, ViewportObject} from "./Types";
 import MapVEuMap from "./MapVEuMap";
 import geohashAnimation from "./animation_functions/geohash";
 import testData from './test-data/geoclust-date-binning-testing-all-levels.json';
@@ -31,7 +31,7 @@ const zoomLevelToGeohashLevel = [
   7  // 18
 ];
 
-const getMarkerElements = ({ bounds, zoomLevel }: BoundsViewport, numMarkers : number, duration : number, scrambleKeys: boolean = false ) => {
+const getMarkerElements = ({ bounds, zoomLevel }: BoundsViewport, numMarkers : number, duration : number, setDblClickBounds: Dispatch<SetStateAction<ViewportObject | null>>, scrambleKeys: boolean = false ) => {
   console.log("I've been triggered with bounds=["+bounds.southWest+" TO "+bounds.northEast+"] and zoom="+zoomLevel);
 
   const geohashLevel = zoomLevelToGeohashLevel[zoomLevel];
@@ -48,6 +48,7 @@ const getMarkerElements = ({ bounds, zoomLevel }: BoundsViewport, numMarkers : n
           lnAvg={bucket.lnAvg}
           count={bucket.count}
           key={bucket.val}
+          setDblClickBounds={setDblClickBounds}
         />
         )
     }
@@ -58,8 +59,8 @@ export const MarkerBounds = () => {
   const [ markerElements, setMarkerElements ] = useState<ReactElement<MarkerProps>[]>([]);
   const duration = 300;
 
-  const handleViewportChanged = useCallback((bvp: BoundsViewport) => {
-    setMarkerElements(getMarkerElements(bvp, 100000, duration));
+  const handleViewportChanged = useCallback((bvp: BoundsViewport, setViewBounds) => {
+    setMarkerElements(getMarkerElements(bvp, 100000, duration, setViewBounds));
   }, [setMarkerElements]);
 
   return (

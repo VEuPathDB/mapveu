@@ -1,5 +1,5 @@
-import React, {useState, CSSProperties, ReactElement} from "react";
-import { BoundsViewport, MarkerProps, AnimationFunction } from "./Types";
+import React, {useState, CSSProperties, ReactElement, useEffect} from "react";
+import { BoundsViewport, MarkerProps, AnimationFunction, ViewportObject } from "./Types";
 const { BaseLayer } = LayersControl
 import {Viewport, Map, TileLayer, LayersControl} from "react-leaflet";
 import SemanticMarkers from "./SemanticMarkers";
@@ -35,7 +35,6 @@ interface MapVEuMapProps {
 }
 
 
-
 export default function MapVEuMap({viewport, height, width, onViewportChanged, markers, animation, nudge, showGrid}: MapVEuMapProps) {
   // this is the React Map component's onViewPortChanged handler
   // we may not need to use it.
@@ -44,16 +43,24 @@ export default function MapVEuMap({viewport, height, width, onViewportChanged, m
   // which is useful for fetching data to show on the map.
   // The Viewport info (center and zoom) handled here would be useful for saving a
   // 'bookmarkable' state of the map.
-  const [state, updateState] = useState<Viewport>(viewport as Viewport);
+  const [state, updateState] = useState<Viewport|ViewportObject>(viewport as Viewport);
+  const [dblClickBounds, setDblClickBounds] = useState<ViewportObject | null>(null)
   const handleViewportChanged = (viewport: Viewport) => {
     updateState(viewport);
   };
+
+  useEffect(() => {
+    if (dblClickBounds) {
+      updateState(dblClickBounds)
+    }
+  }, [dblClickBounds])
 
   return (
     <Map
         viewport={state}
         style={{height, width}}
         onViewportChanged={handleViewportChanged}
+        center={[0, 0]}
     >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -65,6 +72,7 @@ export default function MapVEuMap({viewport, height, width, onViewportChanged, m
         markers={markers}
         animation={animation}
         nudge={nudge}
+        setDblClickBounds={setDblClickBounds}
       />
 
       { showGrid ? <CustomGridLayer /> : null }
