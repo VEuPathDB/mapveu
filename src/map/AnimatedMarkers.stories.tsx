@@ -7,33 +7,12 @@ import './TempIconHack';
 import {DriftMarker} from "leaflet-drift-marker";
 import geohashAnimation from "./animation_functions/geohash";
 import md5 from 'md5';
+import { zoomLevelToGeohashLevel, defaultAnimationDuration } from './config/map.json';
 
 export default {
   title: 'Animated Markers',
 //  component: MapVEuMap,
 };
-
-const zoomLevelToGeohashLevel = [
-  1, // 0
-  1, // 1
-  1, // 2
-  2, // 3
-  2, // 4
-  2, // 5
-  3, // 6
-  3, // 7
-  3, // 8
-  4, // 9
-  4, // 10
-  4, // 11
-  5, // 12
-  5, // 13
-  5, // 14
-  6, // 15
-  6, // 16
-  6, // 17
-  7  // 18
-];
 
 
 //
@@ -82,10 +61,10 @@ const getMarkerElements = ({ bounds, zoomLevel }: BoundsViewport, numMarkers : n
     }
 
     // is it within the viewport bounds?
-    if (lat > bounds.southWest[0] &&
-	lat < bounds.northEast[0] &&
-	long > bounds.southWest[1] &&
-	long < bounds.northEast[1]) {
+    if (lat > bounds.southWest.lat &&
+	lat < bounds.northEast.lat &&
+	long > bounds.southWest.lng &&
+	long < bounds.northEast.lng) {
       const geohash : string = Geohash.encode(lat, long, geohashLevel);
 
       let agg = aggsByGeohash.get(geohash);
@@ -124,7 +103,7 @@ const getMarkerElements = ({ bounds, zoomLevel }: BoundsViewport, numMarkers : n
 
 export const GeohashIds = () => {
   const [ markerElements, setMarkerElements ] = useState<ReactElement<MarkerProps>[]>([]);
-  const duration = 300;
+  const duration = defaultAnimationDuration;
   
   const handleViewportChanged = useCallback((bvp: BoundsViewport) => {
     setMarkerElements(getMarkerElements(bvp, 100000, duration));
@@ -138,8 +117,8 @@ export const GeohashIds = () => {
     markers={markerElements}
     animation={{
       method: "geohash",
-      duration: 300,
-      animationFunction: geohashAnimation
+      animationFunction: geohashAnimation,
+      duration
     }}
     showGrid={true}
     />
@@ -172,7 +151,7 @@ export const SlowAnimation = () => {
 
 export const NoGrid = () => {
   const [ markerElements, setMarkerElements ] = useState<ReactElement<MarkerProps>[]>([]);
-  const duration = 300;
+  const duration = defaultAnimationDuration;
   
   const handleViewportChanged = useCallback((bvp: BoundsViewport) => {
     setMarkerElements(getMarkerElements(bvp, 100000, duration));
@@ -198,7 +177,7 @@ export const NoGrid = () => {
 
 export const NoAnimation = () => {
   const [ markerElements, setMarkerElements ] = useState<ReactElement<MarkerProps>[]>([]);
-  const duration = 300;
+  const duration = defaultAnimationDuration;
   
   const handleViewportChanged = useCallback((bvp: BoundsViewport) => {
     setMarkerElements(getMarkerElements(bvp, 100000, duration));
@@ -222,7 +201,7 @@ export const NoAnimation = () => {
 //
 export const ScrambledGeohashIds = () => {
   const [ markerElements, setMarkerElements ] = useState<ReactElement<MarkerProps>[]>([]);
-  const duration = 300;
+  const duration = defaultAnimationDuration;
 
   const handleViewportChanged = useCallback((bvp: BoundsViewport) => {
     setMarkerElements(getMarkerElements(bvp, 100000, duration, true));

@@ -1,8 +1,8 @@
 import React, { ReactElement, useState, useCallback } from 'react';
 // import { action } from '@storybook/addon-actions';
 // import MapVEuMap from './MapVEuMap';
-import { BoundsViewport, MarkerProps } from './Types';
-import './TempIconHack';
+import { BoundsViewport, MarkerProps, Bounds } from './Types';
+import { zoomLevelToGeohashLevel, defaultAnimationDuration } from './config/map.json';
 
 import speciesData from './test-data/geoclust-species-testing-all-levels.json';
 
@@ -13,14 +13,11 @@ import speciesData from './test-data/geoclust-species-testing-all-levels.json';
 // import('./test-data/geoclust-species-testing-all-levels.json').then((json) => speciesData = json);
 
 import { LeafletMouseEvent } from "leaflet";
-import DonutMarker from './DonutMarker'; // TO BE CREATED
+import DonutMarker from './DonutMarker';
 
 //DKDK sidebar & legend
 import MapVEuMap from './MapVEuMap';
 import MapVEuMapSidebar from './MapVEuMapSidebar';
-//DKDK import a sidebar component
-import SidebarExample from './SidebarExample'
-// import { LeafletMouseEvent } from "leaflet";
 //DKDK import legend
 import MapVEuLegendSampleList, { LegendProps } from './MapVEuLegendSampleList'
 
@@ -60,28 +57,6 @@ const all_colors_hex = [
   "#593315", // Deep Yellowish Brown
   "#F13A13", // Vivid Reddish Orange
   "#232C16" // Dark Olive Green
-];
-
-const zoomLevelToGeohashLevel = [
-  'geohash_1', // 0
-  'geohash_1', // 1
-  'geohash_1', // 2
-  'geohash_2', // 3
-  'geohash_2', // 4
-  'geohash_2', // 5
-  'geohash_3', // 6
-  'geohash_3', // 7
-  'geohash_3', // 8
-  'geohash_4', // 9
-  'geohash_4', // 10
-  'geohash_4', // 11
-  'geohash_5', // 12
-  'geohash_5', // 13
-  'geohash_5', // 14
-  'geohash_6', // 15
-  'geohash_6', // 16
-  'geohash_6', // 17
-  'geohash_7'  // 18
 ];
 
 //DKDK a generic function to remove a class: here it is used for removing highlight-marker
@@ -133,13 +108,13 @@ const getSpeciesMarkerElements = ({bounds, zoomLevel} : BoundsViewport, duration
      thus used this approach instead for consistency
 */
   //DKDK applying b) approach, setting key as string & any
-  const buckets = (speciesData as { [key: string]: any })[geohash_level].facets.geo.buckets.filter((bucket : any) => {
+  const buckets = (speciesData as { [key: string]: any })[`geohash_${geohash_level}`].facets.geo.buckets.filter((bucket : any) => {
     const ltAvg : number = bucket.ltAvg;
     const lnAvg : number = bucket.lnAvg;
-    return ltAvg > bounds.southWest[0] &&
-	   ltAvg < bounds.northEast[0] &&
-	   lnAvg > bounds.southWest[1] &&
-	   lnAvg < bounds.northEast[1]
+    return ltAvg > bounds.southWest.lat &&
+	   ltAvg < bounds.northEast.lat &&
+	   lnAvg > bounds.southWest.lng &&
+	   lnAvg < bounds.northEast.lng
   });
 
   // make a first pass and calculate the legend totals
@@ -182,7 +157,8 @@ const getSpeciesMarkerElements = ({bounds, zoomLevel} : BoundsViewport, duration
 
   return buckets.map((bucket : any) => {
     const lat : number = bucket.ltAvg;
-    const long : number = bucket.lnAvg;
+    const lng : number = bucket.lnAvg;
+    const bounds : Bounds = { southWest: { lat: bucket.ltMin, lng: bucket.lnMin }, northEast: { lat: bucket.ltMax, lng: bucket.lnMax }};
     let labels: string[] = [];
     let values: number[] = [];
     let colors: string[] = [];
@@ -201,18 +177,17 @@ const getSpeciesMarkerElements = ({bounds, zoomLevel} : BoundsViewport, duration
 
     return (
       <DonutMarker
+        id={key}   //DKDK anim
         key={key}   //DKDK anim
-        //DKDK change position format
-        position={[lat, long]}
+        position={{lat, lng}}
+        bounds={bounds}
         labels={labels}
         values={values}
-        //DKDK colors is set to be optional props, if null (e.g., comment out) then bars will have skyblue-like defaultColor
         colors={colors}
         isAtomic={atomicValue}
         onClick={handleClick}
         onMouseOut={handleMouseOut}
         onMouseOver={handleMouseOver}
-        //DKDK anim
         duration={duration}
       />
       )
@@ -225,7 +200,7 @@ export const Species = () => {
   const [ legendData, setLegendData ] = useState<LegendProps["data"]>([])
 
   //DKDK anim
-  const duration = 500
+  const duration = defaultAnimationDuration
   const scrambleKeys = false
 
   const handleViewportChanged = useCallback((bvp : BoundsViewport) => {
@@ -280,181 +255,5 @@ export const Species = () => {
         legendInfoNumberText={legendInfoNumberText}
       />
     </>)
-}
-
-
-// export // disabled for now
-const SpeciesSidebar = () => {
-  //DKDK set global or local
-  // const yAxisRange: Array<number> | null = [0, 1104]
-  // const yAxisRange: Array<number> | null = []
-
-  //DKDK define legendType
-  const legendType = 'categorical'
-
-  //DKDK  props for dropdown toggle text, dropdown item's href, and its text (Categorical)
-  const dropdownTitle: string = 'Species'
-  const dropdownHref: string[] = ['#/link-1','#/link-2','#/link-3','#/link-4','#/link-5','#/link-6','#/link-7']
-  const dropdownItemText: string[] =['Locus', 'Allele', 'Species', 'Sample type', 'Collection Protocol', 'Project', 'Protocol']
-
-  //DKDK send legend number text on top of legend list
-  const legendInfoNumberText: string = 'Species'
-
-  //DKDK send legendData
-  const [ legendData, setLegendData ] = useState<LegendProps["data"]>([])
-
-  //DKDK anim
-  const duration = 1000
-  const scrambleKeys = false
-
-  const [ markerElements, setMarkerElements ] = useState<ReactElement<MarkerProps>[]>([]);
-  const handleViewportChanged = useCallback((bvp: BoundsViewport) => {
-    //DKDK anim add duration & scrambleKeys
-    setMarkerElements(getSpeciesMarkerElements(bvp, duration, scrambleKeys, setLegendData));
-  }, [setMarkerElements])
-
-  //DKDK Sidebar state managements (for categorical)
-  const [ sidebarCollapsed, setSidebarCollapsed ] = useState(true);
-  const [ tabSelected, setTabSelected ] = useState('');   //DKDK could be used to set default active tab, e.g., 'Home', but leave blank
-  const sidebarOnClose = () => {
-    setSidebarCollapsed(true)
-  }
-  const sidebarOnOpen = (id: string) => {
-    setSidebarCollapsed(false)
-    setTabSelected(id)
-  }
-
-  return (
-    //DKDK add fragment
-    <>
-      <SidebarExample
-        id="leaflet-sidebar"
-        collapsed={sidebarCollapsed}
-        position='left'
-        selected={tabSelected}
-        closeIcon='fas fa-times'
-        onOpen={sidebarOnOpen}
-        onClose={sidebarOnClose}
-      />
-
-      <MapVEuLegendSampleList
-        legendType={legendType}
-        data={legendData}
-        // //DKDK send x-/y-axes lables here
-        // variableLabel={variableLabel}    //DKDK: x-axis label
-        // quantityLabel={quantityLabel}    //DKDK: y-axis label
-        // tickLabelsVisible={knob_legendTickLabelsVisible}
-        // //DKDK legend radio button props
-        // onChange={legendRadioChange}
-        // selectedOption={legendRadioValue}
-        //DKDK add dropdown props for Legend
-        dropdownTitle={dropdownTitle}
-        dropdownHref={dropdownHref}
-        dropdownItemText={dropdownItemText}
-        // //DKDK send yAxisRange[1]
-        // yAxisRangeValue={yAxisRangeValue}
-        // //DKDK send legend number text
-        legendInfoNumberText={legendInfoNumberText}
-      />
-
-      {/* DKDK disabled MapVEuMapSidebar for now
-      <MapVEuMapSidebar
-        viewport={{center: [ 13.449566, -2.304301 ], zoom: 7}}
-        height="100vh" width="100vw"
-        onViewportChanged={handleViewportChanged}
-        markers={markerElements}
-        //DKDK add this for closing sidebar at MapVEuMap(Sidebar): passing setSidebarCollapsed()
-        sidebarOnClose={setSidebarCollapsed}
-      /> */}
-    </>
-  );
-}
-
-// export
-const SpeciesNudgedChart = () => {
-  //DKDK set global or local
-  // const yAxisRange: Array<number> | null = [0, 1104]
-  // const yAxisRange: Array<number> | null = []
-
-  //DKDK define legendType
-  const legendType = 'categorical'
-
-  //DKDK  props for dropdown toggle text, dropdown item's href, and its text (Categorical)
-  const dropdownTitle: string = 'Species'
-  const dropdownHref: string[] = ['#/link-1','#/link-2','#/link-3','#/link-4','#/link-5','#/link-6','#/link-7']
-  const dropdownItemText: string[] =['Locus', 'Allele', 'Species', 'Sample type', 'Collection Protocol', 'Project', 'Protocol']
-
-  //DKDK send legend number text on top of legend list
-  const legendInfoNumberText: string = 'Species'
-
-  //DKDK send legendData
-  const [ legendData, setLegendData ] = useState<LegendProps["data"]>([])
-
-  //DKDK anim
-  const duration = 1000
-  const scrambleKeys = false
-
-  const [ markerElements, setMarkerElements ] = useState<ReactElement<MarkerProps>[]>([]);
-  const handleViewportChanged = useCallback((bvp: BoundsViewport) => {
-    //DKDK anim add duration & scrambleKeys
-    setMarkerElements(getSpeciesMarkerElements(bvp, duration, scrambleKeys, setLegendData));
-  }, [setMarkerElements])
-
-  //DKDK Sidebar state managements (other than categorical - test purpose)
-  const [ sidebarCollapsed, setSidebarCollapsed ] = useState(true);
-  const [ tabSelected, setTabSelected ] = useState('');   //DKDK could be used to set default active tab, e.g., 'Home', but leave blank
-  const sidebarOnClose = () => {
-    setSidebarCollapsed(true)
-  }
-  const sidebarOnOpen = (id: string) => {
-    setSidebarCollapsed(false)
-    setTabSelected(id)
-  }
-
-  return (
-    //DKDK add fragment
-    <>
-      <SidebarExample
-        id="leaflet-sidebar"
-        collapsed={sidebarCollapsed}
-        position='left'
-        selected={tabSelected}
-        closeIcon='fas fa-times'
-        onOpen={sidebarOnOpen}
-        onClose={sidebarOnClose}
-      />
-
-      <MapVEuLegendSampleList
-        legendType={legendType}
-        data={legendData}
-        // //DKDK send x-/y-axes lables here
-        // variableLabel={variableLabel}    //DKDK: x-axis label
-        // quantityLabel={quantityLabel}    //DKDK: y-axis label
-        // tickLabelsVisible={knob_legendTickLabelsVisible}
-        // //DKDK legend radio button props
-        // onChange={legendRadioChange}
-        // selectedOption={legendRadioValue}
-        //DKDK add dropdown props for Legend
-        dropdownTitle={dropdownTitle}
-        dropdownHref={dropdownHref}
-        dropdownItemText={dropdownItemText}
-        // //DKDK send yAxisRange[1]
-        // yAxisRangeValue={yAxisRangeValue}
-        // //DKDK send legend number text
-        legendInfoNumberText={legendInfoNumberText}
-      />
-
-      {/* DKDK disabled MapVEuMapSidebar for now
-      <MapVEuMapSidebar
-        viewport={{center: [ 13.449566, -2.304301 ], zoom: 7}}
-        height="100vh" width="100vw"
-        onViewportChanged={handleViewportChanged}
-        markers={markerElements}
-        nudge="geohash"
-        //DKDK add this for closing sidebar at MapVEuMap(Sidebar): passing setSidebarCollapsed()
-        sidebarOnClose={setSidebarCollapsed}
-      /> */}
-    </>
-  );
 }
 
