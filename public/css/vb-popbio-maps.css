@@ -54,7 +54,7 @@ body {
 }
 .info {
     font-family   : "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    padding       : 6px 8px;
+    padding       : 10px;
     font-size     : small;
     background    : white;
     background    : rgba(255, 255, 255, 0.95);
@@ -155,10 +155,10 @@ body {
     z-index: 10000;
 }
 
-.legend > div {
-    /* DKDK change padding from 0 8px to 0 4px */
+/* .legend > div {
+    /* DKDK change padding from 0 8px to 0 4px
     padding: 0 2px;
-}
+} */
 
 .legend p {
     font-size: smaller;
