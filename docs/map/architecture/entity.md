@@ -23,36 +23,43 @@ NOTE: the mock-ups include multiple, unconnected root entities
 not (and can not) handle multiple roots. So, assume single rooted
 trees for now please.
 
+### Functionality shared between mini and expanded version
+
+1. Clicking on a node selects it (via setting highlightedEntityId)
+1. Highlight one node (via highlightedEntityid)
+1. Shading with 'pink bars' using shadingData[].value  (see example in expanded version mock up screenshot)
+1. Expand/collapse button
 
 ### Mini version
 
 This is the smallest possible representation that shows the entities
 unambiguously via abbreviations of their names.  For now we will
 generate the abbreviations in the component, but they may end up being
-provided from the service.
-
-The only 'functionality' the mini version has will be
-
-1. highlighting of the current 'active' entity
-2. clicking anywhere will open up the expanded version
-
+provided from the data service.
 
 ![small entity diagram](images/entity-mini.png)
 
 ### Expanded version
 
-This version will show the full entity names, be clickable to select a new entity, and show some quantitative data (the pink/grey shading).
-
-Note: the data for the pink/grey shading will come at a later date (and it will be independent of the main `data` prop, see below).  We can use random values for now.
-
+This version will show the full entity names.
 
 ![small entity diagram](images/entity-maxi.png)
+
+### Animate betweem mini+expanded version?
 
 
 ### Props
 
 ```
-  data : StudyData;  // is there a typescript def for this already?
+  treeData : StudyData;  // is there a typescript def for this already?
+
+  // data needed to color in the 'pink bars'
+  shadingData : Array<{
+    entityId: string;
+    value: number;   // fractional 0 to 1
+    color?: string;  // or should the color go outside the array? (or both)
+  }>;
+  
   isExpanded : boolean;
   highlightedEntityId : string; // e.g. 'GEMS_HouseObs'
   orientation: 'horizontal' | 'vertical';
