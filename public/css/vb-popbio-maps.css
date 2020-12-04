@@ -1260,3 +1260,12 @@ div.error div, div.warning div, div.info div, div.hint div {
     border-width: 2px;
     border-radius: 5px;
 }
+
+.mouse-toolbar {
+    position: relative;
+    right: 3rem;
+}
+
+.mouse-toolbar > a:hover {
+    background-color: #f4f4f4;
+}
