@@ -198,7 +198,6 @@ export const VISX_Example_Expanded = () => {
                         {node.data.name}
                       </Text>
                     </Group>)
-                    // <CustomNodeExpanded node={node} setHoveredNode={setHoveredNode} hoveredNode={hoveredNode} key={`node-${i}`}/>
                 })}
               </Group>
           )}
