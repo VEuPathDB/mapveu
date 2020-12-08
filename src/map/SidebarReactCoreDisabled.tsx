@@ -5,7 +5,7 @@
 
 import React from 'react'
 import { MapComponent } from 'react-leaflet'
-//DKDK customized typescript by DK for react-leaflet-sidebarv2
+//DKDKDK customized typescript by DK for react-leaflet-sidebarv2-array
 import { SidebarProps, TabProps } from './type-react-leaflet-sidebarv2'
 // //DKDK add css
 // import './sidebar-style.css'
@@ -75,10 +75,16 @@ class Sidebar extends React.Component<SidebarProps, any> {
     else if (typeof(tab.props.icon) === 'object')
       icon = tab.props.icon;
     const active = tab.props.id === this.props.selected ? ' active' : '';
+    //DKDK testing disabled & divider
     const disabled = tab.props.disabled ? ' disabled' : '';
+    const divider = tab.props.divider ? ' divider' : '';
+
+    // console.log('divider =', divider)
 
     //DKDK line divider using image file (made by DK)
-    if (tab.props.disabled && tab.props.divider) {
+    //DKDKDK set different condition
+    // if (tab.props.disabled && tab.props.divider) {
+    if (disabled && divider) {
       return (
         <li className={'sidebartabs' + active + disabled} key={tab.props.id} title={tab.props.header}>
           <a href={'#' + tab.props.id} role="tab" onClick={e => tab.props.disabled || this.onOpen(e, tab.props.id)}>
