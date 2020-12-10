@@ -26,12 +26,22 @@ export const SidebarBasic = () => {
   //DKDK Sidebar state managements
   const [ sidebarCollapsed, setSidebarCollapsed ] = useState(true);
   const [ tabSelected, setTabSelected ] = useState('');   //DKDK could be used to set default active tab, e.g., 'Home', but leave blank
+
+  //DKDK this is X button/icon behavior
   const sidebarOnClose = () => {
     setSidebarCollapsed(true)
   }
+
   const sidebarOnOpen = (id: string) => {
-    setSidebarCollapsed(false)
-    setTabSelected(id)
+    //DKDK add a function to close drawer by clicking the same icon
+    if (tabSelected != id) {
+      setSidebarCollapsed(false)
+      setTabSelected(id)
+    } else {
+      setSidebarCollapsed(true)
+      //DKDK clear tabSelected so that the tab can be reopen
+      setTabSelected('')
+    }
   }
 
   return (
@@ -58,12 +68,22 @@ export const SidebarArrayProps = () => {
   //DKDK Sidebar state managements
   const [ sidebarCollapsed, setSidebarCollapsed ] = useState(true);
   const [ tabSelected, setTabSelected ] = useState('');   //DKDK could be used to set default active tab, e.g., 'Home', but leave blank
+
+  //DKDK this is X button/icon behavior
   const sidebarOnClose = () => {
     setSidebarCollapsed(true)
   }
+
   const sidebarOnOpen = (id: string) => {
-    setSidebarCollapsed(false)
-    setTabSelected(id)
+    //DKDK add a function to close drawer by clicking the same icon
+    if (tabSelected != id) {
+      setSidebarCollapsed(false)
+      setTabSelected(id)
+    } else {
+      setSidebarCollapsed(true)
+      //DKDK clear tabSelected so that the tab can be reopen
+      setTabSelected('')
+    }
   }
 
   //DKDK make array props for generating tabs
@@ -108,12 +128,22 @@ export const SidebarDisabled = () => {
   //DKDK Sidebar state managements (for categorical)
   const [ sidebarCollapsed, setSidebarCollapsed ] = useState(true);
   const [ tabSelected, setTabSelected ] = useState('');   //DKDK could be used to set default active tab, e.g., 'Home', but leave blank
+
+  //DKDK this is X button/icon behavior
   const sidebarOnClose = () => {
     setSidebarCollapsed(true)
   }
+
   const sidebarOnOpen = (id: string) => {
-    setSidebarCollapsed(false)
-    setTabSelected(id)
+    //DKDK add a function to close drawer by clicking the same icon
+    if (tabSelected != id) {
+      setSidebarCollapsed(false)
+      setTabSelected(id)
+    } else {
+      setSidebarCollapsed(true)
+      //DKDK clear tabSelected so that the tab can be reopen
+      setTabSelected('')
+    }
   }
 
   //DKDK make array props for making disabled icon(s)
