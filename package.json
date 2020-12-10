@@ -21,6 +21,7 @@
     "@visx/hierarchy": "^1.0.0",
     "@visx/shape": "^1.1.0",
     "@visx/text": "^1.1.0",
+    "@visx/tooltip": "^1.1.0",
     "babel-loader": "^8.1.0",
     "bootstrap": "^4.5.2",
     "jest": "^26.5.3",
