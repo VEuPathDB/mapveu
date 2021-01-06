@@ -16264,7 +16264,7 @@ vfile@^4.0.0:
 
 "visualization-tools@https://github.com/VEuPathDB/plot-components":
   version "0.1.0"
-  resolved "https://github.com/VEuPathDB/plot-components#94188cb15a43f771134e5277bb6adecdce8c2cde"
+  resolved "https://github.com/VEuPathDB/plot-components#86f704b8d5371b1dd78ecd69e8f657d04a801709"
   dependencies:
     plotly.js "^1.54.1"
     react "^16.13.1"
