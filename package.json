@@ -32,7 +32,7 @@
     "shape2geohash": "^1.2.5",
     "ts-jest": "^26.4.1",
     "typescript": "~3.7.2",
-    "visualization-tools": "https://github.com/VEuPathDB/plot-components"
+    "visualization-tools": "https://github.com/VEuPathDB/web-components"
   },
   "scripts": {
     "storybook": "start-storybook -p 9009 -s public",
